@@ -1,0 +1,10 @@
+{
+  "full_name": "Federico Jaureguialzo",
+  "email": "fedejaure@example.com",
+  "github_username": "fedejaure",
+  "project_name": "Python Boilerplate",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a modern Python package.",
+  "version": "0.1.0",
+  "open_source_license": ["MIT", "BSD", "ISC", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"]
+}
