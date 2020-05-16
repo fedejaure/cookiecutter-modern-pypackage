@@ -26,6 +26,7 @@ clean-pyc:
 
 clean-test:
 	rm -f .coverage
+	rm -f .coverage.*
 	rm -fr htmlcov/
 	rm -fr .pytest_cache
 
