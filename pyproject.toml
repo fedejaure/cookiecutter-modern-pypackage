@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "cookiecutter-modern-pypackage"
+version = "0.1.0"
+description = "Cookiecutter template for a modern Python package."
+authors = ["Federico Jaureguialzo <fedejaure@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.4.2"
+pytest-cov = "^2.8.1"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
