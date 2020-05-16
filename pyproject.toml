@@ -23,6 +23,25 @@ black = "^19.10b0"
 cookiecutter = "^1.7.2"
 pytest-cookies = "^0.5.1"
 
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = [
+  "pragma: no cover",
+  "def __repr__",
+  "if self.debug",
+  "if settings.DEBUG:",
+  "raise AssertionError",
+  "raise NotImplementedError",
+  "if 0:",
+  "if __name__ == __main__:"
+]
+show_missing = true
+
+[tool.coverage.html]
+directory = "htmlcov"
+
 [tool.flakehell]
 format = "grouped"
 max_line_length = 120
