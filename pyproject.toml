@@ -19,6 +19,7 @@ flake8-blind-except = "^0.1.1"
 flake8-logging-format = "^0.6.0"
 isort = "^4.3.21"
 black = "^19.10b0"
+cookiecutter = "^1.7.2"
 
 [tool.flakehell]
 format = "grouped"
