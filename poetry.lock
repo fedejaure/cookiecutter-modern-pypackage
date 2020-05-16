@@ -8,11 +8,11 @@ version = "1.4.4"
 
 [[package]]
 category = "dev"
-description = "Better dates & times for Python"
+description = "Better dates and times for Python"
 name = "arrow"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-version = "0.15.6"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
+version = "0.13.2"
 
 [package.dependencies]
 python-dateutil = "*"
@@ -543,6 +543,19 @@ testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xm
 
 [[package]]
 category = "dev"
+description = "The pytest plugin for your Cookiecutter templates. 🍪"
+name = "pytest-cookies"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.5.1"
+
+[package.dependencies]
+arrow = "<0.14.0"
+cookiecutter = ">=1.4.0,<1.8.0"
+pytest = ">=3.3.0,<6.0.0"
+
+[[package]]
+category = "dev"
 description = "Pytest plugin for measuring coverage."
 name = "pytest-cov"
 optional = false
@@ -724,7 +737,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "1bec42fa9350a2c5f87f3c9b30dcd75f244909297396e11336c0cc34f4ce1273"
+content-hash = "1cf6506a024484e810aae4993c03196ce1c103f66b035fecf2500e4a9e360db8"
 python-versions = "^3.6.1"
 
 [metadata.files]
@@ -733,8 +746,8 @@ appdirs = [
     {file = "appdirs-1.4.4.tar.gz", hash = "sha256:7d5d0167b2b1ba821647616af46a749d1c653740dd0d2415100fe26e27afdf41"},
 ]
 arrow = [
-    {file = "arrow-0.15.6-py2.py3-none-any.whl", hash = "sha256:a24c1de90850f6fb2033fd6bf8a11f281e84cb54825e5eabdda219e673b52aac"},
-    {file = "arrow-0.15.6.tar.gz", hash = "sha256:eb5d339f00072cc297d7de252a2e75f272085d1231a3723f1026d1fa91367118"},
+    {file = "arrow-0.13.2-py2.py3-none-any.whl", hash = "sha256:002f2315cf4c8404de737c42860441732d339bbc57fee584e2027520e055ecc1"},
+    {file = "arrow-0.13.2.tar.gz", hash = "sha256:82dd5e13b733787d4eb0fef42d1ee1a99136dc1d65178f70373b3678b3181bfc"},
 ]
 astroid = [
     {file = "astroid-2.4.1-py3-none-any.whl", hash = "sha256:d8506842a3faf734b81599c8b98dcc423de863adcc1999248480b18bd31a0f38"},
@@ -987,6 +1000,10 @@ pyparsing = [
 pytest = [
     {file = "pytest-5.4.2-py3-none-any.whl", hash = "sha256:95c710d0a72d91c13fae35dce195633c929c3792f54125919847fdcdf7caa0d3"},
     {file = "pytest-5.4.2.tar.gz", hash = "sha256:eb2b5e935f6a019317e455b6da83dd8650ac9ffd2ee73a7b657a30873d67a698"},
+]
+pytest-cookies = [
+    {file = "pytest-cookies-0.5.1.tar.gz", hash = "sha256:b33f7f51772444b9b25991c4eeaea74a69dc9a6e08b09596b9574548a8812f34"},
+    {file = "pytest_cookies-0.5.1-py2.py3-none-any.whl", hash = "sha256:9dc21d7ae56ef38a5fddb0e11eb5cb4c993907a6cafb6dd11d62c41e47af391b"},
 ]
 pytest-cov = [
     {file = "pytest-cov-2.8.1.tar.gz", hash = "sha256:cc6742d8bac45070217169f5f72ceee1e0e55b0221f54bcf24845972d3a47f2b"},
