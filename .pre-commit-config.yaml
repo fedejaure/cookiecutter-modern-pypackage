@@ -10,3 +10,11 @@ repos:
     rev: v1.0.0
     hooks:
     - id: check-poetry
+-   repo: local
+    hooks:
+    -   id: flakehell
+        name: flakehell
+        entry: flakehell
+        args: [lint]
+        language: python
+        types: [python]
