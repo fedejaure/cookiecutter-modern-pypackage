@@ -8,6 +8,14 @@ version = "1.4.4"
 
 [[package]]
 category = "dev"
+description = "An unobtrusive argparse wrapper with natural syntax"
+name = "argh"
+optional = false
+python-versions = "*"
+version = "0.26.2"
+
+[[package]]
+category = "dev"
 description = "Better dates and times for Python"
 name = "arrow"
 optional = false
@@ -414,6 +422,14 @@ version = "0.8.0"
 
 [[package]]
 category = "dev"
+description = "File system general utilities"
+name = "pathtools"
+optional = false
+python-versions = "*"
+version = "0.1.2"
+
+[[package]]
+category = "dev"
 description = "plugin and hook calling mechanisms for python"
 name = "pluggy"
 optional = false
@@ -709,6 +725,28 @@ testing = ["pytest (>=4)", "coverage (>=5)", "coverage-enable-subprocess (>=1)",
 
 [[package]]
 category = "dev"
+description = "Filesystem events monitoring"
+name = "watchdog"
+optional = false
+python-versions = "*"
+version = "0.10.2"
+
+[package.dependencies]
+pathtools = ">=0.1.1"
+
+[package.dependencies.PyYAML]
+optional = true
+version = ">=3.10"
+
+[package.dependencies.argh]
+optional = true
+version = ">=0.24.1"
+
+[package.extras]
+watchmedo = ["PyYAML (>=3.10)", "argh (>=0.24.1)"]
+
+[[package]]
+category = "dev"
 description = "Measures number of Terminal column cells of wide-character codes"
 name = "wcwidth"
 optional = false
@@ -737,13 +775,17 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "1cf6506a024484e810aae4993c03196ce1c103f66b035fecf2500e4a9e360db8"
+content-hash = "b1347ca216d8b5e264d4d859e8aa495dee0d412189d3f15421132e18fffe55ee"
 python-versions = "^3.6.1"
 
 [metadata.files]
 appdirs = [
     {file = "appdirs-1.4.4-py2.py3-none-any.whl", hash = "sha256:a841dacd6b99318a741b166adb07e19ee71a274450e68237b4650ca1055ab128"},
     {file = "appdirs-1.4.4.tar.gz", hash = "sha256:7d5d0167b2b1ba821647616af46a749d1c653740dd0d2415100fe26e27afdf41"},
+]
+argh = [
+    {file = "argh-0.26.2-py2.py3-none-any.whl", hash = "sha256:a9b3aaa1904eeb78e32394cd46c6f37ac0fb4af6dc488daa58971bdc7d7fcaf3"},
+    {file = "argh-0.26.2.tar.gz", hash = "sha256:e9535b8c84dc9571a48999094fda7f33e63c3f1b74f3e5f3ac0105a58405bb65"},
 ]
 arrow = [
     {file = "arrow-0.13.2-py2.py3-none-any.whl", hash = "sha256:002f2315cf4c8404de737c42860441732d339bbc57fee584e2027520e055ecc1"},
@@ -961,6 +1003,9 @@ pathspec = [
     {file = "pathspec-0.8.0-py2.py3-none-any.whl", hash = "sha256:7d91249d21749788d07a2d0f94147accd8f845507400749ea19c1ec9054a12b0"},
     {file = "pathspec-0.8.0.tar.gz", hash = "sha256:da45173eb3a6f2a5a487efba21f050af2b41948be6ab52b6a1e3ff22bb8b7061"},
 ]
+pathtools = [
+    {file = "pathtools-0.1.2.tar.gz", hash = "sha256:7c35c5421a39bb82e58018febd90e3b6e5db34c5443aaaf742b3f33d4655f1c0"},
+]
 pluggy = [
     {file = "pluggy-0.13.1-py2.py3-none-any.whl", hash = "sha256:966c145cd83c96502c3c3868f50408687b38434af77734af1e9ca461a4081d2d"},
     {file = "pluggy-0.13.1.tar.gz", hash = "sha256:15b2acde666561e1298d71b523007ed7364de07029219b604cf808bfa1c765b0"},
@@ -1101,6 +1146,9 @@ urllib3 = [
 virtualenv = [
     {file = "virtualenv-20.0.20-py2.py3-none-any.whl", hash = "sha256:b4c14d4d73a0c23db267095383c4276ef60e161f94fde0427f2f21a0132dde74"},
     {file = "virtualenv-20.0.20.tar.gz", hash = "sha256:fd0e54dec8ac96c1c7c87daba85f0a59a7c37fe38748e154306ca21c73244637"},
+]
+watchdog = [
+    {file = "watchdog-0.10.2.tar.gz", hash = "sha256:c560efb643faed5ef28784b2245cf8874f939569717a4a12826a173ac644456b"},
 ]
 wcwidth = [
     {file = "wcwidth-0.1.9-py2.py3-none-any.whl", hash = "sha256:cafe2186b3c009a04067022ce1dcd79cb38d8d65ee4f4791b8888d6599d1bbe1"},
