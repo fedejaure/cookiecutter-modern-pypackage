@@ -11,6 +11,22 @@ python = "^3.6"
 [tool.poetry.dev-dependencies]
 pytest = "^5.4.2"
 pytest-cov = "^2.8.1"
+flake8 = "3.7.9"
+flakehell = "^0.3.3"
+flake8-builtins = "^1.5.3"
+flake8-blind-except = "^0.1.1"
+flake8-logging-format = "^0.6.0"
+
+[tool.flakehell]
+format = "grouped"
+max_line_length = 120
+show_source = true
+
+[tool.flakehell.plugins]
+pyflakes = ["+*"]
+pycodestyle = ["+*"]
+mccabe = ["+*"]
+"flake8-*" = ["+*"]
 
 [build-system]
 requires = ["poetry>=0.12"]
