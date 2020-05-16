@@ -1,0 +1,12 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.0.0
+    hooks:
+      - id: check-toml
+      - id: check-yaml
+      - id: debug-statements
+      - id: check-merge-conflict
+-   repo: https://gitlab.com/smop/pre-commit-hooks
+    rev: v1.0.0
+    hooks:
+    - id: check-poetry
