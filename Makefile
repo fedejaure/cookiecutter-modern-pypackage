@@ -1,16 +1,5 @@
 BAKE_OPTIONS=--no-input
 
-define BROWSER_PYSCRIPT
-import os, webbrowser, sys
-
-from urllib.request import pathname2url
-
-webbrowser.open("file://" + pathname2url(os.path.abspath(sys.argv[1])))
-endef
-export BROWSER_PYSCRIPT
-
-BROWSER := python -c "$$BROWSER_PYSCRIPT"
-
 help:
 	@echo "bake 	generate project using defaults"
 	@echo "watch 	generate project using defaults and watch for changes"
@@ -51,10 +40,6 @@ fmt:
 
 test:
 	@poetry run py.test --verbose tests
-
-coverage:
-	@poetry run py.test --verbose --cov-report term --cov-report html --cov=tests tests
-	$(BROWSER) htmlcov/index.html
 
 dev: clean
 	poetry install

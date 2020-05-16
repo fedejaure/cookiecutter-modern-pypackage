@@ -12,7 +12,6 @@ python = "^3.6.1"
 pre-commit = "^2.4.0"
 pytest = "^5.4.2"
 coverage = {version = "^5.1", extras = ["toml"]}
-pytest-cov = "^2.8.1"
 flake8 = "3.7.9"
 flakehell = "^0.3.3"
 flake8-builtins = "^1.5.3"
