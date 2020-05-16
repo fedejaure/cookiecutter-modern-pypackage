@@ -10,6 +10,14 @@ repos:
     rev: v1.0.0
     hooks:
     - id: check-poetry
+-   repo: https://github.com/asottile/seed-isort-config
+    rev: v2.1.1
+    hooks:
+    -   id: seed-isort-config
+-   repo: https://github.com/timothycrosley/isort
+    rev: 4.3.21
+    hooks:
+      - id: isort
 -   repo: local
     hooks:
     -   id: flakehell
