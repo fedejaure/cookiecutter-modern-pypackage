@@ -27,7 +27,7 @@ repos:
     hooks:
     -   id: flakehell
         name: flakehell
-        entry: flakehell
+        entry: poetry run flakehell
         args: [lint]
-        language: python
+        language: system
         types: [python]
