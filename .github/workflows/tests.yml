@@ -68,4 +68,4 @@ jobs:
       - name: Run pytest
         run: |
           source $HOME/.poetry/env
-          make coverage
+          make test
