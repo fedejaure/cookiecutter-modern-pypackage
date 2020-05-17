@@ -11,7 +11,6 @@ python = "^3.6.1"
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.4.0"
 pytest = "^5.4.2"
-coverage = {version = "^5.1", extras = ["toml"]}
 flake8 = "3.7.9"
 flakehell = "^0.3.3"
 flake8-builtins = "^1.5.3"
@@ -22,25 +21,6 @@ black = "^19.10b0"
 cookiecutter = "^1.7.2"
 pytest-cookies = "^0.5.1"
 watchdog = {version = "^0.10.2", extras = ["watchmedo"]}
-
-[tool.coverage.run]
-branch = true
-
-[tool.coverage.report]
-exclude_lines = [
-  "pragma: no cover",
-  "def __repr__",
-  "if self.debug",
-  "if settings.DEBUG:",
-  "raise AssertionError",
-  "raise NotImplementedError",
-  "if 0:",
-  "if __name__ == __main__:"
-]
-show_missing = true
-
-[tool.coverage.html]
-directory = "htmlcov"
 
 [tool.flakehell]
 format = "grouped"
