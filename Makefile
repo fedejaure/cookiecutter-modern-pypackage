@@ -30,13 +30,13 @@ replay: watch
 	;
 
 lint:
-	@poetry run flakehell lint \{\{cookiecutter.project_slug\}\} tests
-	@poetry run isort -rc --check-only \{\{cookiecutter.project_slug\}\} tests
-	@poetry run black --check \{\{cookiecutter.project_slug\}\} tests
+	@poetry run flakehell lint tests
+	@poetry run isort -rc --check-only tests
+	@poetry run black --check tests
 
 fmt:
-	@poetry run isort -rc \{\{cookiecutter.project_slug\}\} tests
-	@poetry run black \{\{cookiecutter.project_slug\}\} tests
+	@poetry run isort -rc tests
+	@poetry run black tests
 
 test:
 	@poetry run py.test --verbose tests
