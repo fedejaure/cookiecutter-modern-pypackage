@@ -20,7 +20,7 @@ repos:
     rev: v2.1.1
     hooks:
       - id: seed-isort-config
-        exclude: "^{{cookiecutter.project_slug}}/"
+        args: ["--exclude=^{{cookiecutter.project_slug}}/"]
 -   repo: https://github.com/timothycrosley/isort
     rev: 4.3.21
     hooks:
