@@ -59,7 +59,7 @@ def test_bake_with_defaults(cookies):
         assert result.exception is None
 
         found_toplevel_files = [f.basename for f in result.project.listdir()]
-        assert "python_boilerplate" in found_toplevel_files
+        assert "modern_python_boilerplate" in found_toplevel_files
         assert "tests" in found_toplevel_files
 
 
