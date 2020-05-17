@@ -1,7 +1,24 @@
 import datetime
+import os
+import shlex
+import subprocess
 from contextlib import contextmanager
 
 from cookiecutter.utils import rmtree
+
+
+@contextmanager
+def inside_dir(dirpath):
+    """
+    Execute code from inside the given directory
+    :param dirpath: String, path of the directory the command is being run.
+    """
+    old_path = os.getcwd()
+    try:
+        os.chdir(dirpath)
+        yield
+    finally:
+        os.chdir(old_path)
 
 
 @contextmanager
@@ -16,6 +33,16 @@ def bake_in_temp_dir(cookies, *args, **kwargs):
         yield result
     finally:
         rmtree(str(result.project))
+
+
+def run_inside_dir(command, dirpath):
+    """
+    Run a command from inside a given directory, returning the exit status
+    :param command: Command that will be executed
+    :param dirpath: String, path of the directory the command is being run.
+    """
+    with inside_dir(dirpath):
+        return subprocess.check_call(shlex.split(command))
 
 
 def test_year_compute_in_license_file(cookies):
@@ -41,3 +68,11 @@ def test_bake_not_open_source(cookies):
         found_toplevel_files = [f.basename for f in result.project.listdir()]
         assert "LICENSE" not in found_toplevel_files
         assert "License" not in result.project.join("README.md").read()
+
+
+def test_bake_and_run_tests(cookies):
+    with bake_in_temp_dir(cookies) as result:
+        assert result.project.isdir()
+        run_inside_dir("make lint", str(result.project)) == 0
+        run_inside_dir("make test", str(result.project)) == 0
+        print("test_bake_and_run_tests path", str(result.project))
