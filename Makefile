@@ -41,11 +41,8 @@ fmt:
 test:
 	@poetry run py.test --verbose tests
 
-dev: clean
+install: clean
 	poetry install
 
 hooks:
 	poetry run pre-commit install
-
-install: clean
-	poetry install --no-dev

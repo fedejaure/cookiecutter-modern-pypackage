@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   Linting:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python 3.8
@@ -17,7 +17,12 @@ jobs:
           curl -fsS -o get-poetry.py https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py
           python get-poetry.py --preview -y
           source $HOME/.poetry/env
-          make dev
+          poetry config virtualenvs.in-project true
+      - name: Install dependencies
+        run: |
+          source $HOME/.poetry/env
+          make install
       - name: Linting
         run: |
+          source $HOME/.poetry/env
           make lint

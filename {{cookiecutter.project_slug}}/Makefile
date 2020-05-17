@@ -28,11 +28,8 @@ test:
 coverage:
 	@poetry run py.test --verbose --cov-report term --cov-report html --cov={{ cookiecutter.project_slug }} tests
 
-dev: clean
+install: clean
 	poetry install
 
 hooks:
 	poetry run pre-commit install
-
-install: clean
-	poetry install --no-dev
