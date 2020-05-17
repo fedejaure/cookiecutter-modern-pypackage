@@ -43,6 +43,8 @@ test:
 
 dev: clean
 	poetry install
+
+hooks:
 	poetry run pre-commit install
 
 install: clean
