@@ -3,31 +3,40 @@ repos:
     rev: v3.0.0
     hooks:
       - id: check-toml
+        exclude: "^{{cookiecutter.project_slug}}/"
       - id: check-yaml
+        exclude: "^{{cookiecutter.project_slug}}/"
       - id: debug-statements
+        exclude: "^{{cookiecutter.project_slug}}/"
       - id: check-merge-conflict
       - id: check-json
+        exclude: "^{{cookiecutter.project_slug}}/"
 -   repo: https://gitlab.com/smop/pre-commit-hooks
     rev: v1.0.0
     hooks:
-    - id: check-poetry
+      - id: check-poetry
+        exclude: "^{{cookiecutter.project_slug}}/"
 -   repo: https://github.com/asottile/seed-isort-config
     rev: v2.1.1
     hooks:
-    -   id: seed-isort-config
+      - id: seed-isort-config
+        exclude: "^{{cookiecutter.project_slug}}/"
 -   repo: https://github.com/timothycrosley/isort
     rev: 4.3.21
     hooks:
       - id: isort
+        exclude: "^{{cookiecutter.project_slug}}/"
 -   repo: https://github.com/psf/black
     rev: 19.10b0
     hooks:
       - id: black
+        exclude: "^{{cookiecutter.project_slug}}/"
 -   repo: local
     hooks:
-    -   id: flakehell
+      - id: flakehell
         name: flakehell
         entry: poetry run flakehell
         args: [lint]
         language: system
         types: [python]
+        exclude: "^{{cookiecutter.project_slug}}/"
