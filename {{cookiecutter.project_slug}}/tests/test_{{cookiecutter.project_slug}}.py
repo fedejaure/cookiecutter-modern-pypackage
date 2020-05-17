@@ -1,5 +1,6 @@
 """Tests for `{{ cookiecutter.project_slug }}` package."""
 import pytest
+
 import {{ cookiecutter.project_slug }}
 
 

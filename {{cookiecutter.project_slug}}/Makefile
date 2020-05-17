@@ -25,8 +25,13 @@ fmt:
 test:
 	@poetry run py.test --verbose tests
 
+coverage:
+	@poetry run py.test --verbose --cov-report term --cov-report html --cov={{ cookiecutter.project_slug }} tests
+
 dev: clean
 	poetry install
+
+hooks:
 	poetry run pre-commit install
 
 install: clean
