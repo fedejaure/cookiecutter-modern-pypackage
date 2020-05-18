@@ -73,19 +73,33 @@ def test_bake_not_open_source(cookies):
 def test_bake_and_run_lints(cookies):
     with bake_in_temp_dir(cookies) as result:
         assert result.project.isdir()
-        assert run_inside_dir("make install", str(result.project)) == 0
-        assert run_inside_dir("make lint", str(result.project)) == 0
+        assert run_inside_dir("poetry install", str(result.project)) == 0
+        assert run_inside_dir("poetry run flakehell lint modern_python_boilerplate tests", str(result.project)) == 0
+        assert (
+            run_inside_dir("poetry run isort -rc --check-only modern_python_boilerplate tests", str(result.project))
+            == 0
+        )
+        assert run_inside_dir("poetry run black --check modern_python_boilerplate tests", str(result.project)) == 0
 
 
 def test_bake_and_run_tests(cookies):
     with bake_in_temp_dir(cookies) as result:
         assert result.project.isdir()
-        assert run_inside_dir("make install", str(result.project)) == 0
-        assert run_inside_dir("make test", str(result.project)) == 0
+        assert run_inside_dir("poetry install", str(result.project)) == 0
+        assert run_inside_dir("poetry run py.test --verbose tests", str(result.project)) == 0
 
 
 def test_bake_and_run_coverage(cookies):
     with bake_in_temp_dir(cookies) as result:
         assert result.project.isdir()
-        assert run_inside_dir("make install", str(result.project)) == 0
-        assert run_inside_dir("make coverage", str(result.project)) == 0
+        assert run_inside_dir("poetry install", str(result.project)) == 0
+        assert (
+            run_inside_dir(
+                (
+                    "poetry run py.test --verbose --cov-report term --cov-report html "
+                    "--cov=modern_python_boilerplate tests"
+                ),
+                str(result.project),
+            )
+            == 0
+        )

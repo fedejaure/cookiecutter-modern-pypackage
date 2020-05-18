@@ -3,50 +3,8 @@ name: Tests
 on: [push, pull_request]
 
 jobs:
-  Linting:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Python 3.6
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.6
-
-      - name: Get full python version
-        id: full-python-version
-        shell: bash
-        run: echo ::set-output name=version::$(python -c "import sys; print('-'.join(str(v) for v in sys.version_info))")
-
-      - name: Install poetry
-        shell: bash
-        run: |
-          curl -fsS -o get-poetry.py https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py
-          python get-poetry.py --preview -y
-          echo "::set-env name=PATH::$HOME/.poetry/bin:$PATH"
-
-      - name: Set up cache
-        uses: actions/cache@v1
-        id: cache
-        with:
-          path: .venv
-          key: Ubuntu-venv-${{ steps.full-python-version.outputs.version }}-${{ hashFiles('**/poetry.lock') }}
-
-      - name: Ensure cache is healthy
-        if: steps.cache.outputs.cache-hit == 'true'
-        shell: bash
-        run: poetry run pip --version >/dev/null 2>&1 || rm -rf .venv
-
-      - name: Install dependencies
-        shell: bash
-        run: poetry install
-
-      - name: Linting
-        run: poetry run pre-commit run --all-files
 
   Tests:
-    needs: Linting
     name: ${{ matrix.os }} / ${{ matrix.python-version }}
     runs-on: ${{ matrix.os }}-latest
     strategy:
@@ -91,6 +49,11 @@ jobs:
         shell: bash
         run: poetry install
 
+      - name: Linting
+        shell: bash
+        run: poetry run pre-commit run --all-files
+
       - name: Run pytest
+        if: ${{ success() }}
         shell: bash
         run: poetry run py.test --verbose tests
