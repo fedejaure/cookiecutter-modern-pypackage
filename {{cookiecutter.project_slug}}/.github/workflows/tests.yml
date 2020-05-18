@@ -1,3 +1,4 @@
+{% raw %}
 name: Tests
 
 on: [push, pull_request]
@@ -14,22 +15,10 @@ jobs:
         with:
           python-version: 3.6
 
-      - name: Install and set up Poetry
-        run: |
-          curl -fsS -o get-poetry.py https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py
-          python get-poetry.py --preview -y
-          source $HOME/.poetry/env
-          poetry config virtualenvs.in-project true
-
-      - name: Install dependencies
-        run: |
-          source $HOME/.poetry/env
-          make install
-
       - name: Linting
         run: |
-          source $HOME/.poetry/env
-          make lint
+          pip install pre-commit
+          pre-commit run --all-files
 
   Tests:
     needs: Linting
@@ -67,8 +56,6 @@ jobs:
         with:
           path: .venv
           key: ${{ runner.os }}-venv-${{ steps.full-python-version.outputs.version }}-${{ hashFiles('**/poetry.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-venv-${{ steps.full-python-version.outputs.version }}-
 
       - name: Ensure cache is healthy
         if: steps.cache.outputs.cache-hit == 'true'
@@ -77,8 +64,9 @@ jobs:
 
       - name: Install dependencies
         shell: bash
-        run: make install
+        run: poetry install
 
       - name: Run pytest
         shell: bash
-        run: make test
+        run: poetry run py.test --verbose tests
+{% endraw %}

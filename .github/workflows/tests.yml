@@ -14,25 +14,10 @@ jobs:
         with:
           python-version: 3.6
 
-      - name: Install poetry
-        shell: bash
+      - name: Linting
         run: |
-          curl -fsS -o get-poetry.py https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py
-          python get-poetry.py --preview -y
-          echo "::set-env name=PATH::$HOME/.poetry/bin:$PATH"
-
-      - name: Install dependencies
-        shell: bash
-        run: poetry install
-
-      - name: Flake8
-        run: poetry run flakehell lint tests
-
-      - name: isort
-        run: poetry run isort -rc --check-only tests
-
-      - name: black
-        run: poetry run black --check tests
+          pip install pre-commit
+          pre-commit run --all-files
 
   Tests:
     needs: Linting
@@ -70,8 +55,6 @@ jobs:
         with:
           path: .venv
           key: ${{ runner.os }}-venv-${{ steps.full-python-version.outputs.version }}-${{ hashFiles('**/poetry.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-venv-${{ steps.full-python-version.outputs.version }}-
 
       - name: Ensure cache is healthy
         if: steps.cache.outputs.cache-hit == 'true'
@@ -84,4 +67,4 @@ jobs:
 
       - name: Run pytest
         shell: bash
-        run: poetry run pre-commit install
+        run: poetry run py.test --verbose tests
