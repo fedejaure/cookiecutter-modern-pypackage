@@ -8,16 +8,16 @@ help:
 clean: clean-pyc clean-test
 
 clean-pyc:
-	find . -name '*.pyc' -exec rm -f {} +
-	find . -name '*.pyo' -exec rm -f {} +
-	find . -name '*~' -exec rm -f {} +
-	find . -name '__pycache__' -exec rm -fr {} +
+	@find . -name '*.pyc' -exec rm -f {} +
+	@find . -name '*.pyo' -exec rm -f {} +
+	@find . -name '*~' -exec rm -f {} +
+	@find . -name '__pycache__' -exec rm -fr {} +
 
 clean-test:
-	rm -f .coverage
-	rm -f .coverage.*
-	rm -fr htmlcov/
-	rm -fr .pytest_cache
+	@rm -f .coverage
+	@rm -f .coverage.*
+	@rm -fr htmlcov/
+	@rm -fr .pytest_cache
 
 bake:
 	poetry run cookiecutter $(BAKE_OPTIONS) . --overwrite-if-exists
@@ -39,7 +39,7 @@ fmt:
 	@poetry run black tests
 
 test:
-	@poetry run py.test --verbose tests
+	poetry run py.test --verbose tests
 
 install: clean
 	poetry install
