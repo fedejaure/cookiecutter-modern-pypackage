@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python 3.6
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v2
         with:
           python-version: 3.6
       - name: Install and set up Poetry
@@ -42,8 +42,7 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Get full python version
-        id: full-python-version
+      - name: Display Python version
         run: |
           echo ::set-output name=version::$(python -c "import sys; print('-'.join(str(v) for v in sys.version_info))")
       - name: Install and set up Poetry
@@ -78,12 +77,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Get full python version
-      id: full-python-version
-      shell: bash
+    - name: Display Python version
       run: |
         echo ::set-output name=version::$(python -c "import sys; print('-'.join(str(v) for v in sys.version_info))")
     - name: Install and setup Poetry
