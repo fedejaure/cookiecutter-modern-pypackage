@@ -26,13 +26,13 @@ jobs:
         run: poetry install
 
       - name: Flake8
-        run: poetry run flakehell lint {{ cookiecutter.project_slug }} tests
+        run: poetry run flakehell lint tests
 
       - name: isort
-        run: poetry run isort -rc --check-only {{ cookiecutter.project_slug }} tests
+        run: poetry run isort -rc --check-only tests
 
       - name: black
-        run: poetry run black --check {{ cookiecutter.project_slug }} tests
+        run: poetry run black --check tests
 
   Tests:
     needs: Linting
