@@ -1,3 +1,5 @@
+.PHONY: hooks
+
 BAKE_OPTIONS=--no-input
 
 help:
