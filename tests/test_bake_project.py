@@ -73,19 +73,19 @@ def test_bake_not_open_source(cookies):
 def test_bake_and_run_lints(cookies):
     with bake_in_temp_dir(cookies) as result:
         assert result.project.isdir()
-        assert run_inside_dir("make dev", str(result.project)) == 0
+        assert run_inside_dir("make install", str(result.project)) == 0
         assert run_inside_dir("make lint", str(result.project)) == 0
 
 
 def test_bake_and_run_tests(cookies):
     with bake_in_temp_dir(cookies) as result:
         assert result.project.isdir()
-        assert run_inside_dir("make dev", str(result.project)) == 0
+        assert run_inside_dir("make install", str(result.project)) == 0
         assert run_inside_dir("make test", str(result.project)) == 0
 
 
 def test_bake_and_run_coverage(cookies):
     with bake_in_temp_dir(cookies) as result:
         assert result.project.isdir()
-        assert run_inside_dir("make dev", str(result.project)) == 0
+        assert run_inside_dir("make install", str(result.project)) == 0
         assert run_inside_dir("make coverage", str(result.project)) == 0
