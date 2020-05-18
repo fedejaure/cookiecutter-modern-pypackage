@@ -66,7 +66,9 @@ jobs:
         id: cache
         with:
           path: .venv
-          key: venv-${{ runner.os }}-${{ steps.full-python-version.outputs.version }}-${{ hashFiles('**/poetry.lock') }}
+          key: ${{ runner.os }}-venv-${{ steps.full-python-version.outputs.version }}-${{ hashFiles('**/poetry.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-venv-${{ steps.full-python-version.outputs.version }}-
 
       - name: Ensure cache is healthy
         if: steps.cache.outputs.cache-hit == 'true'
