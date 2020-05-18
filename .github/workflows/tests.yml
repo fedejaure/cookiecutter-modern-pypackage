@@ -14,6 +14,11 @@ jobs:
         with:
           python-version: 3.6
 
+      - name: Get full python version
+        id: full-python-version
+        shell: bash
+        run: echo ::set-output name=version::$(python -c "import sys; print('-'.join(str(v) for v in sys.version_info))")
+
       - name: Install poetry
         shell: bash
         run: |
@@ -21,10 +26,24 @@ jobs:
           python get-poetry.py --preview -y
           echo "::set-env name=PATH::$HOME/.poetry/bin:$PATH"
 
+      - name: Set up cache
+        uses: actions/cache@v1
+        id: cache
+        with:
+          path: .venv
+          key: Ubuntu-venv-${{ steps.full-python-version.outputs.version }}-${{ hashFiles('**/poetry.lock') }}
+
+      - name: Ensure cache is healthy
+        if: steps.cache.outputs.cache-hit == 'true'
+        shell: bash
+        run: poetry run pip --version >/dev/null 2>&1 || rm -rf .venv
+
+      - name: Install dependencies
+        shell: bash
+        run: poetry install
+
       - name: Linting
-        run: |
-          pip install pre-commit
-          pre-commit run --all-files
+        run: poetry run pre-commit run --all-files
 
   Tests:
     needs: Linting
