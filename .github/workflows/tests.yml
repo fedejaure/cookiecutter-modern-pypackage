@@ -14,22 +14,25 @@ jobs:
         with:
           python-version: 3.6
 
-      - name: Install and set up Poetry
+      - name: Install poetry
+        shell: bash
         run: |
-          curl -fsS -o get-poetry.py https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py
+          curl -fsS -o get-poetry.py https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py
           python get-poetry.py --preview -y
-          source $HOME/.poetry/env
-          poetry config virtualenvs.in-project true
+          echo "::set-env name=PATH::$HOME/.poetry/bin:$PATH"
 
       - name: Install dependencies
-        run: |
-          source $HOME/.poetry/env
-          make install
+        shell: bash
+        run: poetry install
 
-      - name: Linting
-        run: |
-          source $HOME/.poetry/env
-          make lint
+      - name: Flake8
+        run: poetry run flakehell lint {{ cookiecutter.project_slug }} tests
+
+      - name: isort
+        run: poetry run isort -rc --check-only {{ cookiecutter.project_slug }} tests
+
+      - name: black
+        run: poetry run black --check {{ cookiecutter.project_slug }} tests
 
   Tests:
     needs: Linting
@@ -81,4 +84,4 @@ jobs:
 
       - name: Run pytest
         shell: bash
-        run: make test
+        run: poetry run pre-commit install
