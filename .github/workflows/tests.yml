@@ -8,97 +8,79 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
       - name: Set up Python 3.6
         uses: actions/setup-python@v2
         with:
           python-version: 3.6
+
       - name: Install and set up Poetry
         run: |
           curl -fsS -o get-poetry.py https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py
           python get-poetry.py --preview -y
           source $HOME/.poetry/env
           poetry config virtualenvs.in-project true
+
       - name: Install dependencies
         run: |
           source $HOME/.poetry/env
           make install
+
       - name: Linting
         run: |
           source $HOME/.poetry/env
           make lint
 
-  Unix:
+  Tests:
     needs: Linting
     name: ${{ matrix.os }} / ${{ matrix.python-version }}
     runs-on: ${{ matrix.os }}-latest
     strategy:
       matrix:
-        os: [Ubuntu, MacOS]
+        fail-fast: false
+        os: [Ubuntu, MacOS, Windows]
         python-version: [3.6, 3.7, 3.8]
 
     steps:
       - uses: actions/checkout@v2
+
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Display Python version
+
+      - name: Get full python version
+        id: full-python-version
+        shell: bash
+        run: echo ::set-output name=version::$(python -c "import sys; print('-'.join(str(v) for v in sys.version_info))")
+
+      - name: Install poetry
+        shell: bash
         run: |
-          echo ::set-output name=version::$(python -c "import sys; print('-'.join(str(v) for v in sys.version_info))")
-      - name: Install and set up Poetry
-        run: |
-          curl -fsS -o get-poetry.py https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py
+          curl -fsS -o get-poetry.py https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py
           python get-poetry.py --preview -y
-          source $HOME/.poetry/env
-          poetry config virtualenvs.in-project true
+          echo "::set-env name=PATH::$HOME/.poetry/bin:$PATH"
+
+      - name: Configure poetry
+        shell: bash
+        run: poetry config virtualenvs.in-project true
+
       - name: Set up cache
         uses: actions/cache@v1
         id: cache
         with:
           path: .venv
           key: venv-${{ runner.os }}-${{ steps.full-python-version.outputs.version }}-${{ hashFiles('**/poetry.lock') }}
+
+      - name: Ensure cache is healthy
+        if: steps.cache.outputs.cache-hit == 'true'
+        shell: bash
+        run: poetry run pip --version >/dev/null 2>&1 || rm -rf .venv
+
       - name: Install dependencies
-        run: |
-          source $HOME/.poetry/env
-          make install
+        shell: bash
+        run: make install
+
       - name: Run pytest
-        run: |
-          source $HOME/.poetry/env
-          make test
-
-  Windows:
-    needs: Linting
-    name: Windows / ${{ matrix.python-version }}
-    runs-on: windows-latest
-    strategy:
-      matrix:
-        python-version: [3.6, 3.7, 3.8]
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Display Python version
-      run: |
-        echo ::set-output name=version::$(python -c "import sys; print('-'.join(str(v) for v in sys.version_info))")
-    - name: Install and setup Poetry
-      run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py -O get-poetry.py
-        python get-poetry.py --preview -y
-        $env:Path += ";$env:Userprofile\.poetry\bin"
-        poetry config virtualenvs.in-project true
-    - name: Set up cache
-      uses: actions/cache@v1
-      with:
-        path: .venv
-        key: venv-${{ runner.os }}-${{ steps.full-python-version.outputs.version }}-${{ hashFiles('**/poetry.lock') }}
-    - name: Install dependencies
-      run: |
-        $env:Path += ";$env:Userprofile\.poetry\bin"
-        make install
-    - name: Run pytest
-      run: |
-        $env:Path += ";$env:Userprofile\.poetry\bin"
-        make test
+        shell: bash
+        run: make test
