@@ -11,11 +11,6 @@ repos:
       - id: check-merge-conflict
       - id: check-json
         exclude: "^{{cookiecutter.project_slug}}/"
--   repo: https://gitlab.com/smop/pre-commit-hooks
-    rev: v1.0.0
-    hooks:
-      - id: check-poetry
-        exclude: "^{{cookiecutter.project_slug}}/"
 -   repo: https://github.com/asottile/seed-isort-config
     rev: v2.1.1
     hooks:
