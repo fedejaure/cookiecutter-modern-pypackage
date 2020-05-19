@@ -4,12 +4,26 @@ on: [push, pull_request]
 
 jobs:
 
+  Linting:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: Linting
+        run: |
+          pip install pre-commit
+          pre-commit run --all-files
+
   Tests:
     name: ${{ matrix.os }} / ${{ matrix.python-version }}
     runs-on: ${{ matrix.os }}-latest
     strategy:
       matrix:
-        os: [Ubuntu, MacOS, Windows]
+        os: [Ubuntu]
         python-version: [3.6, 3.7, 3.8]
       fail-fast: false
 
@@ -49,11 +63,6 @@ jobs:
         shell: bash
         run: poetry install
 
-      - name: Linting
-        shell: bash
-        run: poetry run pre-commit run --all-files
-
       - name: Run pytest
-        if: ${{ success() && !startsWith(matrix.os, 'windows') }}
         shell: bash
         run: poetry run py.test --verbose tests
