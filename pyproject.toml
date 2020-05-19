@@ -9,7 +9,6 @@ license = "MIT"
 python = "^3.6.1"
 
 [tool.poetry.dev-dependencies]
-pre-commit = "^2.4.0"
 pytest = "^5.4.2"
 flake8 = "3.7.9"
 flakehell = "^0.3.3"
