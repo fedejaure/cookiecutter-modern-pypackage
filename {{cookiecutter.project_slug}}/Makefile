@@ -28,6 +28,7 @@ lint:
 	@poetry run flakehell lint {{ cookiecutter.project_slug }} tests
 	@poetry run isort -rc --check-only {{ cookiecutter.project_slug }} tests
 	@poetry run black --check {{ cookiecutter.project_slug }} tests
+	@poetry export --dev --format=requirements.txt --without-hashes | poetry run safety check --stdin
 
 tests:
 	poetry run py.test --verbose tests

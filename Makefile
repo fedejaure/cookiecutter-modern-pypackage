@@ -45,6 +45,7 @@ lint:
 	@poetry run flakehell lint tests
 	@poetry run isort -rc --check-only tests
 	@poetry run black --check tests
+	@poetry export --dev --format=requirements.txt --without-hashes | poetry run safety check --stdin
 
 tests:
 	poetry run py.test --verbose tests
