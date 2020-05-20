@@ -31,20 +31,20 @@ replay: BAKE_OPTIONS=--replay
 replay: watch
 	;
 
-lint:
-	@poetry run flakehell lint tests
-	@poetry run isort -rc --check-only tests
-	@poetry run black --check tests
-
-fmt:
-	@poetry run isort -rc tests
-	@poetry run black tests
-
-test:
-	poetry run py.test --verbose tests
-
 install: clean
 	poetry install
 
 hooks:
 	poetry run pre-commit install
+
+fmt:
+	@poetry run isort -rc tests
+	@poetry run black tests
+
+lint:
+	@poetry run flakehell lint tests
+	@poetry run isort -rc --check-only tests
+	@poetry run black --check tests
+
+test:
+	poetry run py.test --verbose tests
