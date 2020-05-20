@@ -38,13 +38,13 @@ hooks:
 	poetry run pre-commit install
 
 fmt:
-	@poetry run isort -rc tests
-	@poetry run black tests
+	@poetry run isort -rc tests hooks
+	@poetry run black tests hooks
 
 lint:
-	@poetry run flakehell lint tests
-	@poetry run isort -rc --check-only tests
-	@poetry run black --check tests
+	@poetry run flakehell lint tests hooks
+	@poetry run isort -rc --check-only tests hooks
+	@poetry run black --check tests hooks
 	@poetry export --dev --format=requirements.txt --without-hashes | poetry run safety check --stdin
 
 tests:
