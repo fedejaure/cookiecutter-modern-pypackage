@@ -44,7 +44,7 @@ directory = "htmlcov"
 
 [tool.flakehell]
 format = "grouped"
-max_line_length = 120
+max_line_length = 99
 show_source = true
 
 [tool.flakehell.plugins]
@@ -58,11 +58,11 @@ multi_line_output = 3
 include_trailing_comma = true
 force_grid_wrap = 0
 use_parentheses = true
-line_length = 120
+line_length = 99
 known_third_party = []
 
 [tool.black]
-line-length = 120
+line-length = 99
 target-version = ["py36"]
 
 [build-system]

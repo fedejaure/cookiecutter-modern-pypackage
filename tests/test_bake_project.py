@@ -1,3 +1,4 @@
+"""Tests for `cookiecutter-modern-pypackage` package."""
 import datetime
 import os
 import shlex
@@ -64,7 +65,9 @@ def test_bake_with_defaults(cookies):
 
 
 def test_bake_not_open_source(cookies):
-    with bake_in_temp_dir(cookies, extra_context={"open_source_license": "Not open source"}) as result:
+    with bake_in_temp_dir(
+        cookies, extra_context={"open_source_license": "Not open source"}
+    ) as result:
         found_toplevel_files = [f.basename for f in result.project.listdir()]
         assert "LICENSE" not in found_toplevel_files
         assert "License" not in result.project.join("README.md").read()
