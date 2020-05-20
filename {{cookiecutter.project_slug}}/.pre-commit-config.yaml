@@ -7,10 +7,6 @@ repos:
       - id: debug-statements
       - id: check-merge-conflict
       - id: check-json
--   repo: https://gitlab.com/smop/pre-commit-hooks
-    rev: v1.0.0
-    hooks:
-    - id: check-poetry
 -   repo: https://github.com/asottile/seed-isort-config
     rev: v2.1.1
     hooks:
@@ -25,9 +21,19 @@ repos:
       - id: black
 -   repo: local
     hooks:
-    -   id: flakehell
-        name: flakehell
-        entry: poetry run flakehell
-        args: [lint]
-        language: system
-        types: [python]
+      -   id: flakehell
+          name: flakehell
+          description: "`Flakehell` it's a Flake8 wrapper to make it cools."
+          entry: flakehell
+          args: [lint]
+          language: python
+          types: [python]
+          require_serial: true
+          additional_dependencies: [
+            'flake8>=3.7.9',
+            'flakehell>=0.3.3',
+            'flake8-builtins>=1.5.3',
+            'flake8-blind-except>=0.1.1',
+            'flake8-logging-format>=0.6.0',
+            'flake8-bugbear>=20.1.4'
+          ]

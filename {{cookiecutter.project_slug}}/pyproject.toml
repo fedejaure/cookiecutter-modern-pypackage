@@ -1,3 +1,10 @@
+{% set license_classifiers = {
+    'MIT': 'License :: OSI Approved :: MIT License',
+    'BSD': 'License :: OSI Approved :: BSD License',
+    'ISC': 'License :: OSI Approved :: ISC License (ISCL)',
+    'Apache Software License 2.0': 'License :: OSI Approved :: Apache Software License',
+    'GNU General Public License v3': 'License :: OSI Approved :: GNU General Public License v3 (GPLv3)'
+} %}
 [tool.poetry]
 name = "{{ cookiecutter.project_name | slugify }}"
 version = "{{ cookiecutter.version }}"
@@ -6,12 +13,27 @@ authors = ["{{ cookiecutter.full_name }} <{{ cookiecutter.email }}>"]
 {% if cookiecutter.open_source_license == "Not open source" %}
 license = "{{ cookiecutter.open_source_license }}"
 {% endif %}
+readme = "README.md"
+homepage = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
+repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
+keywords = ["{{ cookiecutter.project_slug }}"]
+classifiers=[
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    {% if cookiecutter.open_source_license in license_classifiers %}
+    "{{ license_classifiers[cookiecutter.open_source_license] }}",
+    {% endif %}
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+]
 
 [tool.poetry.dependencies]
-python = "^3.6.1"
+python = "^3.6"
 
 [tool.poetry.dev-dependencies]
-pre-commit = "^2.4.0"
 pytest = "^5.4.2"
 coverage = {version = "^5.1", extras = ["toml"]}
 pytest-cov = "^2.8.1"
@@ -20,13 +42,16 @@ flakehell = "^0.3.3"
 flake8-builtins = "^1.5.3"
 flake8-blind-except = "^0.1.1"
 flake8-logging-format = "^0.6.0"
+flake8-bugbear = "^20.1.4"
 isort = "^4.3.21"
 black = "^19.10b0"
+safety = "^1.9.0"
 
 [tool.coverage.run]
 branch = true
 
 [tool.coverage.report]
+fail_under = 100
 exclude_lines = [
   "pragma: no cover",
   "def __repr__",
@@ -44,7 +69,7 @@ directory = "htmlcov"
 
 [tool.flakehell]
 format = "grouped"
-max_line_length = 120
+max_line_length = 99
 show_source = true
 
 [tool.flakehell.plugins]
@@ -58,11 +83,11 @@ multi_line_output = 3
 include_trailing_comma = true
 force_grid_wrap = 0
 use_parentheses = true
-line_length = 120
+line_length = 99
 known_third_party = []
 
 [tool.black]
-line-length = 120
+line-length = 99
 target-version = ["py36"]
 
 [build-system]
