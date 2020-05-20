@@ -81,7 +81,7 @@ def test_bake_and_run_tests(cookies):
     with bake_in_temp_dir(cookies) as result:
         assert result.project.isdir()
         assert run_inside_dir("make install", str(result.project)) == 0
-        assert run_inside_dir("make test", str(result.project)) == 0
+        assert run_inside_dir("make tests", str(result.project)) == 0
 
 
 def test_bake_and_run_coverage(cookies):

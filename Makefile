@@ -1,4 +1,4 @@
-.PHONY: hooks
+.PHONY: tests hooks
 
 BAKE_OPTIONS=--no-input
 
@@ -46,5 +46,5 @@ lint:
 	@poetry run isort -rc --check-only tests
 	@poetry run black --check tests
 
-test:
+tests:
 	poetry run py.test --verbose tests

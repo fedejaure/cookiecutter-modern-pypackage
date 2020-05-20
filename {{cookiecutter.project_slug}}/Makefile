@@ -1,4 +1,4 @@
-.PHONY: hooks
+.PHONY: tests hooks
 
 clean: clean-pyc clean-test
 
@@ -29,7 +29,7 @@ lint:
 	@poetry run isort -rc --check-only {{ cookiecutter.project_slug }} tests
 	@poetry run black --check {{ cookiecutter.project_slug }} tests
 
-test:
+tests:
 	poetry run py.test --verbose tests
 
 coverage:
