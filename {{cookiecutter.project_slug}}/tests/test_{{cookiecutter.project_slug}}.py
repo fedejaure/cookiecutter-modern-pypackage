@@ -8,9 +8,7 @@ import {{ cookiecutter.project_slug }}
 
 @pytest.fixture
 def version() -> Iterator[str]:
-    """Sample pytest fixture.
-    See more at: http://doc.pytest.org/en/latest/fixture.html
-    """
+    """Sample pytest fixture."""
     yield modern_python_boilerplate.__version__
 
 

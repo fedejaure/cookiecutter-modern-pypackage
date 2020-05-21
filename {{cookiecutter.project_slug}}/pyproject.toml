@@ -44,6 +44,7 @@ flake8-blind-except = "^0.1.1"
 flake8-logging-format = "^0.6.0"
 flake8-bugbear = "^20.1.4"
 flake8-annotations = "^2.1.0"
+flake8-docstrings = "^1.5.0"
 isort = "^4.3.21"
 black = "^19.10b0"
 safety = "^1.9.0"
@@ -79,6 +80,8 @@ pyflakes = ["+*"]
 pycodestyle = ["+*"]
 mccabe = ["+*"]
 "flake8-*" = ["+*"]
+darglint = ["+*"]
+docstring-convention = "google"
 
 [tool.isort]
 multi_line_output = 3
