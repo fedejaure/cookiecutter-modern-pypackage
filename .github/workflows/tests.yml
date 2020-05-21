@@ -65,4 +65,4 @@ jobs:
 
       - name: Run pytest
         shell: bash
-        run: poetry run py.test --verbose tests
+        run: poetry run pytest --verbose tests

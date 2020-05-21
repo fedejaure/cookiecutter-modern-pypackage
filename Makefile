@@ -47,5 +47,8 @@ lint:
 	@poetry run black --check tests hooks
 	@poetry export --dev --format=requirements.txt --without-hashes | poetry run safety check --stdin
 
+mypy:
+	@poetry run mypy tests hooks
+
 tests:
-	poetry run py.test --verbose tests
+	poetry run pytest --verbose tests
