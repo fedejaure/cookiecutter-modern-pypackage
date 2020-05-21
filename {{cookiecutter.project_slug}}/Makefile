@@ -31,7 +31,7 @@ lint:
 	@poetry export --dev --format=requirements.txt --without-hashes | poetry run safety check --stdin
 
 tests:
-	poetry run py.test --verbose tests
+	poetry run pytest --verbose tests
 
 coverage:
-	poetry run py.test --verbose --cov-report term --cov-report html --cov={{ cookiecutter.project_slug }} tests
+	poetry run pytest --verbose --cov-report term --cov-report html --cov={{ cookiecutter.project_slug }} tests
