@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 # Cookiecutter
-python_boilerplate/
+modern_python_boilerplate/
