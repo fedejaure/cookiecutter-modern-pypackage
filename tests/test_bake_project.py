@@ -80,6 +80,13 @@ def test_bake_and_run_lints(cookies):
         assert run_inside_dir("make lint", str(result.project)) == 0
 
 
+def test_bake_and_run_mypy(cookies):
+    with bake_in_temp_dir(cookies) as result:
+        assert result.project.isdir()
+        assert run_inside_dir("make install", str(result.project)) == 0
+        assert run_inside_dir("make mypy", str(result.project)) == 0
+
+
 def test_bake_and_run_tests(cookies):
     with bake_in_temp_dir(cookies) as result:
         assert result.project.isdir()

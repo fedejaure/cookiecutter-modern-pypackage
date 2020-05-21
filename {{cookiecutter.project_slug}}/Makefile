@@ -30,6 +30,9 @@ lint:
 	@poetry run black --check {{ cookiecutter.project_slug }} tests
 	@poetry export --dev --format=requirements.txt --without-hashes | poetry run safety check --stdin
 
+mypy:
+	@poetry run mypy {{ cookiecutter.project_slug }} tests
+
 tests:
 	poetry run pytest --verbose tests
 
