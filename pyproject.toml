@@ -25,7 +25,7 @@ classifiers=[
 ]
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.6.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.4.2"
@@ -35,6 +35,7 @@ flake8-builtins = "^1.5.3"
 flake8-blind-except = "^0.1.1"
 flake8-logging-format = "^0.6.0"
 flake8-bugbear = "^20.1.4"
+flake8-annotations = "^2.1.0"
 isort = "^4.3.21"
 black = "^19.10b0"
 cookiecutter = "^1.7.2"
@@ -60,7 +61,7 @@ include_trailing_comma = true
 force_grid_wrap = 0
 use_parentheses = true
 line_length = 99
-known_third_party = ["cookiecutter"]
+known_third_party = ["cookiecutter", "pytest_cookies"]
 
 [tool.black]
 line-length = 99
