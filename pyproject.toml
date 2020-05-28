@@ -45,6 +45,7 @@ pytest-cookies = "^0.5.1"
 watchdog = {version = "^0.10.2", extras = ["watchmedo"]}
 safety = "^1.9.0"
 mypy = "^0.770"
+sphinx = "^3.0.3"
 
 [tool.flakehell]
 format = "grouped"
