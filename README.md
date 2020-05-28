@@ -1,5 +1,7 @@
 # Cookiecutter Modern PyPackage
 
+![Tests](https://github.com/fedejaure/cookiecutter-modern-pypackage/workflows/Tests/badge.svg)
+
 [Cookiecutter][cookiecutter] template for a modern Python package.
 
 * GitHub repo: https://github.com/fedejaure/cookiecutter-modern-pypackage.git
