@@ -38,17 +38,17 @@ hooks:
 	poetry run pre-commit install
 
 fmt:
-	@poetry run isort -rc tests hooks
-	@poetry run black tests hooks
+	@poetry run isort -rc tests hooks docs/conf.py
+	@poetry run black tests hooks docs/conf.py
 
 lint:
-	@poetry run flakehell lint tests hooks
-	@poetry run isort -rc --check-only tests hooks
-	@poetry run black --check tests hooks
+	@poetry run flakehell lint tests hooks docs/conf.py
+	@poetry run isort -rc --check-only tests hooks docs/conf.py
+	@poetry run black --check tests hooks docs/conf.py
 	@poetry export --dev --format=requirements.txt --without-hashes | poetry run safety check --stdin
 
 mypy:
-	@poetry run mypy tests hooks
+	@poetry run mypy tests hooks docs/conf.py
 
 tests:
 	poetry run pytest --verbose tests
