@@ -6,11 +6,14 @@
 Welcome to cookiecutter-modern-pypackage's documentation!
 =========================================================
 
+Getting Started
+---------------
+
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
-
+   readme
+   tutorial
 
 Indices and tables
 ==================
