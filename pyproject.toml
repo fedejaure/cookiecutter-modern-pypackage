@@ -28,6 +28,7 @@ classifiers=[
 python = "^3.6.1"
 
 [tool.poetry.dev-dependencies]
+invoke = "^1.4.1"
 pytest = "^5.4.2"
 flake8 = "3.7.9"
 flakehell = "^0.3.3"
