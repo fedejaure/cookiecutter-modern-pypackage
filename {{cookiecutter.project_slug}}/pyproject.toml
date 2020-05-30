@@ -34,6 +34,7 @@ classifiers=[
 python = "^3.6.1"
 
 [tool.poetry.dev-dependencies]
+invoke = "^1.4.1"
 pytest = "^5.4.2"
 coverage = {version = "^5.1", extras = ["toml"]}
 pytest-cov = "^2.8.1"
@@ -44,10 +45,14 @@ flake8-blind-except = "^0.1.1"
 flake8-logging-format = "^0.6.0"
 flake8-bugbear = "^20.1.4"
 flake8-annotations = "^2.1.0"
+flake8-docstrings = "^1.5.0"
 isort = "^4.3.21"
 black = "^19.10b0"
 safety = "^1.9.0"
 mypy = "^0.770"
+sphinx = "^3.0.3"
+sphinx-autodoc-typehints = "^1.10.3"
+recommonmark = "^0.6.0"
 
 [tool.coverage.run]
 branch = true
@@ -79,6 +84,8 @@ pyflakes = ["+*"]
 pycodestyle = ["+*"]
 mccabe = ["+*"]
 "flake8-*" = ["+*"]
+darglint = ["+*"]
+docstring-convention = "google"
 
 [tool.isort]
 multi_line_output = 3
@@ -86,7 +93,7 @@ include_trailing_comma = true
 force_grid_wrap = 0
 use_parentheses = true
 line_length = 99
-known_third_party = []
+known_third_party = ["invoke"]
 
 [tool.black]
 line-length = 99
