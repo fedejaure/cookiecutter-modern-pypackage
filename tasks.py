@@ -22,6 +22,7 @@ PYTHON_TARGETS = [
     TEST_DIR,
     ROOT_DIR.joinpath("hooks"),
     DOCS_DIR.joinpath("conf.py"),
+    ROOT_DIR.joinpath("noxfile.py"),
     Path(__file__),
 ]
 PYTHON_TARGETS_STR = " ".join([str(p) for p in PYTHON_TARGETS])
