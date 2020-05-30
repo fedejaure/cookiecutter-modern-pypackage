@@ -23,7 +23,6 @@ TEST_DIR = ROOT_DIR.joinpath("tests")
 PYTHON_TARGETS = [
     SOURCE_DIR,
     TEST_DIR,
-    DOCS_DIR.joinpath("conf.py"),
     Path(__file__),
 ]
 PYTHON_TARGETS_STR = " ".join([str(p) for p in PYTHON_TARGETS])
