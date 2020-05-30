@@ -63,3 +63,17 @@ def clean_docs(c):
 def clean(c):
     # type: (Context) -> None
     """Run all clean sub-tasks."""
+
+
+@task()
+def install_hooks(c):
+    # type: (Context) -> None
+    """Install pre-commit hooks."""
+    _run(c, "poetry run pre-commit install")
+
+
+@task()
+def hooks(c):
+    # type: (Context) -> None
+    """Install pre-commit hooks."""
+    _run(c, "poetry run pre-commit run --all-files")
