@@ -5,6 +5,7 @@ Execute 'invoke --list' for guidance on using Invoke
 """
 import platform
 from pathlib import Path
+import webbrowser
 
 from invoke import call, task
 from invoke.context import Context
@@ -15,6 +16,7 @@ DOCS_DIR = ROOT_DIR.joinpath("docs")
 DOCS_BUILD_DIR = DOCS_DIR.joinpath("_build")
 COVERAGE_FILE = ROOT_DIR.joinpath(".coverage")
 COVERAGE_DIR = ROOT_DIR.joinpath("htmlcov")
+COVERAGE_REPORT = COVERAGE_DIR.joinpath("index.html")
 SOURCE_DIR = ROOT_DIR.joinpath("{{ cookiecutter.project_slug }}")
 TEST_DIR = ROOT_DIR.joinpath("tests")
 PYTHON_TARGETS = [
@@ -134,3 +136,18 @@ def tests(c):
     # type: (Context) -> None
     """Run tests."""
     _run(c, f"poetry run pytest {TEST_DIR}")
+
+
+@task(help={"html": "Build a local html report", "publish": "Publish the result via coveralls"})
+def coverage(c, html=False, publish=False):
+    # type: (Context, bool, bool) -> None
+    """Create coverage report."""
+    cov_options = ["--cov-report term", f"--cov={SOURCE_DIR}"]
+    if html:
+        cov_options.append("--cov-report html")
+    _run(c, f"poetry run pytest {' '.join(cov_options)} {TEST_DIR}")
+    if publish:
+        # TODO
+        pass
+    elif html:
+        webbrowser.open(COVERAGE_REPORT.as_uri())
