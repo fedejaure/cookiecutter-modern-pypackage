@@ -5,6 +5,8 @@ from typing import Any
 import nox
 from nox.sessions import Session
 
+nox.options.sessions = ["tests"]
+
 
 def install_with_constraints(session: Session, *args: str, **kwargs: Any) -> None:
     """Install packages constrained by Poetry's lock file.
