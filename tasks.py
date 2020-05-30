@@ -30,6 +30,31 @@ def _run(c: Context, command: str) -> Result:
 
 
 @task()
+def bake(c, replay=False):
+    # type: (Context, bool) -> None
+    """Bake the cookie."""
+    bake_options = (
+        ["--replay", "--overwrite-if-exists"]
+        if replay
+        else ["--no-input", "--overwrite-if-exists"]
+    )
+    _run(c, f"poetry run cookiecutter {' '.join(bake_options)} .")
+
+
+@task()
+def watch(c, replay=False):
+    # type: (Context, bool) -> None
+    """Bake and watch for changes."""
+    bake(c, replay=replay)
+    _run(
+        c,
+        f"poetry run watchmedo shell-command -p '*.*' "
+        f"-c 'inv bake {'--replay' if replay else ''}' "
+        "-W -R -D {{cookiecutter.project_slug}}",
+    )
+
+
+@task()
 def clean_build(c):
     # type: (Context) -> None
     """Clean up files from package building."""

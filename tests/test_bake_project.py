@@ -95,29 +95,29 @@ def test_bake_and_run_lints(cookies: Cookies) -> None:
     """Test bake the project and check the code style."""
     with bake_in_temp_dir(cookies) as result:
         assert result.project.isdir()
-        assert run_inside_dir("make install", str(result.project)) == 0
-        assert run_inside_dir("make lint", str(result.project)) == 0
+        assert run_inside_dir("poetry install", str(result.project)) == 0
+        assert run_inside_dir("poetry run inv lint", str(result.project)) == 0
 
 
 def test_bake_and_run_mypy(cookies: Cookies) -> None:
     """Test bake the project and statically check types."""
     with bake_in_temp_dir(cookies) as result:
         assert result.project.isdir()
-        assert run_inside_dir("make install", str(result.project)) == 0
-        assert run_inside_dir("make mypy", str(result.project)) == 0
+        assert run_inside_dir("poetry install", str(result.project)) == 0
+        assert run_inside_dir("poetry run inv mypy", str(result.project)) == 0
 
 
 def test_bake_and_run_tests(cookies: Cookies) -> None:
     """Test bake the project and run the tests."""
     with bake_in_temp_dir(cookies) as result:
         assert result.project.isdir()
-        assert run_inside_dir("make install", str(result.project)) == 0
-        assert run_inside_dir("make tests", str(result.project)) == 0
+        assert run_inside_dir("poetry install", str(result.project)) == 0
+        assert run_inside_dir("poetry run inv tests", str(result.project)) == 0
 
 
 def test_bake_and_run_coverage(cookies: Cookies) -> None:
     """Test bake the project and run the tests with coverage."""
     with bake_in_temp_dir(cookies) as result:
         assert result.project.isdir()
-        assert run_inside_dir("make install", str(result.project)) == 0
-        assert run_inside_dir("make coverage", str(result.project)) == 0
+        assert run_inside_dir("poetry install", str(result.project)) == 0
+        assert run_inside_dir("poetry run inv coverage", str(result.project)) == 0
