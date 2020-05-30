@@ -41,6 +41,7 @@ Then:
 * Install pre-commit hooks. (`poetry run inv install_hooks`)
 
 [cookiecutter]: https://github.com/cookiecutter/cookiecutter
+[poetry]: https://python-poetry.org/
 [pytest]: https://github.com/pytest-dev/pytest
 [github actions]: https://github.com/features/actions
 [flake8]: https://gitlab.com/pycqa/flake8
