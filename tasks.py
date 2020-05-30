@@ -4,6 +4,7 @@ Tasks for maintaining the project.
 Execute 'invoke --list' for guidance on using Invoke
 """
 import platform
+import webbrowser
 from pathlib import Path
 
 from invoke import call, task
@@ -13,6 +14,7 @@ from invoke.runners import Result
 ROOT_DIR = Path(__file__).parent
 DOCS_DIR = ROOT_DIR.joinpath("docs")
 DOCS_BUILD_DIR = DOCS_DIR.joinpath("_build")
+DOCS_INDEX = DOCS_BUILD_DIR.joinpath("index.html")
 COVERAGE_FILE = ROOT_DIR.joinpath(".coverage")
 COVERAGE_DIR = ROOT_DIR.joinpath("htmlcov")
 TEST_DIR = ROOT_DIR.joinpath("tests")
@@ -158,3 +160,12 @@ def tests(c):
     # type: (Context) -> None
     """Run tests."""
     _run(c, f"poetry run pytest {TEST_DIR}")
+
+
+@task()
+def docs(c, open_browser=False):
+    # type: (Context, bool) -> None
+    """Build documentation."""
+    _run(c, f"sphinx-build -b html {DOCS_DIR} {DOCS_BUILD_DIR}")
+    if open_browser:
+        webbrowser.open(DOCS_INDEX.absolute().as_uri())

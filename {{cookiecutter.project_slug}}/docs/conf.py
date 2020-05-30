@@ -6,20 +6,34 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 
+# If extensions (or modules to document with autodoc) are in another
+# directory, add these directories to sys.path here. If the directory is
+# relative to the documentation root, use os.path.abspath to make it
+# absolute, like shown here.
+#
+
+# fmt: off
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath('..'))
+import {{ cookiecutter.project_slug }}  # noqa: E402  # skip: isort
+# fmt: on
+
 # -- Project information -----------------------------------------------------
 
-project = "cookiecutter-modern-pypackage"
-copyright = "2020, Federico Jaureguialzo"  # noqa: A001
-author = "Federico Jaureguialzo"
-
-# The version info for the project you're documenting, acts as replacement for
-# |version| and |release|, also used in various other places throughout the
-# built documents.
+# General information about the project.
+project = '{{ cookiecutter.project_name }}'
+copyright = "{% now 'local', '%Y' %}, {{ cookiecutter.full_name }}"  # noqa: A001
+author = "{{ cookiecutter.full_name }}"
+# The version info for the project you're documenting, acts as replacement
+# for |version| and |release|, also used in various other places throughout
+# the built documents.
 #
 # The short X.Y version.
-version = "0.1.0"
+version = {{ cookiecutter.project_slug }}.__version__
 # The full version, including alpha/beta/rc tags.
-release = "0.1.0"
+release = {{ cookiecutter.project_slug }}.__version__
 
 # -- General configuration ---------------------------------------------------
 
