@@ -6,7 +6,7 @@ Execute 'invoke --list' for guidance on using Invoke
 import platform
 from pathlib import Path
 
-from invoke import task
+from invoke import call, task
 from invoke.context import Context
 from invoke.runners import Result
 
@@ -15,6 +15,14 @@ DOCS_DIR = ROOT_DIR.joinpath("docs")
 DOCS_BUILD_DIR = DOCS_DIR.joinpath("_build")
 COVERAGE_FILE = ROOT_DIR.joinpath(".coverage")
 COVERAGE_DIR = ROOT_DIR.joinpath("htmlcov")
+TEST_DIR = ROOT_DIR.joinpath("tests")
+PYTHON_TARGETS = [
+    TEST_DIR,
+    ROOT_DIR.joinpath("hooks"),
+    DOCS_DIR.joinpath("conf.py"),
+    Path(__file__),
+]
+PYTHON_TARGETS_STR = " ".join([str(p) for p in PYTHON_TARGETS])
 
 
 def _run(c: Context, command: str) -> Result:
@@ -56,7 +64,7 @@ def clean_tests(c):
 def clean_docs(c):
     # type: (Context) -> None
     """Clean up files from documentation builds."""
-    _run(c, "rm -fr {}".format(DOCS_BUILD_DIR))
+    _run(c, f"rm -fr {DOCS_BUILD_DIR}")
 
 
 @task(pre=[clean_build, clean_python, clean_tests, clean_docs])
@@ -75,5 +83,53 @@ def install_hooks(c):
 @task()
 def hooks(c):
     # type: (Context) -> None
-    """Install pre-commit hooks."""
+    """Run pre-commit hooks."""
     _run(c, "poetry run pre-commit run --all-files")
+
+
+@task(aliases=["format"], help={"check": "Checks if source is formatted without applying changes"})
+def fmt(c, check=False):
+    # type: (Context, bool) -> None
+    """Format code."""
+    isort_options = ["--recursive", "--check-only", "--diff"] if check else ["--recursive"]
+    _run(c, f"poetry run isort {' '.join(isort_options)} {PYTHON_TARGETS_STR}")
+    black_options = ["--quiet", "--check"] if check else ["--quiet"]
+    _run(c, f"poetry run black {' '.join(black_options)} {PYTHON_TARGETS_STR}")
+
+
+@task()
+def flake8(c):
+    # type: (Context) -> None
+    """Run flake8."""
+    _run(c, f"poetry run flakehell lint {PYTHON_TARGETS_STR}")
+
+
+@task()
+def safety(c):
+    # type: (Context) -> None
+    """Run safety."""
+    _run(
+        c,
+        "poetry export --dev --format=requirements.txt --without-hashes | "
+        "poetry run safety check --stdin --bare",
+    )
+
+
+@task(pre=[flake8, safety, call(fmt, check=True)])
+def lint(c):
+    # type: (Context) -> None
+    """Run all linting."""
+
+
+@task()
+def mypy(c):
+    # type: (Context) -> None
+    """Run mypy."""
+    _run(c, f"poetry run mypy {PYTHON_TARGETS_STR}")
+
+
+@task()
+def tests(c):
+    # type: (Context) -> None
+    """Run tests."""
+    _run(c, f"poetry run pytest {TEST_DIR}")
