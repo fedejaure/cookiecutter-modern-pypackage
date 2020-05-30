@@ -36,36 +36,13 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Get full python version
-        id: full-python-version
-        shell: bash
-        run: echo ::set-output name=version::$(python -c "import sys; print('-'.join(str(v) for v in sys.version_info))")
-
-      - name: Install poetry
+      - name: Install system deps
         shell: bash
         run: |
-          curl -fsS -o get-poetry.py https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py
-          python get-poetry.py --preview -y
-          echo "::set-env name=PATH::$HOME/.poetry/bin:$PATH"
-          source $HOME/.poetry/env
-          poetry config virtualenvs.in-project true
+          pip install nox
+          pip install poetry
 
-      - name: Set up cache
-        uses: actions/cache@v1
-        id: cache
-        with:
-          path: .venv
-          key: ${{ runner.os }}-venv-${{ steps.full-python-version.outputs.version }}-${{ hashFiles('**/poetry.lock') }}
-
-      - name: Install dependencies
+      - name: Run tests with nox
         shell: bash
-        run: |
-          source $HOME/.poetry/env
-          poetry install
-
-      - name: Run pytest
-        shell: bash
-        run: |
-          source $HOME/.poetry/env
-          poetry run inv tests
+        run: nox -s tests-${{ matrix.python-version }}
 {% endraw %}
