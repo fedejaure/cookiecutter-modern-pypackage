@@ -21,6 +21,7 @@
 * All development tasks (lint, format, test, etc) wrapped up in a python CLI by [invoke][invoke]
 * Automating testing in multiple Python environments with [Nox][nox]
 * [Sphinx][sphinx] docs: Documentation ready for generation with, for example, [Read the Docs][rtd]
+* Command line interface using [Click][click] (optional)
 
 ## Quickstart
 
@@ -66,3 +67,4 @@ For more details, see the [tutorial][tutorial].
 [nox]: https://nox.thea.codes/en/stable/
 [tutorial]: https://cookiecutter-modern-pypackage.readthedocs.io/en/latest/tutorial.html
 [pyup]: https://pyup.io/
+[click]: http://click.pocoo.org/
