@@ -18,18 +18,18 @@ Getting Started
 Basics
 ------
 
- .. toctree::
-    :maxdepth: 2
+.. toctree::
+  :maxdepth: 2
 
-    prompts
+  prompts
 
 Advanced Features
 -----------------
 
-  .. toctree::
-     :maxdepth: 2
+.. toctree::
+   :maxdepth: 2
 
-     console_script_setup
+   console_script_setup
 
 Indices and tables
 ==================
