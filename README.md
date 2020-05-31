@@ -19,6 +19,8 @@
 * Checks dependencies for known security vulnerabilities with [Safety][safety]
 * [pre-commit][pre-commit] hooks.
 * All development tasks (lint, format, test, etc) wrapped up in a python CLI by [invoke][invoke]
+* Automating testing in multiple Python environments with [Nox][nox]
+* [Sphinx][sphinx] docs: Documentation ready for generation with, for example, [Read the Docs][rtd]
 
 ## Quickstart
 
@@ -39,6 +41,11 @@ Then:
 * Create a repo and put it there.
 * Install the dev requirements into a virtualenv. (`poetry install`)
 * Install pre-commit hooks. (`poetry run inv install_hooks`)
+* Add the repo to your [Read the Docs][rtd] account + turn on the Read the Docs service hook.
+* Release your package by pushing a new tag to master.
+* Activate your project on [pyup.io][pyup].
+
+For more details, see the [tutorial][tutorial].
 
 [cookiecutter]: https://github.com/cookiecutter/cookiecutter
 [poetry]: https://python-poetry.org/
@@ -54,3 +61,8 @@ Then:
 [safety]: https://github.com/pyupio/safety
 [google styleguide]: https://google.github.io/styleguide/pyguide.html
 [invoke]: https://www.pyinvoke.org/
+[sphinx]: https://www.sphinx-doc.org/en/master/
+[rtd]: https://readthedocs.org/
+[nox]: https://nox.thea.codes/en/stable/
+[tutorial]: https://cookiecutter-modern-pypackage.readthedocs.io/en/latest/tutorial.html
+[pyup]: https://pyup.io/
