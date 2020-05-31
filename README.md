@@ -10,7 +10,7 @@
 ## Features
 
 * Dependency tracking using [poetry][poetry]
-* Testing setup [pytest][pytest]
+* Testing setup with [pytest][pytest]
 * [Github Actions][github actions] ready for Continuous Integration testing
 * Linting provided by [flake8][flake8] with [flakehell][flakehell]
 * Docstring linting provided by [Darglint][darglint] using the [Google Python Style Guide][google styleguide]
