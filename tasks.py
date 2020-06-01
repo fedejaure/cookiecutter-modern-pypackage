@@ -115,7 +115,7 @@ def hooks(c):
     _run(c, "poetry run pre-commit run --all-files")
 
 
-@task(aliases=["format"], help={"check": "Checks if source is formatted without applying changes"})
+@task(name="format", help={"check": "Checks if source is formatted without applying changes"})
 def fmt(c, check=False):
     # type: (Context, bool) -> None
     """Format code."""
