@@ -7,6 +7,7 @@
 [Cookiecutter][cookiecutter] template for a modern Python package.
 
 * GitHub repo: <https://github.com/fedejaure/cookiecutter-modern-pypackage.git>
+* Documentation: <https://cookiecutter-modern-pypackage.readthedocs.io>
 * Free software: MIT license
 
 ## Features

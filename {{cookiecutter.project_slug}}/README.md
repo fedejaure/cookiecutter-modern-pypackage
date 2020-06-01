@@ -12,8 +12,8 @@
 {{ cookiecutter.project_short_description }}
 
 {% if is_open_source %}
-* GitHub repo: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug|replace('_', '-') }}.git
-* Documentation: https://{{ cookiecutter.project_slug|replace('_', '-') }}.readthedocs.io.
+* GitHub repo: <https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug|replace('_', '-') }}.git>
+* Documentation: <https://{{ cookiecutter.project_slug|replace('_', '-') }}.readthedocs.io>
 * Free software: {{ cookiecutter.open_source_license }}
 {% endif %}
 
