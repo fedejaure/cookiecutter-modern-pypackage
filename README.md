@@ -1,6 +1,8 @@
 # Cookiecutter Modern PyPackage
 
 [![tests](https://github.com/fedejaure/cookiecutter-modern-pypackage/workflows/tests/badge.svg)](https://github.com/fedejaure/cookiecutter-modern-pypackage/actions?workflow=tests)
+[![Read the Docs](https://readthedocs.org/projects/cookiecutter-modern-pypackage/badge/)](https://cookiecutter-modern-pypackage.readthedocs.io/)
+[![Updates](https://pyup.io/repos/github/fedejaure/cookiecutter-modern-pypackage/shield.svg)](https://pyup.io/repos/github/fedejaure/cookiecutter-modern-pypackage/)
 
 [Cookiecutter][cookiecutter] template for a modern Python package.
 
