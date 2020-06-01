@@ -115,8 +115,8 @@ def hooks(c):
     _run(c, "poetry run pre-commit run --all-files")
 
 
-@task(aliases=["format"], help={"check": "Checks if source is formatted without applying changes"})
-def fmt(c, check=False):
+@task(name="format", help={"check": "Checks if source is formatted without applying changes"})
+def format_(c, check=False):
     # type: (Context, bool) -> None
     """Format code."""
     isort_options = ["--recursive", "--check-only", "--diff"] if check else ["--recursive"]
@@ -143,7 +143,7 @@ def safety(c):
     )
 
 
-@task(pre=[flake8, safety, call(fmt, check=True)])
+@task(pre=[flake8, safety, call(format_, check=True)])
 def lint(c):
     # type: (Context) -> None
     """Run all linting."""

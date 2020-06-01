@@ -72,3 +72,50 @@ Install the new project's local development requirements inside a virtual enviro
 .. code-block:: bash
 
     poetry install
+
+Step 5: Set Up Read the Docs
+----------------------------
+
+`Read the Docs`_ hosts documentation for the open source community. Think of it as Continuous Documentation.
+
+Log into your account at `Read the Docs`_ . If you don't have one, create one and log into it.
+
+If you are not at your dashboard, choose the pull-down next to your username in the upper right, and select "My Projects". Choose the button to Import the repository and follow the directions.
+
+Now your documentation will get rebuilt when you make documentation changes to your package.
+
+.. _`Read the Docs`: https://readthedocs.org/
+
+Step 6: Set Up pyup.io
+----------------------
+
+`pyup.io`_ is a service that helps you to keep your requirements files up to date. It sends you automated
+pull requests whenever there's a new release for one of your dependencies.
+
+To use it, create a new account at `pyup.io`_ or log into your existing account.
+
+Click on the green ``Add Repo`` button in the top left corner and select the repo you created in Step 3. A popup will
+ask you whether you want to pin your dependencies. Click on ``Pin`` to add the repo.
+
+Once your repo is set up correctly, the pyup.io badge will show your current update status.
+
+.. _`pyup.io`: https://pyup.io/
+
+Step 7: Release on PyPI
+-----------------------
+
+The Python Package Index or `PyPI`_ is the official third-party software repository for the Python programming language. Python developers intend it to be a comprehensive catalog of all open source Python packages.
+
+When you are ready, release your package the standard Python way.
+
+See `PyPI Help`_ for more information about submitting a package.
+
+.. _`PyPI`: https://pypi.python.org/pypi
+.. _`PyPI Help`: http://peterdowns.com/posts/first-time-with-pypi.html
+
+Having problems?
+----------------
+
+Visit our `Issues`_ page and create a new Issue. Be sure to give as much information as possible.
+
+.. _`Issues`: https://github.com/fedejaure/cookiecutter-modern-pypackage/issues

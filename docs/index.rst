@@ -14,6 +14,24 @@ Getting Started
 
    readme
    tutorial
+   changelog
+
+Basics
+------
+
+.. toctree::
+   :maxdepth: 2
+
+   prompts
+   invoke
+
+Advanced Features
+-----------------
+
+.. toctree::
+   :maxdepth: 2
+
+   console_script_setup
 
 Indices and tables
 ==================
