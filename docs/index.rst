@@ -19,9 +19,9 @@ Basics
 ------
 
 .. toctree::
-  :maxdepth: 2
+   :maxdepth: 2
 
-  prompts
+   prompts
 
 Advanced Features
 -----------------

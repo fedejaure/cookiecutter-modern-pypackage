@@ -2,9 +2,10 @@
 # {{ cookiecutter.project_name }}
 
 {% if is_open_source %}
-[![pypi](https://img.shields.io/pypi/v/{{ cookiecutter.project_slug }}.svg)](https://pypi.python.org/pypi/{{ cookiecutter.project_slug }})
-[![pypi](https://img.shields.io/pypi/l/{{ cookiecutter.project_slug }}.svg)](https://pypi.python.org/pypi/{{ cookiecutter.project_slug }})
-[![tests](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug|replace('_', '-') }}/workflows/tests/badge.svg)](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug|replace('_', '-') }}/actions?workflow=tests)
+[![PyPI - Version](https://img.shields.io/pypi/v/{{ cookiecutter.project_slug }}.svg)](https://pypi.python.org/pypi/{{ cookiecutter.project_slug }})
+[![PyPI - License](https://img.shields.io/pypi/l/{{ cookiecutter.project_slug }}.svg)](https://pypi.python.org/pypi/{{ cookiecutter.project_slug }})
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/{{ cookiecutter.project_slug }}.svg)](https://pypi.python.org/pypi/{{ cookiecutter.project_slug }})
+[![Tests](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug|replace('_', '-') }}/workflows/tests/badge.svg)](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug|replace('_', '-') }}/actions?workflow=tests)
 [![Read the Docs](https://readthedocs.org/projects/{{ cookiecutter.project_slug|replace('_', '-') }}/badge/)](https://{{ cookiecutter.project_slug|replace('_', '-') }}.readthedocs.io/)
 [![Updates](https://pyup.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/shield.svg)](https://pyup.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/)
 {% endif %}

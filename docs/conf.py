@@ -57,6 +57,8 @@ html_theme_options = {
     "github_user": "fedejaure",
     "github_repo": "cookiecutter-modern-pypackage",
     "github_banner": True,
+    "show_related": False,
+    "fixed_sidebar": True,
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,

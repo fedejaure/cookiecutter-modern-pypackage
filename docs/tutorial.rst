@@ -116,6 +116,6 @@ See `PyPI Help`_ for more information about submitting a package.
 Having problems?
 ----------------
 
-Visit our :ref:`troubleshooting` page for help. If that doesn't help, go to our `Issues`_ page and create a new Issue. Be sure to give as much information as possible.
+Visit our `Issues`_ page and create a new Issue. Be sure to give as much information as possible.
 
 .. _`Issues`: https://github.com/fedejaure/cookiecutter-modern-pypackage/issues
