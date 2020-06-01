@@ -8,6 +8,7 @@ Welcome to {{ cookiecutter.project_name }}'s documentation!
    installation
    usage
    modules
+   changelog
 
 Indices and tables
 ==================

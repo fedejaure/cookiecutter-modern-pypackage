@@ -14,6 +14,7 @@ Getting Started
 
    readme
    tutorial
+   changelog
 
 Basics
 ------
