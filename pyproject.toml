@@ -49,6 +49,7 @@ mypy = "^0.770"
 sphinx = "^3.0.4"
 sphinx-autodoc-typehints = "^1.10.3"
 recommonmark = "^0.6.0"
+bump2version = {git = "https://github.com/mckelvin/bump2version.git", rev = "handle-special-char"}
 
 [tool.flakehell]
 format = "grouped"
