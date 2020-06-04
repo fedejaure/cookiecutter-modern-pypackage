@@ -129,3 +129,11 @@ def test_bake_and_run_docs(cookies: Cookies) -> None:
         assert result.project.isdir()
         assert run_inside_dir("poetry install", str(result.project)) == 0
         assert run_inside_dir("poetry run inv docs", str(result.project)) == 0
+
+
+def test_bake_and_bump_version(cookies: Cookies) -> None:
+    """Test bake the project and bump the version."""
+    with bake_in_temp_dir(cookies) as result:
+        assert result.project.isdir()
+        assert run_inside_dir("poetry install", str(result.project)) == 0
+        assert run_inside_dir("poetry run inv version -d minor", str(result.project)) == 0
