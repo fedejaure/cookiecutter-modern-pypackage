@@ -161,3 +161,16 @@ def docs(c, open_browser=False):
     _run(c, f"sphinx-build -b html {DOCS_DIR} {DOCS_BUILD_DIR}")
     if open_browser:
         webbrowser.open(DOCS_INDEX.absolute().as_uri())
+
+
+@task(
+    help={
+        "part": "Part of the version to be bumped.",
+        "dry_run": "Don't write any files, just pretend. (default: False)",
+    }
+)
+def version(c, part, dry_run=False):
+    # type: (Context, str, bool) -> None
+    """Bump version."""
+    bump_options = ["--dry-run"] if dry_run else []
+    _run(c, f"bump2version {' '.join(bump_options)} {part}")
