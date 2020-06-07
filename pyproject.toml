@@ -49,6 +49,7 @@ mypy = "^0.770"
 sphinx = "^3.0.4"
 sphinx-autodoc-typehints = "^1.10.3"
 recommonmark = "^0.6.0"
+bump2version = {git = "https://github.com/mckelvin/bump2version.git", rev = "handle-special-char"}
 
 [tool.flakehell]
 format = "grouped"
@@ -69,7 +70,7 @@ include_trailing_comma = true
 force_grid_wrap = 0
 use_parentheses = true
 line_length = 99
-known_third_party = ["cookiecutter", "invoke", "nox", "pytest_cookies"]
+known_third_party = ["cookiecutter", "invoke", "nox", "pytest", "pytest_cookies"]
 
 [tool.black]
 line-length = 99

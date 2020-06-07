@@ -4,8 +4,9 @@ import os
 import shlex
 import subprocess
 from contextlib import contextmanager
-from typing import Any, Iterator
+from typing import Any, Dict, Iterator, List
 
+import pytest
 from cookiecutter.utils import rmtree
 from pytest_cookies.plugin import Cookies, Result
 
@@ -99,33 +100,68 @@ def test_bake_and_run_lints(cookies: Cookies) -> None:
         assert run_inside_dir("poetry run inv lint", str(result.project)) == 0
 
 
-def test_bake_and_run_mypy(cookies: Cookies) -> None:
-    """Test bake the project and statically check types."""
-    with bake_in_temp_dir(cookies) as result:
+@pytest.mark.parametrize(
+    "extra_context,invoke_commands",
+    [
+        (
+            {},
+            [
+                "inv clean",
+                "inv lint",
+                "inv mypy",
+                "inv tests",
+                "inv coverage",
+                "inv docs",
+                "inv version -d minor",
+            ],
+        ),
+        (
+            {"open_source_license": "Not open source"},
+            [
+                "inv clean",
+                "inv lint",
+                "inv mypy",
+                "inv tests",
+                "inv coverage",
+                "inv docs",
+                "inv version -d minor",
+            ],
+        ),
+        (
+            {
+                "open_source_license": "Not open source",
+                "command_line_interface": "No command-line interface",
+            },
+            [
+                "inv clean",
+                "inv lint",
+                "inv mypy",
+                "inv tests",
+                "inv coverage",
+                "inv docs",
+                "inv version -d minor",
+            ],
+        ),
+        (
+            {"open_source_license": "BSD", "command_line_interface": "Click"},
+            [
+                "inv clean",
+                "inv lint",
+                "inv mypy",
+                "inv tests",
+                "inv coverage",
+                "inv docs",
+                "inv version -d minor",
+            ],
+        ),
+    ],
+)
+def test_bake_and_run_invoke(
+    cookies: Cookies, extra_context: Dict[str, str], invoke_commands: List[str]
+) -> None:
+    """Test bake the project and check invoke commands."""
+    with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
         assert result.project.isdir()
         assert run_inside_dir("poetry install", str(result.project)) == 0
-        assert run_inside_dir("poetry run inv mypy", str(result.project)) == 0
-
-
-def test_bake_and_run_tests(cookies: Cookies) -> None:
-    """Test bake the project and run the tests."""
-    with bake_in_temp_dir(cookies) as result:
-        assert result.project.isdir()
-        assert run_inside_dir("poetry install", str(result.project)) == 0
-        assert run_inside_dir("poetry run inv tests", str(result.project)) == 0
-
-
-def test_bake_and_run_coverage(cookies: Cookies) -> None:
-    """Test bake the project and run the tests with coverage."""
-    with bake_in_temp_dir(cookies) as result:
-        assert result.project.isdir()
-        assert run_inside_dir("poetry install", str(result.project)) == 0
-        assert run_inside_dir("poetry run inv coverage", str(result.project)) == 0
-
-
-def test_bake_and_run_docs(cookies: Cookies) -> None:
-    """Test bake the project and build the docs."""
-    with bake_in_temp_dir(cookies) as result:
-        assert result.project.isdir()
-        assert run_inside_dir("poetry install", str(result.project)) == 0
-        assert run_inside_dir("poetry run inv docs", str(result.project)) == 0
+        for inv_cmd in invoke_commands:
+            assert run_inside_dir(f"poetry run {inv_cmd}", str(result.project)) == 0
