@@ -1,4 +1,4 @@
-"""Tests for `{{ cookiecutter.project_slug }}` package."""
+"""Tests for `{{ cookiecutter.project_slug }}` module."""
 from typing import Iterator
 
 import pytest
@@ -9,7 +9,7 @@ import {{ cookiecutter.project_slug }}
 @pytest.fixture
 def version() -> Iterator[str]:
     """Sample pytest fixture."""
-    yield modern_python_boilerplate.__version__
+    yield {{ cookiecutter.project_slug }}.__version__
 
 
 def test_version(version: Iterator[str]) -> None:
