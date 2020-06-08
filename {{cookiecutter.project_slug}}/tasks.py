@@ -97,7 +97,7 @@ def format_(c, check=False):
     """Format code."""
     isort_options = ["--recursive", "--check-only", "--diff"] if check else ["--recursive"]
     _run(c, f"poetry run isort {' '.join(isort_options)} {PYTHON_TARGETS_STR}")
-    black_options = ["--quiet", "--check"] if check else ["--quiet"]
+    black_options = ["--diff", "--check"] if check else ["--quiet"]
     _run(c, f"poetry run black {' '.join(black_options)} {PYTHON_TARGETS_STR}")
 
 
