@@ -30,8 +30,16 @@ classifiers=[
     "Programming Language :: Python :: 3.8",
 ]
 
+{% if cookiecutter.command_line_interface|lower == 'click' %}
+[tool.poetry.scripts]
+{{ cookiecutter.project_slug }} = '{{ cookiecutter.project_slug }}.cli:main'
+{% endif %}
+
 [tool.poetry.dependencies]
 python = "^3.6.1"
+{% if cookiecutter.command_line_interface|lower == 'click' %}
+click = "^7.1.2"
+{% endif %}
 
 [tool.poetry.dev-dependencies]
 invoke = "^1.4.1"
