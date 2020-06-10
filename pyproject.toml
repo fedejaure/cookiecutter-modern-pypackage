@@ -28,12 +28,7 @@ classifiers=[
 python = "<3.9,>=3.6.1"
 
 [tool.poetry.dev-dependencies]
-cookiecutter = "^1.7.2"
-pytest-cookies = "^0.5.1"
-watchdog = {version = "^0.10.2", extras = ["watchmedo"]}
 invoke = "^1.4.1"
-pytest = "^5.4.2"
-xdoctest = "^0.12.0"
 flake8 = "3.7.9"
 flakehell = "^0.3.3"
 flake8-builtins = "^1.5.3"
@@ -52,6 +47,11 @@ sphinx = "^3.0.4"
 sphinx-autodoc-typehints = "^1.10.3"
 recommonmark = "^0.6.0"
 bump2version = {git = "https://github.com/mckelvin/bump2version.git", rev = "handle-special-char"}
+pytest = "^5.4.2"
+xdoctest = "^0.12.0"
+cookiecutter = "^1.7.2"
+pytest-cookies = "^0.5.1"
+watchdog = {version = "^0.10.2", extras = ["watchmedo"]}
 
 [tool.flakehell]
 format = "grouped"

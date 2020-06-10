@@ -42,11 +42,7 @@ click = "^7.1.2"
 {% endif %}
 
 [tool.poetry.dev-dependencies]
-coverage = {version = "^5.1", extras = ["toml"]}
-pytest-cov = "^2.8.1"
 invoke = "^1.4.1"
-pytest = "^5.4.2"
-xdoctest = "^0.12.0"
 flake8 = "3.7.9"
 flakehell = "^0.3.3"
 flake8-builtins = "^1.5.3"
@@ -65,6 +61,10 @@ sphinx = "^3.0.4"
 sphinx-autodoc-typehints = "^1.10.3"
 recommonmark = "^0.6.0"
 bump2version = {git = "https://github.com/mckelvin/bump2version.git", rev = "handle-special-char"}
+pytest = "^5.4.2"
+xdoctest = "^0.12.0"
+coverage = {version = "^5.1", extras = ["toml"]}
+pytest-cov = "^2.8.1"
 
 [tool.coverage.run]
 branch = true
