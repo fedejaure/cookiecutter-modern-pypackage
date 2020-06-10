@@ -42,6 +42,10 @@ jobs:
           pip install nox
           pip install poetry
 
+      - name: Run mypy with nox
+        shell: bash
+        run: nox -s mypy-${{ matrix.python-version }}
+
       - name: Run tests with nox
         shell: bash
         run: nox -s tests-${{ matrix.python-version }}
