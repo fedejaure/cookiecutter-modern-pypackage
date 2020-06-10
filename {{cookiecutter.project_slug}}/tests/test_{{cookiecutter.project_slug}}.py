@@ -12,6 +12,6 @@ def version() -> Generator[str, None, None]:
     yield {{ cookiecutter.project_slug }}.__version__
 
 
-def test_version(version: Generator[str, None, None]) -> None:
+def test_version(version: str) -> None:
     """Sample pytest test function with the pytest fixture as an argument."""
     assert version == "{{ cookiecutter.version }}"
