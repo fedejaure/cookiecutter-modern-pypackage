@@ -38,7 +38,9 @@ def install_with_constraints(session: Session, *args: str, **kwargs: Any) -> Non
 @nox.session(python=["3.6", "3.8", "3.7"])
 def tests(session: Session) -> None:
     """Run the test suite."""
-    install_with_constraints(session, "invoke", "pytest", "cookiecutter", "pytest-cookies")
+    install_with_constraints(
+        session, "invoke", "pytest", "xdoctest", "cookiecutter", "pytest-cookies"
+    )
     session.run("inv", "tests")
 
 
