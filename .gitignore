@@ -125,8 +125,14 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
+# Pytype type checker
+.pytype/
+
 # Pyre type checker
 .pyre/
 
 # Cookiecutter
 modern_python_boilerplate/
+
+# Code editors
+.vscode

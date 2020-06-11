@@ -133,10 +133,19 @@ def mypy(c):
 
 
 @task()
+def pytype(c):
+    # type: (Context) -> None
+    """Run mypy."""
+    pytype_options = ["--disable=import-error"]
+    _run(c, f"poetry run pytype {' '.join(pytype_options)} {PYTHON_TARGETS_STR}")
+
+
+@task()
 def tests(c):
     # type: (Context) -> None
     """Run tests."""
-    _run(c, f"poetry run pytest {TEST_DIR}")
+    pytest_options = ["--xdoctest"]
+    _run(c, f"poetry run pytest {' '.join(pytest_options)} {TEST_DIR} {SOURCE_DIR}")
 
 
 @task(help={"html": "Build a local html report", "publish": "Publish the result via coveralls"})

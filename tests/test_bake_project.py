@@ -4,7 +4,7 @@ import os
 import shlex
 import subprocess
 from contextlib import contextmanager
-from typing import Any, Dict, Iterator, List
+from typing import Any, Dict, Generator, List
 
 import pytest
 from cookiecutter.utils import rmtree
@@ -12,7 +12,7 @@ from pytest_cookies.plugin import Cookies, Result
 
 
 @contextmanager
-def inside_dir(dirpath: str) -> Iterator[None]:
+def inside_dir(dirpath: str) -> Generator[None, None, None]:
     """Execute code from inside the given directory.
 
     Args:

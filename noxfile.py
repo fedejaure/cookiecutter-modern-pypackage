@@ -5,7 +5,7 @@ from typing import Any
 import nox
 from nox.sessions import Session
 
-nox.options.sessions = ["tests"]
+nox.options.sessions = ["tests", "mypy"]
 
 
 def install_with_constraints(session: Session, *args: str, **kwargs: Any) -> None:
@@ -39,6 +39,13 @@ def install_with_constraints(session: Session, *args: str, **kwargs: Any) -> Non
 def tests(session: Session) -> None:
     """Run the test suite."""
     install_with_constraints(
-        session, "invoke", "pytest", "cookiecutter", "pytest-cookies",
+        session, "invoke", "pytest", "xdoctest", "cookiecutter", "pytest-cookies"
     )
     session.run("inv", "tests")
+
+
+@nox.session(python=["3.6", "3.8", "3.7"])
+def mypy(session: Session) -> None:
+    """Run the test suite."""
+    install_with_constraints(session, "invoke", "mypy")
+    session.run("inv", "mypy")

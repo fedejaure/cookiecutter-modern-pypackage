@@ -1,12 +1,13 @@
 """Script that run after the project is generated."""
 from pathlib import Path
+from typing import Union
 
 PROJECT_DIRECTORY = Path.cwd()
 PROJECT_TESTS = PROJECT_DIRECTORY / Path("tests")
 PROJECT_SRC = PROJECT_DIRECTORY / Path("{{ cookiecutter.project_slug }}")
 
 
-def remove_file(filepath: str) -> None:
+def remove_file(filepath: Union[str, Path]) -> None:
     """Remove a file from the file system."""
     Path.unlink(PROJECT_DIRECTORY / filepath)
 

@@ -28,23 +28,23 @@ repos:
         exclude: "^{{cookiecutter.project_slug}}/"
 -   repo: local
     hooks:
-      -   id: flakehell
-          name: flakehell
-          description: "`Flakehell` it's a Flake8 wrapper to make it cools."
-          entry: flakehell
-          args: [lint]
-          language: python
-          types: [python]
-          require_serial: true
-          additional_dependencies: [
-            'flake8>=3.7.9',
-            'flakehell>=0.3.3',
-            'flake8-builtins>=1.5.3',
-            'flake8-blind-except>=0.1.1',
-            'flake8-logging-format>=0.6.0',
-            'flake8-bugbear>=20.1.4',
-            'flake8-annotations>=2.1.0',
-            'flake8-docstrings>=1.5.0',
-            'darglint>=1.3.0'
-          ]
-          exclude: "^{{cookiecutter.project_slug}}/"
+      - id: flakehell
+        name: flakehell
+        description: "`Flakehell` it's a Flake8 wrapper to make it cools."
+        entry: flakehell
+        args: [lint]
+        language: python
+        types: [python]
+        require_serial: true
+        additional_dependencies: [
+          'flake8>=3.7.9',
+          'flakehell>=0.3.3',
+          'flake8-builtins>=1.5.3',
+          'flake8-blind-except>=0.1.1',
+          'flake8-logging-format>=0.6.0',
+          'flake8-bugbear>=20.1.4',
+          'flake8-annotations>=2.1.0',
+          'flake8-docstrings>=1.5.0',
+          'darglint>=1.3.0'
+        ]
+        exclude: "^{{cookiecutter.project_slug}}/"
