@@ -1,4 +1,3 @@
-{% raw %}
 name: release
 on:
   push:
@@ -17,9 +16,7 @@ jobs:
       - run: pip install nox
       - run: pip install poetry
       - run: nox
-      - run: poetry build
-      - run: poetry publish --username=__token__ --password=${{ secrets.PYPI_TOKEN }}
-  
+
   github_release:
     needs: release
     name: Create Github Release
@@ -53,4 +50,3 @@ jobs:
           body: ${{ steps.changelog_reader.outputs.log_entry }}
           draft: false
           prerelease: false
-{% endraw %}
