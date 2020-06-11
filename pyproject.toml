@@ -1,0 +1,83 @@
+[tool.poetry]
+name = "cookiecutter-modern-pypackage"
+version = "0.1.0"
+description = "Cookiecutter template for a modern Python package."
+authors = ["Federico Jaureguialzo <fedejaure@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/fedejaure/cookiecutter-modern-pypackage"
+repository = "https://github.com/fedejaure/cookiecutter-modern-pypackage"
+keywords=["cookiecutter", "template", "package"]
+classifiers=[
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development",
+]
+
+[tool.poetry.dependencies]
+python = "<3.9,>=3.6.1"
+
+[tool.poetry.dev-dependencies]
+invoke = "^1.4.1"
+flake8 = "3.7.9"
+flakehell = "^0.3.3"
+flake8-builtins = "^1.5.3"
+flake8-blind-except = "^0.1.1"
+flake8-logging-format = "^0.6.0"
+flake8-bugbear = "^20.1.4"
+flake8-annotations = "^2.1.0"
+flake8-docstrings = "^1.5.0"
+darglint = "^1.3.0"
+isort = "^4.3.21"
+black = "^19.10b0"
+safety = "^1.9.0"
+mypy = "^0.770"
+pytype = "^2020.6.1"
+sphinx = "^3.0.4"
+sphinx-autodoc-typehints = "^1.10.3"
+recommonmark = "^0.6.0"
+bump2version = {git = "https://github.com/mckelvin/bump2version.git", rev = "handle-special-char"}
+pytest = "^5.4.2"
+xdoctest = "^0.12.0"
+cookiecutter = "^1.7.2"
+pytest-cookies = "^0.5.1"
+watchdog = {version = "^0.10.2", extras = ["watchmedo"]}
+
+[tool.flakehell]
+format = "grouped"
+max_line_length = 99
+show_source = true
+
+[tool.flakehell.plugins]
+pyflakes = ["+*"]
+pycodestyle = ["+*"]
+mccabe = ["+*"]
+"flake8-*" = ["+*"]
+darglint = ["+*"]
+docstring-convention = "google"
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 99
+known_third_party = ["cookiecutter", "invoke", "nox", "pytest", "pytest_cookies"]
+
+[tool.black]
+line-length = 99
+target-version = ["py36"]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
