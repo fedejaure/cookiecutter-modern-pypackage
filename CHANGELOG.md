@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Added
+- New option `serve` to the invoke docs task.
+
+### Changed
+- Improve docs tutorial section.
+- Improve docs index section.
+
+### Fixed
+- README spelling.
 
 ## [0.1.0] - 2020-06-11
 ### Added
