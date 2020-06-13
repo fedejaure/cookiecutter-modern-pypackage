@@ -32,10 +32,3 @@ Advanced Features
    :maxdepth: 2
 
    console_script_setup
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
