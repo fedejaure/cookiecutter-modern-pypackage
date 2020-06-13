@@ -20,7 +20,7 @@ Install cookiecutter:
 
 .. code-block:: bash
 
-    pip install cookiecutter
+    $ pip install cookiecutter
 
 We'll also need poetry so [install that too](https://python-poetry.org/docs/#installation):
 
@@ -33,7 +33,7 @@ Use cookiecutter, pointing it at the cookiecutter-pypackage repo:
 
 .. code-block:: bash
 
-    cookiecutter https://github.com/fedejaure/cookiecutter-modern-pypackage.git
+    $ cookiecutter https://github.com/fedejaure/cookiecutter-modern-pypackage.git
 
 You'll be asked to enter a bunch of values to set the package up.
 If you don't know what to enter, stick with the defaults.
@@ -48,12 +48,12 @@ You will find one folder named after the ``[project_slug]``. Move into this fold
 
 .. code-block:: bash
 
-    cd mypackage
-    git init .
-    git add .
-    git commit -m "Initial skeleton."
-    git remote add origin git@github.com:myusername/mypackage.git
-    git push -u origin master
+    $ cd mypackage
+    (mypackage)$ git init .
+    (mypackage)$ git add .
+    (mypackage)$ git commit -m "Initial skeleton."
+    (mypackage)$ git remote add origin git@github.com:myusername/mypackage.git
+    (mypackage)$ git push -u origin master
 
 Where ``myusername`` and ``mypackage`` are adjusted for your username and package name.
 
@@ -71,7 +71,8 @@ Install the new project's local development requirements inside a virtual enviro
 
 .. code-block:: bash
 
-    poetry install
+    $ poetry install
+    $ poetry run inv install_hooks
 
 Step 5: Set Up Read the Docs
 ----------------------------
