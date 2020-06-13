@@ -12,18 +12,18 @@
 
 ## Features
 
-* Dependency tracking using [poetry][poetry]
-* Testing setup with [pytest][pytest]
+* Dependency tracking using [Poetry][poetry]
+* Testing setup with [Pytest][pytest]
 * [Github Actions][github actions] ready for Continuous Integration testing
-* Linting provided by [flake8][flake8] with [flakehell][flakehell]
+* Linting provided by [Flake8][flake8] with [Flakehell][flakehell]
 * Docstring linting provided by [Darglint][darglint] using the [Google Python Style Guide][google styleguide]
 * Static type checking by [Mypy][mypy]
-* Formatting provided by [black][black] and [isort][isort]
+* Formatting provided by [Black][black] and [Isort][isort]
 * Checks dependencies for known security vulnerabilities with [Safety][safety]
-* [pre-commit][pre-commit] hooks.
+* Git hooks managed by [pre-commit][pre-commit].
 * All development tasks (lint, format, test, etc) wrapped up in a python CLI by [invoke][invoke]
-* Automating testing in multiple Python environments with [Nox][nox]
-* [Sphinx][sphinx] docs: Documentation ready for generation with, for example, [Read the Docs][rtd]
+* Multiple Python environments testing provided by [Nox][nox]
+* Documentation provided by [Sphinx][sphinx] ready for generation with, for example, [Read the Docs][rtd]
 * Command line interface using [Click][click] (optional)
 
 ## Quickstart
