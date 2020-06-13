@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - README spelling.
+- ivoke pytype task typo.
 
 ## [0.1.0] - 2020-06-11
 ### Added
