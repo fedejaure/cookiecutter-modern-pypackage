@@ -15,8 +15,6 @@ ROOT_DIR = Path(__file__).parent
 DOCS_DIR = ROOT_DIR.joinpath("docs")
 DOCS_BUILD_DIR = DOCS_DIR.joinpath("_build")
 DOCS_INDEX = DOCS_BUILD_DIR.joinpath("index.html")
-COVERAGE_FILE = ROOT_DIR.joinpath(".coverage")
-COVERAGE_DIR = ROOT_DIR.joinpath("htmlcov")
 TEST_DIR = ROOT_DIR.joinpath("tests")
 PYTHON_TARGETS = [
     TEST_DIR,
@@ -82,9 +80,6 @@ def clean_python(c):
 def clean_tests(c):
     # type: (Context) -> None
     """Clean up files from testing."""
-    _run(c, f"rm -f {COVERAGE_FILE}")
-    _run(c, f"rm -f {COVERAGE_FILE}.*")
-    _run(c, f"rm -fr {COVERAGE_DIR}")
     _run(c, "rm -fr .pytest_cache")
 
 

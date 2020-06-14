@@ -59,7 +59,6 @@ def clean_tests(c):
     # type: (Context) -> None
     """Clean up files from testing."""
     _run(c, f"rm -f {COVERAGE_FILE}")
-    _run(c, f"rm -f {COVERAGE_FILE}.*")
     _run(c, f"rm -fr {COVERAGE_DIR}")
     _run(c, "rm -fr .pytest_cache")
 
