@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cookiecutter-modern-pypackage"
-version = "0.1.1"
+version = "0.1.2"
 description = "Cookiecutter template for a modern Python package."
 authors = ["Federico Jaureguialzo <fedejaure@gmail.com>"]
 license = "MIT"
@@ -42,7 +42,6 @@ isort = "^4.3.21"
 black = "^19.10b0"
 safety = "^1.9.0"
 mypy = "^0.770"
-pytype = "^2020.6.1"
 sphinx = "^3.0.4"
 sphinx-autodoc-typehints = "^1.10.3"
 recommonmark = "^0.6.0"
