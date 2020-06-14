@@ -51,6 +51,14 @@ Then:
 
 For more details, see the [tutorial][tutorial].
 
+## Credits
+
+This cookiecutter was built for learning purpose and inspired by:
+
+* [audreyr/cookiecutter-pypackage][audreyr/cookiecutter-pypackage]: Cookiecutter template for a Python package.
+* [briggySmalls/cookiecutter-pypackage][briggySmalls/cookiecutter-pypackage]: A fork from [audreyr/cookiecutter-pypackage][audreyr/cookiecutter-pypackage] using Poetry for package management, with linting, formatting and more.
+* [hypermodern-python][hypermodern-python]: Hypermodern Python article series.
+
 [cookiecutter]: https://github.com/cookiecutter/cookiecutter
 [poetry]: https://python-poetry.org/
 [pytest]: https://github.com/pytest-dev/pytest
@@ -71,3 +79,6 @@ For more details, see the [tutorial][tutorial].
 [tutorial]: https://cookiecutter-modern-pypackage.readthedocs.io/en/latest/tutorial.html
 [pyup]: https://pyup.io/
 [click]: http://click.pocoo.org/
+[audreyr/cookiecutter-pypackage]: https://github.com/audreyr/cookiecutter-pypackage
+[briggySmalls/cookiecutter-pypackage]: https://github.com/briggySmalls/cookiecutter-pypackage
+[hypermodern-python]: https://cjolowicz.github.io/posts/hypermodern-python-01-setup/
