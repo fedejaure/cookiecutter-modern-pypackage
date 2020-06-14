@@ -59,7 +59,6 @@ def clean_tests(c):
     # type: (Context) -> None
     """Clean up files from testing."""
     _run(c, f"rm -f {COVERAGE_FILE}")
-    _run(c, f"rm -f {COVERAGE_FILE}.*")
     _run(c, f"rm -fr {COVERAGE_DIR}")
     _run(c, "rm -fr .pytest_cache")
 
@@ -130,14 +129,6 @@ def mypy(c):
     # type: (Context) -> None
     """Run mypy."""
     _run(c, f"poetry run mypy {PYTHON_TARGETS_STR}")
-
-
-@task()
-def pytype(c):
-    # type: (Context) -> None
-    """Run pytype."""
-    pytype_options = ["--disable=import-error"]
-    _run(c, f"poetry run pytype {' '.join(pytype_options)} {PYTHON_TARGETS_STR}")
 
 
 @task()
