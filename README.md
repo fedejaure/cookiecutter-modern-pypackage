@@ -12,18 +12,18 @@
 
 ## Features
 
-* Dependency tracking using [poetry][poetry]
-* Testing setup with [pytest][pytest]
+* Dependency tracking using [Poetry][poetry]
+* Testing setup with [Pytest][pytest]
 * [Github Actions][github actions] ready for Continuous Integration testing
-* Linting provided by [flake8][flake8] with [flakehell][flakehell]
+* Linting provided by [Flake8][flake8] with [Flakehell][flakehell]
 * Docstring linting provided by [Darglint][darglint] using the [Google Python Style Guide][google styleguide]
 * Static type checking by [Mypy][mypy]
-* Formatting provided by [black][black] and [isort][isort]
+* Formatting provided by [Black][black] and [Isort][isort]
 * Checks dependencies for known security vulnerabilities with [Safety][safety]
-* [pre-commit][pre-commit] hooks.
+* Git hooks managed by [pre-commit][pre-commit].
 * All development tasks (lint, format, test, etc) wrapped up in a python CLI by [invoke][invoke]
-* Automating testing in multiple Python environments with [Nox][nox]
-* [Sphinx][sphinx] docs: Documentation ready for generation with, for example, [Read the Docs][rtd]
+* Multiple Python environments testing provided by [Nox][nox]
+* Documentation provided by [Sphinx][sphinx] ready for generation with, for example, [Read the Docs][rtd]
 * Command line interface using [Click][click] (optional)
 
 ## Quickstart
@@ -51,6 +51,14 @@ Then:
 
 For more details, see the [tutorial][tutorial].
 
+## Credits
+
+This cookiecutter was built for learning purpose and inspired by:
+
+* [audreyr/cookiecutter-pypackage][audreyr/cookiecutter-pypackage]: Cookiecutter template for a Python package.
+* [briggySmalls/cookiecutter-pypackage][briggySmalls/cookiecutter-pypackage]: A fork from [audreyr/cookiecutter-pypackage][audreyr/cookiecutter-pypackage] using Poetry for package management, with linting, formatting and more.
+* [hypermodern-python][hypermodern-python]: Hypermodern Python article series.
+
 [cookiecutter]: https://github.com/cookiecutter/cookiecutter
 [poetry]: https://python-poetry.org/
 [pytest]: https://github.com/pytest-dev/pytest
@@ -71,3 +79,6 @@ For more details, see the [tutorial][tutorial].
 [tutorial]: https://cookiecutter-modern-pypackage.readthedocs.io/en/latest/tutorial.html
 [pyup]: https://pyup.io/
 [click]: http://click.pocoo.org/
+[audreyr/cookiecutter-pypackage]: https://github.com/audreyr/cookiecutter-pypackage
+[briggySmalls/cookiecutter-pypackage]: https://github.com/briggySmalls/cookiecutter-pypackage
+[hypermodern-python]: https://cjolowicz.github.io/posts/hypermodern-python-01-setup/

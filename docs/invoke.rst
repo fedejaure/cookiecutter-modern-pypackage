@@ -28,5 +28,7 @@ Execute `inv[oke] --list` to see the list of available commands.
      install-hooks   Install pre-commit hooks.
      lint            Run all linting.
      mypy            Run mypy.
+     pytype          Run pytype.
      safety          Run safety.
      tests           Run tests.
+     version         Bump version.
