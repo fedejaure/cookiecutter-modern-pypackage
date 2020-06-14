@@ -49,11 +49,11 @@ You will find one folder named after the ``[project_slug]``. Move into this fold
 .. code-block:: bash
 
     $ cd mypackage
-    (mypackage)$ git init .
-    (mypackage)$ git add .
-    (mypackage)$ git commit -m "Initial skeleton."
-    (mypackage)$ git remote add origin git@github.com:myusername/mypackage.git
-    (mypackage)$ git push -u origin master
+    mypackage $ git init .
+    mypackage $ git add .
+    mypackage $ git commit -m "Initial skeleton."
+    mypackage $ git remote add origin git@github.com:myusername/mypackage.git
+    mypackage $ git push -u origin master
 
 Where ``myusername`` and ``mypackage`` are adjusted for your username and package name.
 
