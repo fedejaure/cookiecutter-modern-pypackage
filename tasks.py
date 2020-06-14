@@ -157,14 +157,6 @@ def mypy(c):
 
 
 @task()
-def pytype(c):
-    # type: (Context) -> None
-    """Run pytype."""
-    pytype_options = ["--disable=import-error"]
-    _run(c, f"poetry run pytype {' '.join(pytype_options)} {PYTHON_TARGETS_STR}")
-
-
-@task()
 def tests(c):
     # type: (Context) -> None
     """Run tests."""
