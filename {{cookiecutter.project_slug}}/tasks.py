@@ -135,7 +135,7 @@ def mypy(c):
 @task()
 def pytype(c):
     # type: (Context) -> None
-    """Run mypy."""
+    """Run pytype."""
     pytype_options = ["--disable=import-error"]
     _run(c, f"poetry run pytype {' '.join(pytype_options)} {PYTHON_TARGETS_STR}")
 
@@ -163,13 +163,22 @@ def coverage(c, html=False, publish=False):
         webbrowser.open(COVERAGE_REPORT.as_uri())
 
 
-@task()
-def docs(c, open_browser=False):
-    # type: (Context, bool) -> None
+@task(
+    help={
+        "serve": "Build the docs watching for changes",
+        "open_browser": "Open  the docs in the web browser",
+    }
+)
+def docs(c, serve=False, open_browser=False):
+    # type: (Context, bool, bool) -> None
     """Build documentation."""
-    _run(c, f"sphinx-build -b html {DOCS_DIR} {DOCS_BUILD_DIR}")
+    _run(c, f"sphinx-apidoc -o {DOCS_DIR} {SOURCE_DIR}")
+    build_docs = f"sphinx-build -b html {DOCS_DIR} {DOCS_BUILD_DIR}"
+    _run(c, build_docs)
     if open_browser:
         webbrowser.open(DOCS_INDEX.absolute().as_uri())
+    if serve:
+        _run(c, f"poetry run watchmedo shell-command -p '*.rst;*.md' -c '{build_docs}' -R -D .")
 
 
 @task(
