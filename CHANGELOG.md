@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Fixed
+- isort support for pyproject.toml
+
 ### Removed
 - sphinx-autodoc-typehints from the dev requirements.
 
