@@ -127,6 +127,7 @@ version = "1.0.1.dev0"
 reference = "4934870ea02942611b76d5cdd50ce21d5c718c3a"
 type = "git"
 url = "https://github.com/mckelvin/bump2version.git"
+
 [[package]]
 category = "dev"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -775,21 +776,6 @@ test = ["pytest", "pytest-cov", "html5lib", "typed-ast", "cython"]
 
 [[package]]
 category = "dev"
-description = "Type hints (PEP 484) support for the Sphinx autodoc extension"
-name = "sphinx-autodoc-typehints"
-optional = false
-python-versions = ">=3.5.2"
-version = "1.10.3"
-
-[package.dependencies]
-Sphinx = ">=2.1"
-
-[package.extras]
-test = ["pytest (>=3.1.0)", "typing-extensions (>=3.5)", "sphobjinv (>=2.0)", "dataclasses"]
-type_comments = ["typed-ast (>=1.4.0)"]
-
-[[package]]
-category = "dev"
 description = "sphinxcontrib-applehelp is a sphinx extension which outputs Apple help books"
 name = "sphinxcontrib-applehelp"
 optional = false
@@ -980,7 +966,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "c07c43cfff024a0cea5d560e33eb3ea05c43552558528fd8f509f151a87e1be3"
+content-hash = "9e0356c66d3b3437077906f90543624c224ee878efc22eda185e0400553d2e59"
 python-versions = "<3.9,>=3.6.1"
 
 [metadata.files]
@@ -1336,10 +1322,6 @@ snowballstemmer = [
 sphinx = [
     {file = "Sphinx-3.1.1-py3-none-any.whl", hash = "sha256:97c9e3bcce2f61d9f5edf131299ee9d1219630598d9f9a8791459a4d9e815be5"},
     {file = "Sphinx-3.1.1.tar.gz", hash = "sha256:74fbead182a611ce1444f50218a1c5fc70b6cc547f64948f5182fb30a2a20258"},
-]
-sphinx-autodoc-typehints = [
-    {file = "sphinx-autodoc-typehints-1.10.3.tar.gz", hash = "sha256:a6b3180167479aca2c4d1ed3b5cb044a70a76cccd6b38662d39288ebd9f0dff0"},
-    {file = "sphinx_autodoc_typehints-1.10.3-py3-none-any.whl", hash = "sha256:27c9e6ef4f4451766ab8d08b2d8520933b97beb21c913f3df9ab2e59b56e6c6c"},
 ]
 sphinxcontrib-applehelp = [
     {file = "sphinxcontrib-applehelp-1.0.2.tar.gz", hash = "sha256:a072735ec80e7675e3f432fcae8610ecf509c5f1869d17e2eecff44389cdbc58"},
