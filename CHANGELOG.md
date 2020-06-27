@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Removed
+- sphinx-autodoc-typehints from the dev requirements.
 
 ## [0.1.2] - 2020-06-14
 ### Fixed
