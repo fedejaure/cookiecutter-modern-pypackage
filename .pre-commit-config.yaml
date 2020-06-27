@@ -21,10 +21,6 @@ repos:
     hooks:
       - id: isort
         exclude: "^{{cookiecutter.project_slug}}/"
--   repo: https://github.com/timothycrosley/isort
-    rev: 4.3.21
-    hooks:
-      - id: isort
         additional_dependencies: [
           'isort[pyproject]==4.3.21',
         ]
