@@ -14,14 +14,15 @@
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..'))
+
+sys.path.insert(0, os.path.abspath(".."))  # isort:skip
 
 import {{ cookiecutter.project_slug }}
 
 # -- Project information -----------------------------------------------------
 
 # General information about the project.
-project = '{{ cookiecutter.project_name }}'
+project = "{{ cookiecutter.project_name }}"
 copyright = "{% now 'local', '%Y' %}, {{ cookiecutter.full_name }}"  # noqa: A001
 author = "{{ cookiecutter.full_name }}"
 # The version info for the project you're documenting, acts as replacement
@@ -42,7 +43,6 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.viewcode",
     "sphinx.ext.napoleon",
-    "sphinx_autodoc_typehints",
     "recommonmark",
 ]
 
