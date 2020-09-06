@@ -29,10 +29,6 @@ jobs:
           export CURRENT_VERSION=${GITHUB_TAG/refs\/tags\/v/}
           echo "::set-env name=CURRENT_VERSION::$CURRENT_VERSION"
       - uses: actions/checkout@v2
-      - name: Set up Python 3.6
-        uses: actions/setup-python@v1
-        with:
-          python-version: 3.6
       - name: Get Changelog Entry
         id: changelog_reader
         uses: mindsers/changelog-reader-action@v1.1.0
