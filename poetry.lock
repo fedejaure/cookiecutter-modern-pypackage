@@ -124,10 +124,9 @@ python-versions = ">=3.5"
 version = "1.0.1.dev0"
 
 [package.source]
-reference = "4934870ea02942611b76d5cdd50ce21d5c718c3a"
+reference = "8e6db2370a683f17a4188d8b4cc8968bac881c56"
 type = "git"
-url = "https://github.com/mckelvin/bump2version.git"
-
+url = "https://github.com/c4urself/bump2version.git"
 [[package]]
 category = "dev"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -971,7 +970,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "0a24e0c1dc6184651879b3932b42cad8317703ce8892159e9114234f97783a9b"
+content-hash = "0f670a38b485d16c44cd145f6ee4ee3cfc818aa3b0ad1cb6f0bc566592fcaa64"
 python-versions = "<3.9,>=3.6.1"
 
 [metadata.files]
