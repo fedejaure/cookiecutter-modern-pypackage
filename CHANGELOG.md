@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Changed
+- Python actions to the v2.
+
+### Removed
+- Unnecessary python steps on the release workflow.
 
 ## [0.1.3] - 2020-08-13
 ### Fixed
