@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - Unnecessary python steps on the release workflow.
 
+### Fixed
+- bump2version version.
+
 ## [0.1.3] - 2020-08-13
 ### Fixed
 - isort support for pyproject.toml
