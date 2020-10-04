@@ -34,8 +34,7 @@ jobs:
       - name: Install system deps
         shell: bash
         run: |
-          pip install nox
-          pip install poetry
+          pip install poetry nox nox-poetry
           poetry config virtualenvs.in-project true
       - name: Run mypy with nox
         shell: bash
