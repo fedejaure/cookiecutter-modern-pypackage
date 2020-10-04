@@ -40,8 +40,12 @@ jobs:
           poetry config virtualenvs.in-project true
       - name: Run mypy with nox
         shell: bash
-        run: nox -s mypy-${{ matrix.python-version }}
+        run: nox --force-color -s mypy-${{ matrix.python-version }}
       - name: Run tests with nox
         shell: bash
-        run: nox -s tests-${{ matrix.python-version }}
+        run: nox --force-color -s tests-${{ matrix.python-version }}
+      - name: Run safety check
+        if: matrix.python-version == 3.8 && matrix.os == 'Ubuntu'
+        shell: bash
+        run: nox --force-color -s safety
 {% endraw %}
