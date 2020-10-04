@@ -1,8 +1,13 @@
 # Cookiecutter Modern PyPackage
 
-[![tests](https://github.com/fedejaure/cookiecutter-modern-pypackage/workflows/tests/badge.svg)](https://github.com/fedejaure/cookiecutter-modern-pypackage/actions?workflow=tests)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/fedejaure/cookiecutter-modern-pypackage?logo=github)](https://github.com/fedejaure/cookiecutter-modern-pypackage/releases)
+[![Python Version](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8-blue?logo=python)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen)](https://opensource.org/licenses/MIT)
+[![Tests](https://github.com/fedejaure/cookiecutter-modern-pypackage/workflows/tests/badge.svg)](https://github.com/fedejaure/cookiecutter-modern-pypackage/actions?workflow=tests)
 [![Read the Docs](https://readthedocs.org/projects/cookiecutter-modern-pypackage/badge/)](https://cookiecutter-modern-pypackage.readthedocs.io/)
-[![Updates](https://pyup.io/repos/github/fedejaure/cookiecutter-modern-pypackage/shield.svg)](https://pyup.io/repos/github/fedejaure/cookiecutter-modern-pypackage/)
+[![Black](https://img.shields.io/badge/code%20style-black-000000)](https://github.com/psf/black)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+
 
 [Cookiecutter][cookiecutter] template for a modern Python package.
 
@@ -25,6 +30,7 @@
 * Multiple Python environments testing provided by [Nox][nox]
 * Documentation provided by [Sphinx][sphinx] ready for generation with, for example, [Read the Docs][rtd]
 * Command line interface using [Click][click] (optional)
+* Automated dependency updates with [Dependabot][dependabot]
 
 ## Quickstart
 
@@ -47,7 +53,6 @@ Then:
 * Install pre-commit hooks. (`poetry run inv install_hooks`)
 * Add the repo to your [Read the Docs][rtd] account + turn on the Read the Docs service hook.
 * Release your package by pushing a new tag to master.
-* Activate your project on [pyup.io][pyup].
 
 For more details, see the [tutorial][tutorial].
 
@@ -77,8 +82,8 @@ This cookiecutter was built for learning purpose and inspired by:
 [rtd]: https://readthedocs.org/
 [nox]: https://nox.thea.codes/en/stable/
 [tutorial]: https://cookiecutter-modern-pypackage.readthedocs.io/en/latest/tutorial.html
-[pyup]: https://pyup.io/
 [click]: http://click.pocoo.org/
+[dependabot]: https://dependabot.com/
 [audreyr/cookiecutter-pypackage]: https://github.com/audreyr/cookiecutter-pypackage
 [briggySmalls/cookiecutter-pypackage]: https://github.com/briggySmalls/cookiecutter-pypackage
 [hypermodern-python]: https://cjolowicz.github.io/posts/hypermodern-python-01-setup/

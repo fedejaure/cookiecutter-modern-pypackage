@@ -6,6 +6,7 @@ import nox
 from nox.sessions import Session
 
 nox.options.sessions = ["tests", "mypy"]
+python_versions = ["3.6", "3.7", "3.8"]
 
 
 def install_with_constraints(session: Session, *args: str, **kwargs: Any) -> None:
@@ -36,7 +37,7 @@ def install_with_constraints(session: Session, *args: str, **kwargs: Any) -> Non
         session.install(f"--constraint={requirements.name}", *args, **kwargs)
 
 
-@nox.session(python=["3.6", "3.8", "3.7"])
+@nox.session(python=python_versions)
 def tests(session: Session) -> None:
     """Run the test suite."""
     install_with_constraints(
@@ -45,8 +46,15 @@ def tests(session: Session) -> None:
     session.run("inv", "tests")
 
 
-@nox.session(python=["3.6", "3.8", "3.7"])
+@nox.session(python=python_versions)
 def mypy(session: Session) -> None:
-    """Run the test suite."""
+    """Type-check using mypy."""
     install_with_constraints(session, "invoke", "mypy")
     session.run("inv", "mypy")
+
+
+@nox.session(python="3.8")
+def safety(session: Session) -> None:
+    """Scan dependencies for insecure packages."""
+    install_with_constraints(session, "invoke", "safety")
+    session.run("inv", "safety")
