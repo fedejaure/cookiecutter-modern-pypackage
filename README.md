@@ -2,7 +2,6 @@
 
 [![tests](https://github.com/fedejaure/cookiecutter-modern-pypackage/workflows/tests/badge.svg)](https://github.com/fedejaure/cookiecutter-modern-pypackage/actions?workflow=tests)
 [![Read the Docs](https://readthedocs.org/projects/cookiecutter-modern-pypackage/badge/)](https://cookiecutter-modern-pypackage.readthedocs.io/)
-[![Updates](https://pyup.io/repos/github/fedejaure/cookiecutter-modern-pypackage/shield.svg)](https://pyup.io/repos/github/fedejaure/cookiecutter-modern-pypackage/)
 
 [Cookiecutter][cookiecutter] template for a modern Python package.
 
@@ -47,7 +46,6 @@ Then:
 * Install pre-commit hooks. (`poetry run inv install_hooks`)
 * Add the repo to your [Read the Docs][rtd] account + turn on the Read the Docs service hook.
 * Release your package by pushing a new tag to master.
-* Activate your project on [pyup.io][pyup].
 
 For more details, see the [tutorial][tutorial].
 
@@ -77,7 +75,6 @@ This cookiecutter was built for learning purpose and inspired by:
 [rtd]: https://readthedocs.org/
 [nox]: https://nox.thea.codes/en/stable/
 [tutorial]: https://cookiecutter-modern-pypackage.readthedocs.io/en/latest/tutorial.html
-[pyup]: https://pyup.io/
 [click]: http://click.pocoo.org/
 [audreyr/cookiecutter-pypackage]: https://github.com/audreyr/cookiecutter-pypackage
 [briggySmalls/cookiecutter-pypackage]: https://github.com/briggySmalls/cookiecutter-pypackage
