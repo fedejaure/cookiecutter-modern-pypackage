@@ -18,7 +18,7 @@ def test_command_line_interface_help() -> None:
     runner = CliRunner()
     help_result = runner.invoke(cli.main, ["--help"])
     assert help_result.exit_code == 0
-    assert f"Usage: main [OPTIONS]" in help_result.output
+    assert "Usage: main [OPTIONS]" in help_result.output
 
 
 def test_command_line_interface_version() -> None:
