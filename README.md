@@ -30,6 +30,7 @@
 * Multiple Python environments testing provided by [Nox][nox]
 * Documentation provided by [Sphinx][sphinx] ready for generation with, for example, [Read the Docs][rtd]
 * Command line interface using [Click][click] (optional)
+* Automated dependency updates with [Dependabot][dependabot]
 
 ## Quickstart
 
@@ -82,6 +83,7 @@ This cookiecutter was built for learning purpose and inspired by:
 [nox]: https://nox.thea.codes/en/stable/
 [tutorial]: https://cookiecutter-modern-pypackage.readthedocs.io/en/latest/tutorial.html
 [click]: http://click.pocoo.org/
+[dependabot]: https://dependabot.com/
 [audreyr/cookiecutter-pypackage]: https://github.com/audreyr/cookiecutter-pypackage
 [briggySmalls/cookiecutter-pypackage]: https://github.com/briggySmalls/cookiecutter-pypackage
 [hypermodern-python]: https://cjolowicz.github.io/posts/hypermodern-python-01-setup/
