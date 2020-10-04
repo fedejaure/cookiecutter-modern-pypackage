@@ -5,11 +5,17 @@ from typing import Union
 PROJECT_DIRECTORY = Path.cwd()
 PROJECT_TESTS = PROJECT_DIRECTORY / Path("tests")
 PROJECT_SRC = PROJECT_DIRECTORY / Path("{{ cookiecutter.project_slug }}")
+PROJECT_DOCS = PROJECT_DIRECTORY / Path("docs")
 
 
 def remove_file(filepath: Union[str, Path]) -> None:
     """Remove a file from the file system."""
     Path.unlink(PROJECT_DIRECTORY / filepath)
+
+
+def add_symlink(path: Path, target: Union[str, Path], target_is_directory: bool = False) -> None:
+    """Add symbolic link to target."""
+    path.symlink_to(target, target_is_directory)
 
 
 if __name__ == "__main__":
@@ -20,3 +26,6 @@ if __name__ == "__main__":
 
     if "Not open source" == "{{ cookiecutter.open_source_license }}":
         remove_file("LICENSE")
+
+    add_symlink(PROJECT_DOCS / "readme.md", PROJECT_DIRECTORY / "README.md")
+    add_symlink(PROJECT_DOCS / "changelog.md", PROJECT_DIRECTORY / "CHANGELOG.md")
