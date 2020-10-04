@@ -11,19 +11,10 @@ repos:
       - id: check-merge-conflict
       - id: check-json
         exclude: "^{{cookiecutter.project_slug}}/"
--   repo: https://github.com/asottile/seed-isort-config
-    rev: v2.1.1
-    hooks:
-      - id: seed-isort-config
-        args: ["--exclude=^{{cookiecutter.project_slug}}/"]
 -   repo: https://github.com/timothycrosley/isort
-    rev: 4.3.21
+    rev: 5.5.4
     hooks:
       - id: isort
-        exclude: "^{{cookiecutter.project_slug}}/"
-        additional_dependencies: [
-          'isort[pyproject]==4.3.21',
-        ]
 -   repo: https://github.com/psf/black
     rev: 19.10b0
     hooks:
