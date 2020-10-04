@@ -46,7 +46,7 @@ sphinx = "^3.0.4"
 recommonmark = "^0.6.0"
 bump2version = {git = "https://github.com/c4urself/bump2version.git", rev = "master"}
 pytest = "^5.4.2"
-xdoctest = "^0.12.0"
+xdoctest = "^0.15.0"
 cookiecutter = "^1.7.2"
 pytest-cookies = "^0.5.1"
 watchdog = {version = "^0.10.2", extras = ["watchmedo"]}
