@@ -127,7 +127,6 @@ version = "1.0.1.dev0"
 reference = "8e6db2370a683f17a4188d8b4cc8968bac881c56"
 type = "git"
 url = "https://github.com/c4urself/bump2version.git"
-
 [[package]]
 category = "dev"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -968,7 +967,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=3.5,<3.7.3 || >3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pytest-cov", "jaraco.test (>=3.2.0)", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy"]
 
 [metadata]
-content-hash = "e1a38ed191e6d06db0f93a6846568a0d512821441cabbb8b637cd4e75b337dfb"
+content-hash = "99e08298d52044a624e5a81c98edae28535e8023c2af820489ff5e24fc00a06f"
 python-versions = "<3.9,>=3.6.1"
 
 [metadata.files]
