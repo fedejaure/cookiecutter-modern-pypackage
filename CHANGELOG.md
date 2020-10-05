@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Changed
+- changelog-reader-action from v1.1.0 to v2.
+- sphinx from 3.0.4 to 3.2.1.
+- flakehell from 0.3.6 to 0.6.1.
+- black from 19.10b0 to 20.8b1.
+- xdoctest from 0.12.0 to 0.15.0.
+- mypy from 0.770 to 0.782
 
 ## [0.2.0] - 2020-10-04
 ### Added
