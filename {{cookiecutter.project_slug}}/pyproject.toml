@@ -60,7 +60,7 @@ sphinx = "^3.2.1"
 recommonmark = "^0.6.0"
 bump2version = {git = "https://github.com/c4urself/bump2version.git", rev = "master"}
 pytest = "^5.4.2"
-xdoctest = "^0.12.0"
+xdoctest = "^0.15.0"
 coverage = {version = "^5.1", extras = ["toml"]}
 pytest-cov = "^2.8.1"
 watchdog = {version = "^0.10.2", extras = ["watchmedo"]}
