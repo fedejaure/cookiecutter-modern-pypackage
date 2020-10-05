@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1] - 2020-10-05
+### Changed
+- changelog-reader-action from v1.1.0 to v2.
+- sphinx from 3.0.4 to 3.2.1.
+- flakehell from 0.3.6 to 0.6.1.
+- black from 19.10b0 to 20.8b1.
+- xdoctest from 0.12.0 to 0.15.0.
+- mypy from 0.770 to 0.782
+
+### Fixed
+- read the docs dependencies.
+
 ## [0.2.0] - 2020-10-04
 ### Added
 - Dependabot configuration.
@@ -69,7 +81,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release.
 
 
-[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v0.2.0...develop
+[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v0.2.1...develop
+[0.2.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v0.1.4...v0.2.0
 [0.1.4]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v0.1.3...v0.1.4
 [0.1.3]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v0.1.2...v0.1.3
