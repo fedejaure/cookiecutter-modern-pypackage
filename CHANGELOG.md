@@ -14,6 +14,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - xdoctest from 0.12.0 to 0.15.0.
 - mypy from 0.770 to 0.782
 
+### Fixed
+- read the docs dependencies.
+
 ## [0.2.0] - 2020-10-04
 ### Added
 - Dependabot configuration.
