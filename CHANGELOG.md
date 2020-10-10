@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - github actions ready to configure activity types.
+- isort from `^5.5.4` to `^5.5.4`.
 
 ## [0.2.1] - 2020-10-05
 ### Changed
