@@ -1,5 +1,12 @@
 name: tests
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+    branches:
+      - develop
 jobs:
 
   linting:
@@ -24,7 +31,7 @@ jobs:
       matrix:
         os: [Ubuntu, MacOS, Windows]
         python-version: [3.6, 3.7, 3.8]
-      fail-fast: false
+      fail-fast: true
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
