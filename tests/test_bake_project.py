@@ -65,7 +65,7 @@ def run_inside_dir(command: str, dirpath: str) -> int:
 def test_year_compute_in_license_file(cookies: Cookies) -> None:
     """Test that the year computed is in the license file."""
     with bake_in_temp_dir(cookies) as result:
-        license_file_path = result.project.join("LICENSE")
+        license_file_path = result.project.join("LICENSE.rst")
         now = datetime.datetime.now()
         assert str(now.year) in license_file_path.read()
 
@@ -88,7 +88,7 @@ def test_bake_not_open_source(cookies: Cookies) -> None:
         cookies, extra_context={"open_source_license": "Not open source"}
     ) as result:
         found_toplevel_files = [f.basename for f in result.project.listdir()]
-        assert "LICENSE" not in found_toplevel_files
+        assert "LICENSE.rst" not in found_toplevel_files
         assert "License" not in result.project.join("README.md").read()
 
 
