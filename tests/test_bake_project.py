@@ -4,7 +4,7 @@ import os
 import shlex
 import subprocess
 from contextlib import contextmanager
-from typing import Any, Dict, Generator, List
+from typing import Any, Dict, Generator
 
 import pytest
 from cookiecutter.utils import rmtree
@@ -101,65 +101,28 @@ def test_bake_and_run_lints(cookies: Cookies) -> None:
 
 
 @pytest.mark.parametrize(
-    "extra_context,invoke_commands",
+    "extra_context",
     [
-        (
-            {},
-            [
-                "inv clean",
-                "inv lint",
-                "inv mypy",
-                "inv tests",
-                "inv coverage",
-                "inv docs",
-                "inv version -d minor",
-            ],
-        ),
-        (
-            {"open_source_license": "Not open source"},
-            [
-                "inv clean",
-                "inv lint",
-                "inv mypy",
-                "inv tests",
-                "inv coverage",
-                "inv docs",
-                "inv version -d minor",
-            ],
-        ),
-        (
-            {
-                "open_source_license": "Not open source",
-                "command_line_interface": "No command-line interface",
-            },
-            [
-                "inv clean",
-                "inv lint",
-                "inv mypy",
-                "inv tests",
-                "inv coverage",
-                "inv docs",
-                "inv version -d minor",
-            ],
-        ),
-        (
-            {"open_source_license": "BSD", "command_line_interface": "Click"},
-            [
-                "inv clean",
-                "inv lint",
-                "inv mypy",
-                "inv tests",
-                "inv coverage",
-                "inv docs",
-                "inv version -d minor",
-            ],
-        ),
+        {},
+        {"open_source_license": "Not open source"},
+        {
+            "open_source_license": "Not open source",
+            "command_line_interface": "No command-line interface",
+        },
+        {"open_source_license": "BSD", "command_line_interface": "Click"},
     ],
 )
-def test_bake_and_run_invoke(
-    cookies: Cookies, extra_context: Dict[str, str], invoke_commands: List[str]
-) -> None:
+def test_bake_and_run_invoke(cookies: Cookies, extra_context: Dict[str, str]) -> None:
     """Test bake the project and check invoke commands."""
+    invoke_commands = [
+        "inv clean",
+        "inv lint",
+        "inv mypy",
+        "inv tests",
+        "inv coverage",
+        "inv docs",
+        "inv version -d minor",
+    ]
     with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
         assert result.project.isdir()
         assert run_inside_dir("poetry install", str(result.project)) == 0
