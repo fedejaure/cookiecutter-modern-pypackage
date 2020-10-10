@@ -15,6 +15,8 @@ def remove_file(filepath: Union[str, Path]) -> None:
 
 def add_symlink(path: Path, target: Union[str, Path], target_is_directory: bool = False) -> None:
     """Add symbolic link to target."""
+    if path.is_symlink():
+        path.unlink()
     path.symlink_to(target, target_is_directory)
 
 
@@ -27,5 +29,5 @@ if __name__ == "__main__":
     if "Not open source" == "{{ cookiecutter.open_source_license }}":
         remove_file("LICENSE")
 
-    add_symlink(PROJECT_DOCS / "readme.md", PROJECT_DIRECTORY / "README.md")
-    add_symlink(PROJECT_DOCS / "changelog.md", PROJECT_DIRECTORY / "CHANGELOG.md")
+    add_symlink(PROJECT_DOCS / "readme.md", "../README.md")
+    add_symlink(PROJECT_DOCS / "changelog.md", "../CHANGELOG.md")
