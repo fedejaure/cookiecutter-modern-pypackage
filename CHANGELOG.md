@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Added
+- License section on the docs.
+
 ### Changed
 - github actions ready to configure activity types.
 - isort from `^5.5.4` to `^5.5.4`.
