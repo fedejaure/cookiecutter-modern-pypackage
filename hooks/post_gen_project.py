@@ -27,7 +27,9 @@ if __name__ == "__main__":
         remove_file(PROJECT_SRC / "cli.py")
 
     if "Not open source" == "{{ cookiecutter.open_source_license }}":
-        remove_file("LICENSE")
+        remove_file("LICENSE.srt")
+    else:
+        add_symlink(PROJECT_DOCS / "license.srt", "../LICENSE.srt")
 
     add_symlink(PROJECT_DOCS / "readme.md", "../README.md")
     add_symlink(PROJECT_DOCS / "changelog.md", "../CHANGELOG.md")
