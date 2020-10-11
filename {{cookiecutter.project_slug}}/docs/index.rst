@@ -15,3 +15,10 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+{% if cookiecutter.open_source_license != 'Not open source' %}
+.. toctree::
+   :hidden:
+
+   License <license>
+{% endif %}

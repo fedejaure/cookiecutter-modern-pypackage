@@ -1,5 +1,6 @@
 {% if cookiecutter.open_source_license == 'MIT' %}
 MIT License
+===========
 
 Copyright (c) {% now 'local', '%Y' %}, {{ cookiecutter.full_name }}
 
@@ -21,8 +22,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 {% elif cookiecutter.open_source_license == 'BSD' %}
-
 BSD License
+===========
 
 Copyright (c) {% now 'local', '%Y' %}, {{ cookiecutter.full_name }}
 All rights reserved.
@@ -53,6 +54,7 @@ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISE
 OF THE POSSIBILITY OF SUCH DAMAGE.
 {% elif cookiecutter.open_source_license == 'ISC' -%}
 ISC License
+===========
 
 Copyright (c) {% now 'local', '%Y' %}, {{ cookiecutter.full_name }}
 
