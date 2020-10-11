@@ -1,16 +1,18 @@
 """Script that run after the project is generated."""
+import os
 from pathlib import Path
 from typing import Union
 
-PROJECT_DIRECTORY = Path.cwd()
-PROJECT_TESTS = PROJECT_DIRECTORY / Path("tests")
-PROJECT_SRC = PROJECT_DIRECTORY / Path("{{ cookiecutter.project_slug }}")
-PROJECT_DOCS = PROJECT_DIRECTORY / Path("docs")
+PROJECT_DIR = Path.cwd()
+PROJECT_TESTS = PROJECT_DIR / Path("tests")
+PROJECT_SRC = PROJECT_DIR / Path("{{ cookiecutter.project_slug }}")
+PROJECT_DOCS = PROJECT_DIR / Path("docs")
+SAFE_NT_RELATIVE_DIR = Path("..") if not os.name == "nt" else PROJECT_DIR
 
 
 def remove_file(filepath: Union[str, Path]) -> None:
     """Remove a file from the file system."""
-    Path.unlink(PROJECT_DIRECTORY / filepath)
+    Path.unlink(PROJECT_DIR / filepath)
 
 
 def add_symlink(path: Path, target: Union[str, Path], target_is_directory: bool = False) -> None:
@@ -29,7 +31,7 @@ if __name__ == "__main__":
     if "Not open source" == "{{ cookiecutter.open_source_license }}":
         remove_file("LICENSE.rst")
     else:
-        add_symlink(PROJECT_DOCS / "license.rst", "../LICENSE.rst")
+        add_symlink(PROJECT_DOCS / "license.rst", SAFE_NT_RELATIVE_DIR / "LICENSE.rst")
 
-    add_symlink(PROJECT_DOCS / "readme.md", "../README.md")
-    add_symlink(PROJECT_DOCS / "changelog.md", "../CHANGELOG.md")
+    add_symlink(PROJECT_DOCS / "readme.md", SAFE_NT_RELATIVE_DIR / "README.md")
+    add_symlink(PROJECT_DOCS / "changelog.md", SAFE_NT_RELATIVE_DIR / "CHANGELOG.md")

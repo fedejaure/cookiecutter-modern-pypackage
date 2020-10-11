@@ -56,6 +56,9 @@ Then:
 
 For more details, see the [tutorial][tutorial].
 
+> Windows: You'll need to manually fix the symbolic links 
+> to the `README.md`, `LICENSE.rst`, and `CHANGELOG.md` under the docs directory.
+
 ## Credits
 
 This cookiecutter was built for learning purpose and inspired by:
