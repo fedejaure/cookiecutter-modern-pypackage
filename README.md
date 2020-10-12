@@ -31,6 +31,7 @@
 * Documentation provided by [Sphinx][sphinx] ready for generation with, for example, [Read the Docs][rtd]
 * Command line interface using [Click][click] (optional)
 * Automated dependency updates with [Dependabot][dependabot]
+* Coverage reports on [Codecov][codecov]
 
 ## Quickstart
 
@@ -51,6 +52,7 @@ Then:
 * Create a repo and put it there.
 * Install the dev requirements into a virtualenv. (`poetry install`)
 * Install pre-commit hooks. (`poetry run inv install_hooks`)
+* Configure [Codecov][codecov] repository settings. (Codecov App, `CODECOV_TOKEN`)
 * Add the repo to your [Read the Docs][rtd] account + turn on the Read the Docs service hook.
 * Release your package by pushing a new tag to master.
 
@@ -87,3 +89,4 @@ This cookiecutter was built for learning purpose and inspired by:
 [audreyr/cookiecutter-pypackage]: https://github.com/audreyr/cookiecutter-pypackage
 [briggySmalls/cookiecutter-pypackage]: https://github.com/briggySmalls/cookiecutter-pypackage
 [hypermodern-python]: https://cjolowicz.github.io/posts/hypermodern-python-01-setup/
+[codecov]: https://codecov.io/

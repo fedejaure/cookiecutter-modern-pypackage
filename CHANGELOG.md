@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - License section on the docs.
+- Codecov integration.
 
 ### Changed
 - github actions ready to configure activity types.
