@@ -87,6 +87,10 @@ def test_bake_not_open_source(cookies: Cookies) -> None:
     with bake_in_temp_dir(
         cookies, extra_context={"open_source_license": "Not open source"}
     ) as result:
+        assert result.project.isdir()
+        assert result.exit_code == 0
+        assert result.exception is None
+
         found_toplevel_files = [f.basename for f in result.project.listdir()]
         assert "LICENSE.rst" not in found_toplevel_files
         assert "License" not in result.project.join("README.md").read()
@@ -117,6 +121,9 @@ def test_bake_and_run_invoke(cookies: Cookies, extra_context: Dict[str, str]) ->
     ]
     with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
         assert result.project.isdir()
+        assert result.exit_code == 0
+        assert result.exception is None
+
         assert run_inside_dir("poetry install", str(result.project)) == 0
         for inv_cmd in invoke_commands:
             assert run_inside_dir(f"poetry run {inv_cmd}", str(result.project)) == 0
