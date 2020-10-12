@@ -135,7 +135,7 @@ def mypy(c):
 def tests(c):
     # type: (Context) -> None
     """Run tests."""
-    pytest_options = ["--xdoctest"]
+    pytest_options = ["--xdoctest", "--cov-report=", f"--cov={SOURCE_DIR}"]
     _run(c, f"poetry run pytest {' '.join(pytest_options)} {TEST_DIR} {SOURCE_DIR}")
 
 
@@ -148,10 +148,9 @@ def tests(c):
 def coverage(c, html=False, open_browser=False):
     # type: (Context, bool, bool) -> None
     """Create coverage report."""
-    pytest_options = ["--xdoctest", "--cov-report term", f"--cov={SOURCE_DIR}"]
-    if html:
-        pytest_options.append("--cov-report html")
-    _run(c, f"poetry run pytest {' '.join(pytest_options)} {TEST_DIR}")
+    if any(Path().glob(".coverage.*")):
+        _run(c, "poetry run coverage combine")
+    _run(c, f"poetry run coverage {'html' if html else 'report'}")
     if html and open_browser:
         webbrowser.open(COVERAGE_REPORT.as_uri())
 
