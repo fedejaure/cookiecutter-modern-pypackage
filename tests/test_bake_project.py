@@ -3,12 +3,20 @@ import datetime
 import os
 import shlex
 import subprocess
+import sys
 from contextlib import contextmanager
-from typing import Any, Dict, Generator
+from typing import Any, Dict, Generator, List
 
 import pytest
 from cookiecutter.utils import rmtree
 from pytest_cookies.plugin import Cookies, Result
+
+skip_on_windows = pytest.mark.skipif(sys.platform == "win32", reason="does not run on windows")
+
+COOKIE_CONTEXT_NOT_OPEN_SOURCE = {"open_source_license": "Not open source"}
+COOKIE_CONTEXT_CLI = {"command_line_interface": "Click"}
+COOKIE_CONTEXT_BSD = {"open_source_license": "BSD"}
+COOKIE_CONTEXT_NO_CLI = {"command_line_interface": "No command-line interface"}
 
 
 @contextmanager
@@ -84,9 +92,7 @@ def test_bake_with_defaults(cookies: Cookies) -> None:
 
 def test_bake_not_open_source(cookies: Cookies) -> None:
     """Test bake not open-source project."""
-    with bake_in_temp_dir(
-        cookies, extra_context={"open_source_license": "Not open source"}
-    ) as result:
+    with bake_in_temp_dir(cookies, extra_context=COOKIE_CONTEXT_NOT_OPEN_SOURCE) as result:
         assert result.project.isdir()
         assert result.exit_code == 0
         assert result.exception is None
@@ -96,34 +102,52 @@ def test_bake_not_open_source(cookies: Cookies) -> None:
         assert "License" not in result.project.join("README.md").read()
 
 
-@pytest.mark.parametrize(
-    "extra_context",
-    [
-        {},
-        {"open_source_license": "Not open source"},
-        {
-            "open_source_license": "Not open source",
-            "command_line_interface": "No command-line interface",
-        },
-        {"open_source_license": "BSD", "command_line_interface": "Click"},
-    ],
-)
-def test_bake_and_run_invoke(cookies: Cookies, extra_context: Dict[str, str]) -> None:
-    """Test bake the project and check invoke commands."""
-    invoke_commands = [
-        "inv clean",
-        "inv lint",
-        "inv mypy",
-        "inv tests",
-        "inv coverage",
-        "inv docs",
-        "inv version -d minor",
-    ]
+def _test_bake_and_run_invoke_tasks(
+    cookies: Cookies, extra_context: Dict[str, str], inv_tasks: List[str]
+) -> None:
+    """Test bake the project and check invoke tasks."""
     with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
         assert result.project.isdir()
         assert result.exit_code == 0
         assert result.exception is None
 
         assert run_inside_dir("poetry install", str(result.project)) == 0
-        for inv_cmd in invoke_commands:
-            assert run_inside_dir(f"poetry run {inv_cmd}", str(result.project)) == 0
+        for task in inv_tasks:
+            assert run_inside_dir(f"poetry run inv {task}", str(result.project)) == 0
+
+
+@pytest.mark.parametrize(
+    "extra_context",
+    [
+        {},
+        COOKIE_CONTEXT_NOT_OPEN_SOURCE,
+        {**COOKIE_CONTEXT_NOT_OPEN_SOURCE, **COOKIE_CONTEXT_NO_CLI},
+        {**COOKIE_CONTEXT_CLI, **COOKIE_CONTEXT_BSD},
+    ],
+)
+def test_bake_and_run_invoke(cookies: Cookies, extra_context: Dict[str, str]) -> None:
+    """Test bake the project and check invoke tasks."""
+    invoke_tasks = [
+        "clean",
+        "lint",
+        "mypy",
+        "tests",
+        "coverage",
+        "version -d minor",
+    ]
+    _test_bake_and_run_invoke_tasks(cookies, extra_context, invoke_tasks)
+
+
+@skip_on_windows
+@pytest.mark.parametrize(
+    "extra_context",
+    [
+        {},
+        COOKIE_CONTEXT_NOT_OPEN_SOURCE,
+        {**COOKIE_CONTEXT_NOT_OPEN_SOURCE, **COOKIE_CONTEXT_NO_CLI},
+        {**COOKIE_CONTEXT_CLI, **COOKIE_CONTEXT_BSD},
+    ],
+)
+def test_bake_and_build_docs(cookies: Cookies, extra_context: Dict[str, str]) -> None:
+    """Test bake the project and check invoke docs task."""
+    _test_bake_and_run_invoke_tasks(cookies, extra_context, ["docs"])
