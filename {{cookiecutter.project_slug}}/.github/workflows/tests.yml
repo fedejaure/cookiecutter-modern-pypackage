@@ -42,6 +42,7 @@ jobs:
           pip install nox
           pip install poetry
           poetry config virtualenvs.in-project true
+      
       - name: Run mypy with nox
         shell: bash
         run: nox --force-color -s mypy-${{ matrix.python-version }}
@@ -52,4 +53,38 @@ jobs:
         if: matrix.python-version == 3.8 && matrix.os == 'Ubuntu'
         shell: bash
         run: nox --force-color -s safety
+
+      - name: Upload coverage data
+        uses: actions/upload-artifact@v2.2.0
+        with:
+          name: coverage-data
+          path: ".coverage.*"
+
+  coverage:
+    needs: tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+      - name: Install system deps
+        shell: bash
+        run: |
+          pip install nox
+          pip install poetry
+          poetry config virtualenvs.in-project true
+
+      - name: Download coverage data
+        uses: actions/download-artifact@v2.0.5
+        with:
+          name: coverage-data
+
+      - name: Create coverage report
+        run: |
+          nox --force-color --session=coverage -- --fmt xml
+
+      - name: Upload coverage report
+        uses: codecov/codecov-action@v1.0.13
 {% endraw %}
