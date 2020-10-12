@@ -139,25 +139,27 @@ def tests(c):
     _run(c, f"poetry run pytest {' '.join(pytest_options)} {TEST_DIR} {SOURCE_DIR}")
 
 
-@task(help={"html": "Build a local html report", "publish": "Publish the result via coveralls"})
-def coverage(c, html=False, publish=False):
+@task(
+    help={
+        "html": "Build a local html report",
+        "open_browser": "Open the coverage report in the web browser (requires --html)",
+    }
+)
+def coverage(c, html=False, open_browser=False):
     # type: (Context, bool, bool) -> None
     """Create coverage report."""
-    cov_options = ["--cov-report term", f"--cov={SOURCE_DIR}"]
+    pytest_options = ["--xdoctest", "--cov-report term", f"--cov={SOURCE_DIR}"]
     if html:
-        cov_options.append("--cov-report html")
-    _run(c, f"poetry run pytest {' '.join(cov_options)} {TEST_DIR}")
-    if publish:
-        # TODO
-        pass
-    elif html:
+        pytest_options.append("--cov-report html")
+    _run(c, f"poetry run pytest {' '.join(pytest_options)} {TEST_DIR}")
+    if html and open_browser:
         webbrowser.open(COVERAGE_REPORT.as_uri())
 
 
 @task(
     help={
         "serve": "Build the docs watching for changes",
-        "open_browser": "Open  the docs in the web browser",
+        "open_browser": "Open the docs in the web browser",
     }
 )
 def docs(c, serve=False, open_browser=False):
