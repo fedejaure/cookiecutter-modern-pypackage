@@ -141,17 +141,17 @@ def tests(c):
 
 @task(
     help={
-        "html": "Build a local html report",
-        "open_browser": "Open the coverage report in the web browser (requires --html)",
+        "fmt": "Build a local report: report, html, json, annotate, html, xml.",
+        "open_browser": "Open the coverage report in the web browser (requires --fmt html)",
     }
 )
-def coverage(c, html=False, open_browser=False):
-    # type: (Context, bool, bool) -> None
+def coverage(c, fmt="report", open_browser=False):
+    # type: (Context, str, bool) -> None
     """Create coverage report."""
     if any(Path().glob(".coverage.*")):
         _run(c, "poetry run coverage combine")
-    _run(c, f"poetry run coverage {'html' if html else 'report'}")
-    if html and open_browser:
+    _run(c, f"poetry run coverage {fmt}")
+    if fmt == "html" and open_browser:
         webbrowser.open(COVERAGE_REPORT.as_uri())
 
 
