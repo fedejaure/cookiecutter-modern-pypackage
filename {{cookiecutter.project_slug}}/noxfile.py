@@ -1,7 +1,8 @@
 """Nox sessions."""
+import platform
 import tempfile
 from typing import Any
-import platform
+
 import nox
 from nox.sessions import Session
 
