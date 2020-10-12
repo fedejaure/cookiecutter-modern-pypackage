@@ -92,14 +92,6 @@ def test_bake_not_open_source(cookies: Cookies) -> None:
         assert "License" not in result.project.join("README.md").read()
 
 
-def test_bake_and_run_lints(cookies: Cookies) -> None:
-    """Test bake the project and check the code style."""
-    with bake_in_temp_dir(cookies) as result:
-        assert result.project.isdir()
-        assert run_inside_dir("poetry install", str(result.project)) == 0
-        assert run_inside_dir("poetry run inv lint", str(result.project)) == 0
-
-
 @pytest.mark.parametrize(
     "extra_context",
     [
