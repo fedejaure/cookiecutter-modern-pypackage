@@ -28,6 +28,7 @@ classifiers=[
 python = "<3.9,>=3.6.1"
 
 [tool.poetry.dev-dependencies]
+pre-commit = "^2.7.1"
 invoke = "^1.4.1"
 flake8 = "^3.7.9"
 flakehell = "^0.6.1"

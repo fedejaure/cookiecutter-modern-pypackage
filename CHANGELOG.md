@@ -14,6 +14,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - isort from `^5.5.4` to `^5.5.4`.
 - bump2version from `master` to `^1.0.1`.
 
+### Fixed
+- missing pre-commit requirement.
+
 ## [0.2.1] - 2020-10-05
 ### Changed
 - changelog-reader-action from v1.1.0 to v2.
