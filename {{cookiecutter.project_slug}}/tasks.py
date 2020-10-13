@@ -135,29 +135,30 @@ def mypy(c):
 def tests(c):
     # type: (Context) -> None
     """Run tests."""
-    pytest_options = ["--xdoctest"]
+    pytest_options = ["--xdoctest", "--cov-report=", f"--cov={SOURCE_DIR}"]
     _run(c, f"poetry run pytest {' '.join(pytest_options)} {TEST_DIR} {SOURCE_DIR}")
 
 
-@task(help={"html": "Build a local html report", "publish": "Publish the result via coveralls"})
-def coverage(c, html=False, publish=False):
-    # type: (Context, bool, bool) -> None
+@task(
+    help={
+        "fmt": "Build a local report: report, html, json, annotate, html, xml.",
+        "open_browser": "Open the coverage report in the web browser (requires --fmt html)",
+    }
+)
+def coverage(c, fmt="report", open_browser=False):
+    # type: (Context, str, bool) -> None
     """Create coverage report."""
-    cov_options = ["--cov-report term", f"--cov={SOURCE_DIR}"]
-    if html:
-        cov_options.append("--cov-report html")
-    _run(c, f"poetry run pytest {' '.join(cov_options)} {TEST_DIR}")
-    if publish:
-        # TODO
-        pass
-    elif html:
+    if any(Path().glob(".coverage.*")):
+        _run(c, "poetry run coverage combine")
+    _run(c, f"poetry run coverage {fmt}")
+    if fmt == "html" and open_browser:
         webbrowser.open(COVERAGE_REPORT.as_uri())
 
 
 @task(
     help={
         "serve": "Build the docs watching for changes",
-        "open_browser": "Open  the docs in the web browser",
+        "open_browser": "Open the docs in the web browser",
     }
 )
 def docs(c, serve=False, open_browser=False):

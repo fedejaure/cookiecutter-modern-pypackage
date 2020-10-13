@@ -119,7 +119,7 @@ def _test_bake_and_run_invoke_tasks(
 @pytest.mark.parametrize(
     "extra_context",
     [
-        {},
+        None,
         COOKIE_CONTEXT_NOT_OPEN_SOURCE,
         {**COOKIE_CONTEXT_NOT_OPEN_SOURCE, **COOKIE_CONTEXT_NO_CLI},
         {**COOKIE_CONTEXT_CLI, **COOKIE_CONTEXT_BSD},
