@@ -5,18 +5,21 @@ on:
     tags:
       - 'v*'
 jobs:
-
   release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      
       - name: Set up Python 3.6
         uses: actions/setup-python@v2
         with:
           python-version: 3.6
-      - run: pip install nox
-      - run: pip install poetry
-      - run: nox
+      
+      - name: Install system deps
+        shell: bash
+        run: |
+          pip install poetry
+          poetry config virtualenvs.in-project true
 
       - name: Build package
         run: |
@@ -46,13 +49,16 @@ jobs:
         run: |
           export CURRENT_VERSION=${GITHUB_TAG/refs\/tags\/v/}
           echo "::set-env name=CURRENT_VERSION::$CURRENT_VERSION"
+      
       - uses: actions/checkout@v2
+      
       - name: Get Changelog Entry
         id: changelog_reader
         uses: mindsers/changelog-reader-action@v2.0.0
         with:
           version: ${{ env.CURRENT_VERSION }}
           path: ./CHANGELOG.md
+      
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
