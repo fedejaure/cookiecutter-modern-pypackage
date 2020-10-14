@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - License section on the docs.
 - Codecov integration.
+- PyPI and TestPyPI steps on the release workflow.
 
 ### Changed
 - github actions ready to configure activity types.

@@ -17,8 +17,23 @@ jobs:
       - run: pip install nox
       - run: pip install poetry
       - run: nox
-      - run: poetry build
-      - run: poetry publish --username=__token__ --password=${{ secrets.PYPI_TOKEN }}
+
+      - name: Build package
+        run: |
+          poetry build --ansi
+
+      - name: Publish package on PyPI
+        uses: pypa/gh-action-pypi-publish@v1.4.1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_TOKEN }}
+
+      - name: Publish package on TestPyPI
+        uses: pypa/gh-action-pypi-publish@v1.4.1
+        with:
+          user: __token__
+          password: ${{ secrets.TEST_PYPI_TOKEN }}
+          repository_url: https://test.pypi.org/legacy/
 
   github_release:
     needs: release

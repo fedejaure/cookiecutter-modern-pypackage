@@ -32,6 +32,7 @@
 * Command line interface using [Click][click] (optional)
 * Automated dependency updates with [Dependabot][dependabot]
 * Coverage reports on [Codecov][codecov]
+* Automated releases to [PyPI][pypi] and [TestPyPI][testpypi]
 
 ## Quickstart
 
@@ -54,7 +55,8 @@ Then:
 * Install pre-commit hooks. (`poetry run inv install_hooks`)
 * Configure [Codecov][codecov] repository settings. (Codecov App, `CODECOV_TOKEN`)
 * Add the repo to your [Read the Docs][rtd] account + turn on the Read the Docs service hook.
-* Release your package by pushing a new tag to master.
+* Configure [PyPI][pypi] and [TestPyPI][testpypi] tokens. (`PYPI_TOKEN`, `TEST_PYPI_TOKEN`)
+* Release your package by pushing a new tag.
 
 For more details, see the [tutorial][tutorial].
 
@@ -90,3 +92,5 @@ This cookiecutter was built for learning purpose and inspired by:
 [briggySmalls/cookiecutter-pypackage]: https://github.com/briggySmalls/cookiecutter-pypackage
 [hypermodern-python]: https://cjolowicz.github.io/posts/hypermodern-python-01-setup/
 [codecov]: https://codecov.io/
+[pypi]: https://pypi.org/
+[testpypi]: https://test.pypi.org/
