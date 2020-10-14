@@ -4,24 +4,7 @@ on:
     tags:
       - 'v*'
 jobs:
-  release:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      
-      - name: Set up Python 3.6
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.6
-      
-      - name: Install system deps
-        shell: bash
-        run: |
-          pip install poetry
-          poetry config virtualenvs.in-project true
-
   github_release:
-    needs: release
     name: Create Github Release
     runs-on: ubuntu-latest
     steps:
