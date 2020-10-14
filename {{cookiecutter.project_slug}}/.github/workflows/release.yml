@@ -47,8 +47,7 @@ jobs:
         env:
           GITHUB_REF: ${{ github.ref }}
         run: |
-          export CURRENT_VERSION=${GITHUB_TAG/refs\/tags\/v/}
-          echo "::set-env name=CURRENT_VERSION::$CURRENT_VERSION"
+          echo "CURRENT_VERSION=${GITHUB_TAG/refs\/tags\/v/}" >> $GITHUB_ENV
       
       - uses: actions/checkout@v2
       
