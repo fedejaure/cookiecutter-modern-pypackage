@@ -12,7 +12,7 @@ repos:
       - id: check-json
         exclude: "^{{cookiecutter.project_slug}}/"
 -   repo: https://github.com/timothycrosley/isort
-    rev: 5.6.3
+    rev: 5.6.4
     hooks:
       - id: isort
 -   repo: https://github.com/psf/black
