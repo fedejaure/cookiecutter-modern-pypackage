@@ -2,7 +2,7 @@
 import datetime
 import os
 import shlex
-import subprocess
+import subprocess  # noqa: S404
 import sys
 from contextlib import contextmanager
 from typing import Any, Dict, Generator, List
@@ -67,7 +67,7 @@ def run_inside_dir(command: str, dirpath: str) -> int:
         The return code of the command.
     """
     with inside_dir(dirpath):
-        return subprocess.check_call(shlex.split(command))
+        return subprocess.check_call(shlex.split(command), shell=False)  # noqa: S603
 
 
 def test_year_compute_in_license_file(cookies: Cookies) -> None:
