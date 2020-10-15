@@ -31,7 +31,7 @@ jobs:
     strategy:
       matrix:
         os: [Ubuntu, MacOS, Windows]
-        python-version: [3.6, 3.7, 3.8]
+        python-version: [3.6, 3.7, 3.8, 3.9]
       fail-fast: true
     steps:
       - uses: actions/checkout@v2
@@ -57,6 +57,6 @@ jobs:
         run: nox --force-color -s tests-${{ matrix.python-version }}
       
       - name: Run safety check
-        if: matrix.python-version == 3.8 && matrix.os == 'Ubuntu'
+        if: matrix.python-version == 3.9 && matrix.os == 'Ubuntu'
         shell: bash
         run: nox --force-color -s safety

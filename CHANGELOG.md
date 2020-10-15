@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - License section on the docs.
 - Codecov integration.
 - PyPI and TestPyPI steps on the release workflow.
+- Python `3.9` support.
 
 ### Changed
 - github actions ready to configure activity types.
@@ -19,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - coverage from `^5.1` to `^5.3`.
 - pytest-cov from `^2.8.1` to `^2.10.1`.
 - pytest from `^5.4.2` to `^6.1.1`.
+- flake8 from `^3.7.9` to `^3.8.4`.
 
 ### Fixed
 - missing pre-commit requirement.
