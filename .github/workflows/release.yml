@@ -8,21 +8,22 @@ jobs:
     name: Create Github Release
     runs-on: ubuntu-latest
     steps:
-      - name: Get version from tag
-        env:
-          GITHUB_REF: ${{ github.ref }}
-        run: |
-          echo "CURRENT_VERSION=${GITHUB_TAG/refs\/tags\/v/}" >> $GITHUB_ENV
-      
       - uses: actions/checkout@v2
       
+      - name: Get version from tag
+        id: tag_name
+        shell: bash
+        run: |
+          echo ::set-output name=current_version::${GITHUB_REF#refs/tags/v}
+
       - name: Get Changelog Entry
         id: changelog_reader
         uses: mindsers/changelog-reader-action@v2.0.0
         with:
-          version: ${{ env.CURRENT_VERSION }}
+          validation_depth: 1
+          version: ${{ steps.tag_name.outputs.current_version }}
           path: ./CHANGELOG.md
-      
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1

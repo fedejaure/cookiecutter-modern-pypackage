@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - missing pre-commit requirement.
+- get release version on the release workflow.
 
 ## [0.2.1] - 2020-10-05
 ### Changed
