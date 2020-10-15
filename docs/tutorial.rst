@@ -102,17 +102,21 @@ Now your documentation will get rebuilt when you make documentation changes to y
 
 .. _`Read the Docs`: https://readthedocs.org/
 
-Step 7: Release on PyPI
------------------------
+Step 7: Release on PyPI and TestPyPI
+------------------------------------
 
 The Python Package Index or `PyPI`_ is the official third-party software repository for the Python programming language. Python developers intend it to be a comprehensive catalog of all open source Python packages.
 
-When you are ready, release your package the standard Python way.
+`TestPyPI`_ is a separate instance of the Python Package Index (`PyPI`_) that allows you to try out the distribution tools and process without worrying about affecting the real index.
 
-See `PyPI Help`_ for more information about submitting a package.
+Log into your account at `PyPI`_ and `TestPyPI`_. Go to Account Settings and generate an API tokens. 
+
+Go to the repository settings on GitHub, and add tow secrets named `PYPI_TOKEN` and `TEST_PYPI_TOKEN` with the tokens that you just generated.
+
+Release your package by pushing a new tag.
 
 .. _`PyPI`: https://pypi.python.org/pypi
-.. _`PyPI Help`: http://peterdowns.com/posts/first-time-with-pypi.html
+.. _`TestPyPI`: https://test.pypi.org/
 
 Having problems?
 ----------------
