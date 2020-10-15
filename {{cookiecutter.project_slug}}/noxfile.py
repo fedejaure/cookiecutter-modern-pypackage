@@ -1,4 +1,5 @@
 """Nox sessions."""
+import platform
 import tempfile
 from typing import Any
 
@@ -6,7 +7,7 @@ import nox
 from nox.sessions import Session
 
 nox.options.sessions = ["tests", "mypy"]
-python_versions = ["3.6", "3.7", "3.8"]
+python_versions = ["3.6", "3.7", "3.8", "3.9"]
 
 
 def install_with_constraints(session: Session, *args: str, **kwargs: Any) -> None:
@@ -41,8 +42,30 @@ def install_with_constraints(session: Session, *args: str, **kwargs: Any) -> Non
 def tests(session: Session) -> None:
     """Run the test suite."""
     session.install(".")
-    install_with_constraints(session, "invoke", "pytest", "xdoctest")
-    session.run("inv", "tests")
+    install_with_constraints(
+        session, "invoke", "pytest", "xdoctest", "coverage[toml]", "pytest-cov"
+    )
+    try:
+        session.run(
+            "inv",
+            "tests",
+            env={
+                "COVERAGE_FILE": f".coverage.{platform.system()}.{platform.python_version()}",
+            },
+        )
+    finally:
+        if session.interactive:
+            session.notify("coverage")
+
+
+@nox.session
+def coverage(session: Session) -> None:
+    """Produce the coverage report."""
+    args = session.posargs if session.posargs and len(session._runner.manifest) == 1 else []
+
+    install_with_constraints(session, "invoke", "coverage[toml]")
+
+    session.run("inv", "coverage", *args)
 
 
 @nox.session(python=python_versions)
@@ -52,7 +75,7 @@ def mypy(session: Session) -> None:
     session.run("inv", "mypy")
 
 
-@nox.session(python="3.8")
+@nox.session(python="3.9")
 def safety(session: Session) -> None:
     """Scan dependencies for insecure packages."""
     install_with_constraints(session, "invoke", "safety")

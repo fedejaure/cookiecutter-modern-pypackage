@@ -74,7 +74,22 @@ Install the new project's local development requirements inside a virtual enviro
     $ poetry install
     $ poetry run inv install_hooks
 
-Step 5: Set Up Read the Docs
+Step 5: Set Up Codecov
+----------------------
+
+`Codecov`_ provides highly integrated tools to group, merge, archive, and compare coverage reports. 
+
+Log into your account at `Codecov`_. If you don't have one, create one and log into it.
+
+Click on `Add new repository`. Choose the desired one. Then follow the instructions to setup the `CODECOV_TOKEN` on the github secrets.
+
+Install the `Codecov`_ github App.
+
+Now your coverage reports will be generated when a new PR is created.
+
+.. _`Codecov`: https://codecov.io/
+
+Step 6: Set Up Read the Docs
 ----------------------------
 
 `Read the Docs`_ hosts documentation for the open source community. Think of it as Continuous Documentation.
@@ -87,17 +102,21 @@ Now your documentation will get rebuilt when you make documentation changes to y
 
 .. _`Read the Docs`: https://readthedocs.org/
 
-Step 6: Release on PyPI
------------------------
+Step 7: Release on PyPI and TestPyPI
+------------------------------------
 
 The Python Package Index or `PyPI`_ is the official third-party software repository for the Python programming language. Python developers intend it to be a comprehensive catalog of all open source Python packages.
 
-When you are ready, release your package the standard Python way.
+`TestPyPI`_ is a separate instance of the Python Package Index (`PyPI`_) that allows you to try out the distribution tools and process without worrying about affecting the real index.
 
-See `PyPI Help`_ for more information about submitting a package.
+Log into your account at `PyPI`_ and `TestPyPI`_. Go to Account Settings and generate an API tokens. 
+
+Go to the repository settings on GitHub, and add tow secrets named `PYPI_TOKEN` and `TEST_PYPI_TOKEN` with the tokens that you just generated.
+
+Release your package by pushing a new tag.
 
 .. _`PyPI`: https://pypi.python.org/pypi
-.. _`PyPI Help`: http://peterdowns.com/posts/first-time-with-pypi.html
+.. _`TestPyPI`: https://test.pypi.org/
 
 Having problems?
 ----------------
