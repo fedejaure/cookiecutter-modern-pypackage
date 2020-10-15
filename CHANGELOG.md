@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+
+## [1.0.0] - 2020-10-15
 ### Added
 - License section on the docs.
 - Codecov integration.
@@ -100,7 +102,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release.
 
 
-[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v0.2.1...develop
+[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.0.0...develop
+[1.0.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v0.2.1...v1.0.0
 [0.2.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v0.1.4...v0.2.0
 [0.1.4]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v0.1.3...v0.1.4
