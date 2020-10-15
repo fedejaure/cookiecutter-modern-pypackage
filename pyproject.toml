@@ -19,13 +19,14 @@ classifiers=[
     "Programming Language :: Python :: 3.6",
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: Implementation :: CPython",
     "Programming Language :: Python :: Implementation :: PyPy",
     "Topic :: Software Development",
 ]
 
 [tool.poetry.dependencies]
-python = "<3.9,>=3.6.1"
+python = "<3.10,>=3.6.1"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.7.1"
