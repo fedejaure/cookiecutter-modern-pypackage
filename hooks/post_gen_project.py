@@ -4,7 +4,7 @@ from typing import Union
 
 PROJECT_DIR = Path.cwd()
 PROJECT_TESTS = PROJECT_DIR / Path("tests")
-PROJECT_SRC = PROJECT_DIR / Path("{{ cookiecutter.project_slug }}")
+PROJECT_SRC = PROJECT_DIR / Path("src/{{ cookiecutter.project_slug }}")
 PROJECT_DOCS = PROJECT_DIR / Path("docs")
 
 
