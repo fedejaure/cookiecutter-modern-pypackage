@@ -1,4 +1,4 @@
-Welcome to {{ cookiecutter.project_name }}'s documentation!
+Welcome to {{ cookiecutter.project_title }}'s documentation!
 ===========================================================
 
 .. toctree::

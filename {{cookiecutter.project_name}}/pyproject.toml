@@ -6,7 +6,7 @@
     'GNU General Public License v3': 'License :: OSI Approved :: GNU General Public License v3 (GPLv3)'
 } %}
 [tool.poetry]
-name = "{{ cookiecutter.project_name | slugify }}"
+name = "{{ cookiecutter.project_name }}"
 version = "{{ cookiecutter.version }}"
 description = "{{ cookiecutter.project_short_description }}"
 authors = ["{{ cookiecutter.full_name }} <{{ cookiecutter.email }}>"]
@@ -14,9 +14,9 @@ authors = ["{{ cookiecutter.full_name }} <{{ cookiecutter.email }}>"]
 license = "{{ cookiecutter.open_source_license }}"
 {% endif %}
 readme = "README.md"
-homepage = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
-repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
-keywords = ["{{ cookiecutter.project_slug }}"]
+homepage = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}"
+repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}"
+keywords = ["{{ cookiecutter.project_name }}"]
 classifiers=[
     "Development Status :: 2 - Pre-Alpha",
     "Intended Audience :: Developers",
@@ -33,7 +33,7 @@ classifiers=[
 
 {% if cookiecutter.command_line_interface|lower == 'click' %}
 [tool.poetry.scripts]
-{{ cookiecutter.project_slug }} = '{{ cookiecutter.project_slug }}.cli:main'
+{{ cookiecutter.project_name }} = '{{ cookiecutter.project_slug }}.cli:main'
 {% endif %}
 
 [tool.poetry.dependencies]
