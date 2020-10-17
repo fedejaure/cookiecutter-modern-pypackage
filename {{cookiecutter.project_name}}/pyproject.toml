@@ -68,8 +68,12 @@ coverage = {version = "^5.3", extras = ["toml"]}
 pytest-cov = "^2.10.1"
 watchdog = {version = "^0.10.2", extras = ["watchmedo"]}
 
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
 [tool.coverage.run]
 branch = true
+source = ["{{ cookiecutter.project_slug }}"]
 
 [tool.coverage.report]
 fail_under = 100
