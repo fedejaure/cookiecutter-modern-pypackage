@@ -18,10 +18,13 @@ github_username
     Your GitHub username.
 
 project_name
-    The name of your new Python package project. This is used in documentation, so spaces and any characters are fine here.
+    The name of your new Python package project. This is used in the package name and the Github repository name, so use - insteed of spaces.
 
 project_slug
     The namespace of your Python package. This should be Python import-friendly. Typically, it is the slugified version of project_name.
+
+project_title
+    The title of your new Python project. This is used in documentation, so spaces and any characters are fine here.
 
 project_short_description
     A 1-sentence description of what your Python package does.
@@ -38,4 +41,4 @@ open_source_license
     Whether to add a license file. Options: ["MIT", "BSD", "ISC", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"s]
 
 command_line_interface
-    Whether to create a console script using Click. Console script entry point will match the project_slug. Options: ["Click", "No command-line interface"]
+    Whether to create a console script using Click. Console script entry point will match the project_name. Options: ["Click", "No command-line interface"]

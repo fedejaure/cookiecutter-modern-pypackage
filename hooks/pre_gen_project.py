@@ -2,14 +2,33 @@
 import re
 import sys
 
-MODULE_REGEX = r"^[_a-zA-Z][_a-zA-Z0-9]+$"
+NAME_REGEX = r"^[a-zA-Z][\-a-zA-Z0-9]+$"
+SLUG_REGEX = r"^[_a-zA-Z][_a-zA-Z0-9]+$"
 
-module_name = "{{ cookiecutter.project_slug}}"
 
-if not re.match(MODULE_REGEX, module_name):
-    print(
-        f"ERROR: The project slug {module_name} is not a valid Python module name. "
-        "Please do not use a - and use _ instead"
+def validate_value(value: str, regex: str, fail_msg: str) -> None:
+    """Validate value format."""
+    if not re.match(regex, value):
+        print(fail_msg)
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+
+    validate_value(
+        "{{ cookiecutter.project_name }}",
+        NAME_REGEX,
+        (
+            "ERROR: The project name {value} is not a valid Github repository name. "
+            "Please do not use a _ and use - instead"
+        ),
     )
 
-    sys.exit(1)
+    validate_value(
+        "{{ cookiecutter.project_slug }}",
+        SLUG_REGEX,
+        (
+            "ERROR: The project slug {value} is not a valid Python module name. "
+            "Please do not use a - and use _ instead"
+        ),
+    )
