@@ -42,9 +42,9 @@ If you don't know what to enter, stick with the defaults.
 Step 3: Create a GitHub Repo
 ----------------------------
 
-Go to your GitHub account and create a new repo named ``mypackage``, where ``mypackage`` matches the ``[project_slug]`` from your answers to running cookiecutter.
+Go to your GitHub account and create a new repo named ``mypackage``, where ``mypackage`` matches the ``[project_name]`` from your answers to running cookiecutter.
 
-You will find one folder named after the ``[project_slug]``. Move into this folder, and then setup git to use your GitHub repo and upload the code:
+You will find one folder named after the ``[project_name]``. Move into this folder, and then setup git to use your GitHub repo and upload the code:
 
 .. code-block:: bash
 

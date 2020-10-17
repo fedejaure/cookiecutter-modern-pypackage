@@ -67,7 +67,7 @@ html_theme = "alabaster"
 # documentation.
 html_theme_options = {
     "github_user": "{{ cookiecutter.github_username }}",
-    "github_repo": "{{ cookiecutter.project_slug }}",
+    "github_repo": "{{ cookiecutter.project_name }}",
     "github_banner": True,
     "show_related": False,
     "fixed_sidebar": True,

@@ -132,7 +132,7 @@ dmypy.json
 .pyre/
 
 # Cookiecutter
-modern_python_boilerplate/
+modern-python-boilerplate/
 
 # Code editors
 .vscode

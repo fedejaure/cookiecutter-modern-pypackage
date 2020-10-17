@@ -51,7 +51,7 @@ def watch(c, replay=False):
         c,
         f"poetry run watchmedo shell-command -p '*.*' "
         f"-c 'inv bake {'--replay' if replay else ''}' "
-        "-W -R -D {{cookiecutter.project_slug}}",
+        "-W -R -D {{ cookiecutter.project_name }}",
     )
 
 

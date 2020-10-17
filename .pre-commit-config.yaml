@@ -3,24 +3,25 @@ repos:
     rev: v3.0.0
     hooks:
       - id: check-toml
-        exclude: "^{{cookiecutter.project_slug}}/"
+        exclude: "^{{cookiecutter.project_name}}/"
       - id: check-yaml
-        exclude: "^{{cookiecutter.project_slug}}/"
+        exclude: "^{{cookiecutter.project_name}}/"
       - id: debug-statements
-        exclude: "^{{cookiecutter.project_slug}}/"
+        exclude: "^{{cookiecutter.project_name}}/"
       - id: check-merge-conflict
       - id: check-json
-        exclude: "^{{cookiecutter.project_slug}}/"
+        exclude: "^{{cookiecutter.project_name}}/"
       - id: end-of-file-fixer
 -   repo: https://github.com/timothycrosley/isort
     rev: 5.6.4
     hooks:
       - id: isort
+        exclude: "^{{cookiecutter.project_name}}/"
 -   repo: https://github.com/psf/black
     rev: 20.8b1
     hooks:
       - id: black
-        exclude: "^{{cookiecutter.project_slug}}/"
+        exclude: "^{{cookiecutter.project_name}}/"
 -   repo: local
     hooks:
       - id: flakehell
@@ -43,4 +44,4 @@ repos:
           'flake8-bandit>=2.1.2',
           'darglint>=1.3.0'
         ]
-        exclude: "^{{cookiecutter.project_slug}}/"
+        exclude: "^{{cookiecutter.project_name}}/"
