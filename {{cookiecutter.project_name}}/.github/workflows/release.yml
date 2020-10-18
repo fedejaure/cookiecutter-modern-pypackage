@@ -69,4 +69,5 @@ jobs:
           body: ${{ steps.changelog_reader.outputs.changes }}
           draft: false
           prerelease: false
+
 {% endraw %}
