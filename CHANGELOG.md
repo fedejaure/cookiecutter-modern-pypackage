@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Changed
+- flakehell from `^0.6.1` to `^0.7.0`.
+
 ### Fixes
 - mypy nox session requirements.
 
