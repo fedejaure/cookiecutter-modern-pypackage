@@ -62,15 +62,14 @@ def tests(session: Session) -> None:
 def coverage(session: Session) -> None:
     """Produce the coverage report."""
     args = session.posargs if session.posargs and len(session._runner.manifest) == 1 else []
-
     install_with_constraints(session, "invoke", "coverage[toml]")
-
     session.run("inv", "coverage", *args)
 
 
 @nox.session(python=python_versions)
 def mypy(session: Session) -> None:
     """Type-check using mypy."""
+    session.install(".")
     install_with_constraints(session, "invoke", "mypy")
     session.run("inv", "mypy")
 
