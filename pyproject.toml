@@ -48,7 +48,7 @@ mypy = "^0.790"
 sphinx = "^3.2.1"
 recommonmark = "^0.6.0"
 bump2version = "^1.0.1"
-pytest = "^6.1.1"
+pytest = "^6.1.2"
 xdoctest = "^0.15.0"
 cookiecutter = "^1.7.2"
 pytest-cookies = {git = "https://github.com/jayvdb/pytest-cookies.git", rev = "rm-pins"}
