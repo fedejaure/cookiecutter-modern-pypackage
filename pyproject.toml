@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cookiecutter-modern-pypackage"
-version = "1.1.1"
+version = "1.1.2"
 description = "Cookiecutter template for a modern Python package."
 authors = ["Federico Jaureguialzo <fedejaure@gmail.com>"]
 license = "MIT"
