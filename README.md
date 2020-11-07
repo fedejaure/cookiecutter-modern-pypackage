@@ -45,14 +45,14 @@ pip install -U cookiecutter
 Generate a Python package project:
 
 ```
-cookiecutter gh:fedejaure/cookiecutter-modern-pypackage --checkout v1.1.1
+cookiecutter gh:fedejaure/cookiecutter-modern-pypackage --checkout v1.1.2
 ```
 
 Then:
 
 * Create a repo and put it there.
 * Install the dev requirements into a virtualenv. (`poetry install`)
-* Install pre-commit hooks. (`poetry run inv install_hooks`)
+* Install pre-commit hooks. (`poetry run inv install-hooks`)
 * Configure [Codecov][codecov] repository settings. (Codecov App, `CODECOV_TOKEN`)
 * Add the repo to your [Read the Docs][rtd] account + turn on the Read the Docs service hook.
 * Configure [PyPI][pypi] and [TestPyPI][testpypi] tokens. (`PYPI_TOKEN`, `TEST_PYPI_TOKEN`)
