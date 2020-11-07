@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - create-release action from `v1` to `v1.1.4`.
 - checkout action from `v2` to `v2.3.3`.
 - setup-python action from `v2` to `v2.1.4`.
+- sphinx from `^3.2.1` to `^3.3.0`.
 
 ### Fixes
 - mypy nox session requirements.
