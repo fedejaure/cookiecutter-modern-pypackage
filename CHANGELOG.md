@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Changed
+- sphinx from `^3.3.0` to `^3.3.1`.
 
 ## [1.1.2] - 2020-11-07
 ### Changed
