@@ -42,6 +42,6 @@ repos:
           'flake8-annotations>=2.1.0',
           'flake8-docstrings>=1.5.0',
           'flake8-bandit>=2.1.2',
-          'darglint>=1.3.0'
+          'darglint>=1.5.8'
         ]
         exclude: "^{{cookiecutter.project_name}}/"
