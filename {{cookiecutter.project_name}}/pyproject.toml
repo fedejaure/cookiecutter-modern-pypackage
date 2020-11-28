@@ -43,7 +43,7 @@ click = "^7.1.2"
 {% endif %}
 
 [tool.poetry.dev-dependencies]
-pre-commit = "^2.9.0"
+pre-commit = "^2.9.2"
 invoke = "^1.4.1"
 flake8 = "^3.8.4"
 flakehell = "^0.7.0"
