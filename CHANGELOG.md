@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.3] - 2020-12-23
+### Changed
+- sphinx from `^3.3.0` to `^3.4.0`.
+- recommonmark from `0.6.0` to `0.7.1`
+- watchdog from `^0.10.2` to `^1.0.2`.
+- pre-commit from `^2.8.2` to `^2.9.3`.
+- flakehell from `^0.7.0` to `^0.7.1`.
+- safety from `^1.9.0` to `^1.10.0`.
+- darglint from `^1.3.0` to `^1.5.8`.
+- flake8-bugbear from `^20.1.4` to `^20.11.1`.
+- actions/setup-python from `v2.1.4` to `v2.2.1`.
+- pytest from `^6.1.2` to `^6.2.1`.
+
 ## [1.1.2] - 2020-11-07
 ### Changed
 - flakehell from `^0.6.1` to `^0.7.0`.
@@ -132,7 +145,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release.
 
 
-[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.1.2...develop
+[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.1.3...develop
+[1.1.3]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.1.2...v1.1.3
 [1.1.2]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.0.1...v1.1.0
