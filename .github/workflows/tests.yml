@@ -44,6 +44,7 @@ jobs:
       - name: Install system deps
         shell: bash
         run: |
+          pip install virtualenv==20.2.1
           pip install nox
           pip install poetry
           poetry config virtualenvs.in-project true
