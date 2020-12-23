@@ -367,7 +367,7 @@ flake8 = "*"
 
 [[package]]
 name = "flakehell"
-version = "0.7.0"
+version = "0.7.1"
 description = "Flake8 wrapper to make it nice and configurable"
 category = "dev"
 optional = false
@@ -1081,7 +1081,7 @@ testing = ["pytest (>=3.5,!=3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake
 [metadata]
 lock-version = "1.1"
 python-versions = "<3.10,>=3.6.1"
-content-hash = "81b41d042f624de16bc7d59761d1242187bc9100f278e90b6cae6edfc79a8ea2"
+content-hash = "f2596079e1aa98d134c7349919fe4041a7a41bd1d702b4344a07136cb548e5e7"
 
 [metadata.files]
 alabaster = [
@@ -1218,8 +1218,8 @@ flake8-polyfill = [
     {file = "flake8_polyfill-1.0.2-py2.py3-none-any.whl", hash = "sha256:12be6a34ee3ab795b19ca73505e7b55826d5f6ad7230d31b18e106400169b9e9"},
 ]
 flakehell = [
-    {file = "flakehell-0.7.0-py3-none-any.whl", hash = "sha256:4cc8963c082e5b60d62186874ab930c3374ce4c7bce9a5a59b971684a1c54dc2"},
-    {file = "flakehell-0.7.0.tar.gz", hash = "sha256:7d2e813e22d25e472677c4713695051686b4cb22e2d8690c7ad9107f6106f34c"},
+    {file = "flakehell-0.7.1-py3-none-any.whl", hash = "sha256:5e554a6b75d5211cf5a38b7b25e11fd80d56e7f18fe874d4d338021ad3b395be"},
+    {file = "flakehell-0.7.1.tar.gz", hash = "sha256:aaf3252a14d214b06cf752c7b65caa8f4b44cb679531ccd7c930341e5ca8e148"},
 ]
 gitdb = [
     {file = "gitdb-4.0.5-py3-none-any.whl", hash = "sha256:91f36bfb1ab7949b3b40e23736db18231bf7593edada2ba5c3a174a7b23657ac"},
