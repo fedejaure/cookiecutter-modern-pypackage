@@ -26,11 +26,10 @@ jobs:
 
   tests:
     needs: linting
-    name: ${{ matrix.os }} / ${{ matrix.python-version }}
-    runs-on: ${{ matrix.os }}-latest
+    name: Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        os: [Ubuntu, MacOS, Windows]
         python-version: [3.6, 3.7, 3.8, 3.9]
       fail-fast: true
     steps:
@@ -58,6 +57,6 @@ jobs:
         run: nox --force-color -s tests-${{ matrix.python-version }}
       
       - name: Run safety check
-        if: matrix.python-version == 3.9 && matrix.os == 'Ubuntu'
+        if: matrix.python-version == 3.9
         shell: bash
         run: nox --force-color -s safety
