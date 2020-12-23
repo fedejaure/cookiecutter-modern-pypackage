@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - sphinx from `^3.3.0` to `^3.4.0`.
 - recommonmark from `0.6.0` to `0.7.1`
-- watchdog from `^0.10.2` to `^0.10.4`.
+- watchdog from `^0.10.2` to `^1.0.2`.
 - pre-commit from `^2.8.2` to `^2.9.3`.
 - flakehell from `^0.7.0` to `^0.7.1`.
 - safety from `^1.9.0` to `^1.10.0`.
