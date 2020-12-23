@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - pre-commit from `^2.8.2` to `^2.9.2`.
 - darglint from `^1.3.0` to `^1.5.8`.
 - flake8-bugbear from `^20.1.4` to `^20.11.1`.
+- actions/setup-python from `v2.1.4` to `v2.2.1`.
 
 ## [1.1.2] - 2020-11-07
 ### Changed
