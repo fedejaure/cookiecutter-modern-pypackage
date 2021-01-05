@@ -846,7 +846,7 @@ python-versions = "*"
 
 [[package]]
 name = "sphinx"
-version = "3.4.0"
+version = "3.4.2"
 description = "Python documentation generator"
 category = "dev"
 optional = false
@@ -1071,7 +1071,7 @@ testing = ["pytest (>=3.5,!=3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake
 [metadata]
 lock-version = "1.1"
 python-versions = "<3.10,>=3.6.1"
-content-hash = "708b74332877157e95ceb9cbfc2cc93c27c427a3b51715e78314fc8d487a7603"
+content-hash = "433b06f04817648ba6c87e15322577d57da92d70107502295a997534a04f71be"
 
 [metadata.files]
 alabaster = [
@@ -1398,6 +1398,8 @@ pyyaml = [
     {file = "PyYAML-5.3.1-cp37-cp37m-win_amd64.whl", hash = "sha256:73f099454b799e05e5ab51423c7bcf361c58d3206fa7b0d555426b1f4d9a3eaf"},
     {file = "PyYAML-5.3.1-cp38-cp38-win32.whl", hash = "sha256:06a0d7ba600ce0b2d2fe2e78453a470b5a6e000a985dd4a4e54e436cc36b0e97"},
     {file = "PyYAML-5.3.1-cp38-cp38-win_amd64.whl", hash = "sha256:95f71d2af0ff4227885f7a6605c37fd53d3a106fcab511b8860ecca9fcf400ee"},
+    {file = "PyYAML-5.3.1-cp39-cp39-win32.whl", hash = "sha256:ad9c67312c84def58f3c04504727ca879cb0013b2517c85a9a253f0cb6380c0a"},
+    {file = "PyYAML-5.3.1-cp39-cp39-win_amd64.whl", hash = "sha256:6034f55dab5fea9e53f436aa68fa3ace2634918e8b5994d82f3621c04ff5ed2e"},
     {file = "PyYAML-5.3.1.tar.gz", hash = "sha256:b8eac752c5e14d3eca0e6dd9199cd627518cb5ec06add0de9d32baeee6fe645d"},
 ]
 recommonmark = [
@@ -1468,8 +1470,8 @@ snowballstemmer = [
     {file = "snowballstemmer-2.0.0.tar.gz", hash = "sha256:df3bac3df4c2c01363f3dd2cfa78cce2840a79b9f1c2d2de9ce8d31683992f52"},
 ]
 sphinx = [
-    {file = "Sphinx-3.4.0-py3-none-any.whl", hash = "sha256:77c801947eb86457822e01eadd5c2e2de020db0201f1f9fc98b0927980b6d212"},
-    {file = "Sphinx-3.4.0.tar.gz", hash = "sha256:4dcde313801f23ea4789ac31e5405e240cb758b5d375804807f2f3cc3c396bfa"},
+    {file = "Sphinx-3.4.2-py3-none-any.whl", hash = "sha256:b8aa4eb5502c53d3b5ca13a07abeedacd887f7770c198952fd5b9530d973e767"},
+    {file = "Sphinx-3.4.2.tar.gz", hash = "sha256:77dec5ac77ca46eee54f59cf477780f4fb23327b3339ef39c8471abb829c1285"},
 ]
 sphinxcontrib-applehelp = [
     {file = "sphinxcontrib-applehelp-1.0.2.tar.gz", hash = "sha256:a072735ec80e7675e3f432fcae8610ecf509c5f1869d17e2eecff44389cdbc58"},
