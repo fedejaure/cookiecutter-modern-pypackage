@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### changed
 - sphinx from `^3.4.0` to `^3.4.3`.
+- safety from `^1.10.0` to `^1.10.1`.
 
 ## [1.1.3] - 2020-12-23
 ### Changed
