@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
-### changed
+### Added
+- pyproject `documentation` entry.
+- pyproject `tool.poetry.urls` section.
+
+### Changed
 - sphinx from `^3.4.0` to `^3.4.3`.
 - safety from `^1.10.0` to `^1.10.1`.
 - flake8-blind-except from `^0.1.1` to `^0.2.0`.

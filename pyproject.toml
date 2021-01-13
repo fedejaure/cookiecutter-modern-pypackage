@@ -7,6 +7,7 @@ license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/fedejaure/cookiecutter-modern-pypackage"
 repository = "https://github.com/fedejaure/cookiecutter-modern-pypackage"
+documentation = "https://cookiecutter-modern-pypackage.readthedocs.io"
 keywords=["cookiecutter", "template", "package"]
 classifiers=[
     "Development Status :: 4 - Beta",
@@ -24,6 +25,9 @@ classifiers=[
     "Programming Language :: Python :: Implementation :: PyPy",
     "Topic :: Software Development",
 ]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/fedejaure/cookiecutter-modern-pypackage/issues"
 
 [tool.poetry.dependencies]
 python = "<3.10,>=3.6.1"

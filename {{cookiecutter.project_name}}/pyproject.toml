@@ -16,6 +16,7 @@ license = "{{ cookiecutter.open_source_license }}"
 readme = "README.md"
 homepage = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}"
 repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}"
+documentation = "https://{{ cookiecutter.project_name }}.readthedocs.io"
 keywords = ["{{ cookiecutter.project_name }}"]
 classifiers=[
     "Development Status :: 2 - Pre-Alpha",
@@ -30,6 +31,11 @@ classifiers=[
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
 ]
+
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/issues"
+
 
 {% if cookiecutter.command_line_interface|lower == 'click' %}
 [tool.poetry.scripts]
