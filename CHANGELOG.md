@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - flake8-annotations from `^2.1.0` to `^2.5.0`.
 - isort from `^5.6.4` to `^5.7.0`.
 - invoke from `^1.4.1` to `^1.5.0`.
+- parametrize cli tests.
 
 ## [1.1.3] - 2020-12-23
 ### Changed
