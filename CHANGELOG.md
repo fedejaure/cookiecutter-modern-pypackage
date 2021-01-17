@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - sphinx from `^3.4.0` to `^3.4.3`.
-- safety from `^1.10.0` to `^1.10.1`.
+- safety from `^1.10.0` to `^1.10.3`.
 - flake8-blind-except from `^0.1.1` to `^0.2.0`.
 - flake8-annotations from `^2.1.0` to `^2.5.0`.
 - isort from `^5.6.4` to `^5.7.0`.
