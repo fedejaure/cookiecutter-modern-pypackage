@@ -7,11 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-
 ## [{{ cookiecutter.version }}] - {% now 'local' %}
 ### Added
 - First release on PyPI.
-
 
 [Unreleased]: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/compare/v{{ cookiecutter.version }}...HEAD
 [{{ cookiecutter.version }}]: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/compare/releases/tag/v{{ cookiecutter.version }}
