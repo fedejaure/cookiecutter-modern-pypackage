@@ -16,6 +16,7 @@ license = "{{ cookiecutter.open_source_license }}"
 readme = "README.md"
 homepage = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}"
 repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}"
+documentation = "https://{{ cookiecutter.project_name }}.readthedocs.io"
 keywords = ["{{ cookiecutter.project_name }}"]
 classifiers=[
     "Development Status :: 2 - Pre-Alpha",
@@ -31,6 +32,11 @@ classifiers=[
     "Programming Language :: Python :: 3.9",
 ]
 
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/issues"
+
+
 {% if cookiecutter.command_line_interface|lower == 'click' %}
 [tool.poetry.scripts]
 {{ cookiecutter.project_name }} = '{{ cookiecutter.project_slug }}.cli:main'
@@ -44,22 +50,22 @@ click = "^7.1.2"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.9.3"
-invoke = "^1.4.1"
+invoke = "^1.5.0"
 flake8 = "^3.8.4"
-flakehell = "^0.7.1"
+flakehell = "^0.9.0"
 flake8-builtins = "^1.5.3"
-flake8-blind-except = "^0.1.1"
+flake8-blind-except = "^0.2.0"
 flake8-logging-format = "^0.6.0"
 flake8-bugbear = "^20.11.1"
-flake8-annotations = "^2.1.0"
+flake8-annotations = "^2.5.0"
 flake8-docstrings = "^1.5.0"
 flake8-bandit = "^2.1.2"
 darglint = "^1.5.8"
-isort = "^5.6.4"
+isort = "^5.7.0"
 black = "^20.8b1"
-safety = "^1.10.0"
+safety = "^1.10.3"
 mypy = "^0.790"
-sphinx = "^3.4.0"
+sphinx = "^3.4.3"
 recommonmark = "^0.7.1"
 bump2version = "^1.0.1"
 pytest = "^6.2.1"

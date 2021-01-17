@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2021-01-17
+### Added
+- pyproject `documentation` entry.
+- pyproject `tool.poetry.urls` section.
+
+### Fixed
+- Readme links.
+
+### Changed
+- sphinx from `^3.4.0` to `^3.4.3`.
+- safety from `^1.10.0` to `^1.10.3`.
+- flake8-blind-except from `^0.1.1` to `^0.2.0`.
+- flake8-annotations from `^2.1.0` to `^2.5.0`.
+- isort from `^5.6.4` to `^5.7.0`.
+- invoke from `^1.4.1` to `^1.5.0`.
+- flakehell from `^0.7.1` to `^0.9.0`.
+- parametrize cli tests.
+
 ## [1.1.3] - 2020-12-23
 ### Changed
 - sphinx from `^3.3.0` to `^3.4.0`.
@@ -145,7 +163,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release.
 
 
-[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.1.3...develop
+[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.0...develop
+[1.2.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.1.3...v1.2.0
 [1.1.3]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.1.2...v1.1.3
 [1.1.2]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.1.0...v1.1.1
