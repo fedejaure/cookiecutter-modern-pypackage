@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Changed
+- xdoctest from `0.15.0` to `0.15.2`.
+
 ### Fixed
 - bump2version config file.
 
