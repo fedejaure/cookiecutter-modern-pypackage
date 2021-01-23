@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+
+## [1.2.1] - 2021-01-23
 ### Changed
 - xdoctest from `0.15.0` to `0.15.2`.
 
@@ -168,7 +170,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release.
 
 
-[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.0...develop
+[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.1...develop
+[1.2.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.1.3...v1.2.0
 [1.1.3]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.1.2...v1.1.3
 [1.1.2]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.1.1...v1.1.2
