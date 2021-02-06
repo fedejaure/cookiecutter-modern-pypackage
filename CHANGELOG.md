@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Changed
+- xdoctest from `0.15.2` to `0.15.4`.
+- darglint from `^1.5.8` to `^1.6.0`.
+- pre-commit from `^2.9.3` to `^2.10.0`.
+- pytest from `^6.2.1` to `^6.2.2`.
+- mypy from `^0.790` to `^0.800`.
 
 ## [1.2.1] - 2021-01-23
 ### Changed
