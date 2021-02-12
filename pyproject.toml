@@ -57,6 +57,7 @@ xdoctest = "^0.15.4"
 cookiecutter = "^1.7.2"
 pytest-cookies = {git = "https://github.com/jayvdb/pytest-cookies.git", rev = "rm-pins"}
 watchdog = {version = "^1.0.2", extras = ["watchmedo"]}
+nox = "^2020.12.31"
 
 [tool.flakehell]
 format = "grouped"
