@@ -8,10 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - xdoctest from `0.15.2` to `0.15.4`.
-- darglint from `^1.5.8` to `^1.6.0`.
-- pre-commit from `^2.9.3` to `^2.10.0`.
+- darglint from `^1.5.8` to `^1.7.0`.
+- pre-commit from `^2.9.3` to `^2.10.1`.
 - pytest from `^6.2.1` to `^6.2.2`.
-- mypy from `^0.790` to `^0.800`.
+- mypy from `^0.790` to `^0.812`.
+- flake8-bugbear from `^20.11.1` to `^21.3.1`.
+- watchdog from `^1.0.2` to `^2.0.2`.
 
 ## [1.2.1] - 2021-01-23
 ### Changed
@@ -41,7 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.1.3] - 2020-12-23
 ### Changed
 - sphinx from `^3.3.0` to `^3.4.0`.
-- recommonmark from `0.6.0` to `0.7.1`
+- recommonmark from `0.6.0` to `0.7.1`.
 - watchdog from `^0.10.2` to `^1.0.2`.
 - pre-commit from `^2.8.2` to `^2.9.3`.
 - flakehell from `^0.7.0` to `^0.7.1`.
