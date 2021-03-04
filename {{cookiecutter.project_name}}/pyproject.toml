@@ -72,7 +72,7 @@ pytest = "^6.2.2"
 xdoctest = "^0.15.4"
 coverage = {version = "^5.3", extras = ["toml"]}
 pytest-cov = "^2.10.1"
-watchdog = {version = "^1.0.2", extras = ["watchmedo"]}
+watchdog = {version = "^2.0.2", extras = ["watchmedo"]}
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
