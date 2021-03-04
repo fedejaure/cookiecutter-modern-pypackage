@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - xdoctest from `0.15.2` to `0.15.4`.
 - darglint from `^1.5.8` to `^1.6.0`.
-- pre-commit from `^2.9.3` to `^2.10.0`.
+- pre-commit from `^2.9.3` to `^2.10.1`.
 - pytest from `^6.2.1` to `^6.2.2`.
 - mypy from `^0.790` to `^0.800`.
 - flake8-bugbear from `^20.11.1` to `^21.3.1`.
