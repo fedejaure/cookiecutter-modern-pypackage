@@ -32,10 +32,16 @@ project_short_description
 version
     The starting version number of the package.
 
+package_tool
+    The tool used to manage dependencies
+
 Options
 -------
 
 The following package configuration options set up different features for your project.
+
+package_tool
+    Whether to create a project using Pipenv or using Poetry.
 
 open_source_license
     Whether to add a license file. Options: ["MIT", "BSD", "ISC", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"s]

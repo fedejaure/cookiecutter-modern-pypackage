@@ -8,5 +8,6 @@
   "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a modern Python package.",
   "version": "0.1.0",
   "open_source_license": ["MIT", "BSD", "ISC", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"],
-  "command_line_interface": ["Click", "No command-line interface"]
+  "command_line_interface": ["Click", "No command-line interface"],
+  "package_tool": ["Pipenv", "Poetry"]
 }
