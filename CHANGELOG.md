@@ -18,6 +18,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - flake8-annotations from `^2.5.0` to `^2.6.0`.
 - codecov/codecov-action from `v1.0.13` to `v1.2.2`.
 
+### Fixed
+- bump2version invoke command.
+
 ## [1.2.1] - 2021-01-23
 ### Changed
 - xdoctest from `0.15.0` to `0.15.2`.
