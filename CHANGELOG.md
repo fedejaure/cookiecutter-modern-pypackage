@@ -8,14 +8,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - xdoctest from `0.15.2` to `0.15.4`.
-- darglint from `^1.5.8` to `^1.7.0`.
 - pre-commit from `^2.9.3` to `^2.11.1`.
 - pytest from `^6.2.1` to `^6.2.2`.
 - mypy from `^0.790` to `^0.812`.
-- flake8-bugbear from `^20.11.1` to `^21.3.2`.
 - watchdog from `^1.0.2` to `^2.0.2`.
 - sphinx from `^3.4.3` to `^3.5.2`.
+- darglint from `^1.5.8` to `^1.7.0`.
 - flake8-annotations from `^2.5.0` to `^2.6.0`.
+- flake8-bugbear from `^20.11.1` to `^21.3.2`.
+- flake8-docstrings from `1.5.0` to `1.6.0`.
 - codecov/codecov-action from `v1.0.13` to `v1.2.2`.
 
 ### Fixed
