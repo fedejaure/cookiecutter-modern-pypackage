@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - flake8-annotations from `^2.5.0` to `^2.6.1`.
 - flake8-bugbear from `^20.11.1` to `^21.3.2`.
 - flake8-docstrings from `1.5.0` to `1.6.0`.
-- codecov/codecov-action from `v1.0.13` to `v1.2.2`.
+- codecov/codecov-action from `v1.0.13` to `v1.3.1`.
 
 ### Fixed
 - bump2version invoke command.
