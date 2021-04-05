@@ -68,7 +68,7 @@ mypy = "^0.812"
 sphinx = "^3.5.3"
 recommonmark = "^0.7.1"
 bump2version = "^1.0.1"
-pytest = "^6.2.2"
+pytest = "^6.2.3"
 xdoctest = "^0.15.4"
 coverage = {version = "^5.3", extras = ["toml"]}
 pytest-cov = "^2.10.1"
