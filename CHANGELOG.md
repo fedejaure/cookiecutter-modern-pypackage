@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Changed
+- sphinx from `3.5.2` to `3.5.3`.
+- flake8 from `3.8.4` to `3.9.0`.
+- isort from `5.7.0` to `5.8.0`.
+- flake8-bugbear from `21.3.2` to `21.4.3`.
+- flake8-annotations from `2.6.1` to `2.6.2`.
+- darglint from `1.7.0` to `1.8.0`.
+- pytest from `6.2.2` to `6.2.3`.
 
 ## [1.2.2] - 2021-03-19
 ### Changed
