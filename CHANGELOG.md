@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - sphinx from `3.5.2` to `3.5.3`.
 - flake8 from `3.8.4` to `3.9.0`.
+- isort from `5.7.0` to `5.8.0`.
 
 ## [1.2.2] - 2021-03-19
 ### Changed
