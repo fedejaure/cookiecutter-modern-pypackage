@@ -33,9 +33,9 @@ classifiers=[
 python = "<3.10,>=3.6.1"
 
 [tool.poetry.dev-dependencies]
-pre-commit = "^2.11.1"
+pre-commit = "^2.12.1"
 invoke = "^1.5.0"
-flake8 = "^3.9.0"
+flake8 = "^3.9.1"
 flakehell = "^0.9.0"
 flake8-builtins = "^1.5.3"
 flake8-blind-except = "^0.2.0"
@@ -49,14 +49,14 @@ isort = "^5.8.0"
 black = "^20.8b1"
 safety = "^1.10.3"
 mypy = "^0.812"
-sphinx = "^3.5.3"
+sphinx = "^3.5.4"
 recommonmark = "^0.7.1"
 bump2version = "^1.0.1"
 pytest = "^6.2.3"
 xdoctest = "^0.15.4"
 cookiecutter = "^1.7.2"
 pytest-cookies = {git = "https://github.com/jayvdb/pytest-cookies.git", rev = "rm-pins"}
-watchdog = {version = "^2.0.2", extras = ["watchmedo"]}
+watchdog = {version = "^2.0.3", extras = ["watchmedo"]}
 
 [tool.flakehell]
 format = "grouped"
