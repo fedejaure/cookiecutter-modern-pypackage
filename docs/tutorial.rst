@@ -35,7 +35,7 @@ Use cookiecutter, pointing it at the cookiecutter-pypackage repo:
 
 .. code-block:: bash
 
-    $ cookiecutter gh:fedejaure/cookiecutter-modern-pypackage --checkout v1.2.2
+    $ cookiecutter gh:fedejaure/cookiecutter-modern-pypackage --checkout v1.2.3
 
 You'll be asked to enter a bunch of values to set the package up.
 If you don't know what to enter, stick with the defaults.

@@ -1,2 +1,2 @@
-sphinx==3.5.2
+sphinx==3.5.4
 recommonmark==0.7.1
