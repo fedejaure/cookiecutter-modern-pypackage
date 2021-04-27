@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - flake8-annotations from `2.6.1` to `2.6.2`.
 - darglint from `1.7.0` to `1.8.0`.
 - pytest from `6.2.2` to `6.2.3`.
+- watchdog from `^2.0.2` to `^2.0.3`.
 - actions/setup-python from `v2.2.1` to `v2.2.2`.
 
 ### Fixed
