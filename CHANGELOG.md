@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+
+## [1.2.3] - 2021-04-27
 ### Changed
 - sphinx from `3.5.2` to `3.5.4`.
 - flake8 from `3.8.4` to `3.9.1`.
@@ -202,7 +204,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release.
 
 
-[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.2...develop
+[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.3...develop
+[1.2.3]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.2...v1.2.3
 [1.2.2]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.1...v1.2.2
 [1.2.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.1.3...v1.2.0
