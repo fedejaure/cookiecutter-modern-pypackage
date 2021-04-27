@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - watchdog from `^2.0.2` to `^2.0.3`.
 - pre-commit from `^2.11.1` to `^2.12.1`.
 - actions/setup-python from `v2.2.1` to `v2.2.2`.
+- pre-commit flakehell additional_dependencies versions config.
 
 ### Fixed
 - flakehell config for flake8 >= 3.9.1.
