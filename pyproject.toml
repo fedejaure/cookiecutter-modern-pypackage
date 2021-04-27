@@ -63,6 +63,7 @@ format = "grouped"
 max_line_length = 99
 show_source = true
 docstring-convention = "google"
+extended_default_ignore = []
 
 [tool.flakehell.plugins]
 pyflakes = ["+*"]

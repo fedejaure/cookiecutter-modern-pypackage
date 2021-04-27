@@ -15,6 +15,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - darglint from `1.7.0` to `1.8.0`.
 - pytest from `6.2.2` to `6.2.3`.
 
+### Fixed
+- flakehell config for flake8 >= 3.9.1.
+
 ## [1.2.2] - 2021-03-19
 ### Changed
 - xdoctest from `0.15.2` to `0.15.4`.
