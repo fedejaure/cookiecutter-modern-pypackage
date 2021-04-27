@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - darglint from `1.7.0` to `1.8.0`.
 - pytest from `6.2.2` to `6.2.3`.
 - watchdog from `^2.0.2` to `^2.0.3`.
+- pre-commit from `^2.11.1` to `^2.12.1`.
 - actions/setup-python from `v2.2.1` to `v2.2.2`.
 
 ### Fixed
