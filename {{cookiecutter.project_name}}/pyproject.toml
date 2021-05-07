@@ -5,6 +5,7 @@
     'Apache Software License 2.0': 'License :: OSI Approved :: Apache Software License',
     'GNU General Public License v3': 'License :: OSI Approved :: GNU General Public License v3 (GPLv3)'
 } %}
+{% if cookiecutter.package_tool == "Poetry" %}
 [tool.poetry]
 name = "{{ cookiecutter.project_name }}"
 version = "{{ cookiecutter.version }}"
@@ -73,6 +74,7 @@ xdoctest = "^0.15.2"
 coverage = {version = "^5.3", extras = ["toml"]}
 pytest-cov = "^2.10.1"
 watchdog = {version = "^1.0.2", extras = ["watchmedo"]}
+{% endif %}
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]

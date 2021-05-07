@@ -98,7 +98,7 @@ def clean(c):
 
 @task()
 def install_hooks(c):
-    # type: (Context) -> None
+    # type: (Context, str) -> None
     """Install pre-commit hooks."""
     _run(c, "poetry run pre-commit install")
 

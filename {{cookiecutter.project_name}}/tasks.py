@@ -32,7 +32,6 @@ PYTHON_TARGETS_STR = " ".join([str(p) for p in PYTHON_TARGETS])
 def _run(c: Context, command: str) -> Result:
     return c.run(command, pty=platform.system() != "Windows")
 
-
 @task()
 def clean_build(c):
     # type: (Context) -> None
@@ -75,6 +74,7 @@ def clean(c):
     # type: (Context) -> None
     """Run all clean sub-tasks."""
 
+{% if cookiecutter.package_tool == "Poetry" %}
 
 @task()
 def install_hooks(c):
@@ -171,7 +171,112 @@ def docs(c, serve=False, open_browser=False):
         webbrowser.open(DOCS_INDEX.absolute().as_uri())
     if serve:
         _run(c, f"poetry run watchmedo shell-command -p '*.rst;*.md' -c '{build_docs}' -R -D .")
+{% endif %}
 
+
+{% if cookiecutter.package_tool == "Pipenv" %}
+@task()
+def install_hooks(c):
+    # type: (Context) -> None
+    """Install pre-commit hooks."""
+    _run(c, "./tools/initial_hooks.sh")
+
+@task()
+def install(c):
+    # type: (Context) -> None
+    """Install pre-commit hooks."""
+    _run(c, "./tools/initial.sh")
+
+@task()
+def hooks(c):
+    # type: (Context) -> None
+    """Run pre-commit hooks."""
+    _run(c, "pipenv run pre-commit run --all-files")
+
+
+@task(name="format", help={"check": "Checks if source is formatted without applying changes"})
+def format_(c, check=False):
+    # type: (Context, bool) -> None
+    """Format code."""
+    isort_options = ["--check-only", "--diff"] if check else []
+    _run(c, f"pipenv run isort {' '.join(isort_options)} {PYTHON_TARGETS_STR}")
+    black_options = ["--diff", "--check"] if check else ["--quiet"]
+    _run(c, f"pipenv run black {' '.join(black_options)} {PYTHON_TARGETS_STR}")
+
+
+@task()
+def flake8(c):
+    # type: (Context) -> None
+    """Run flake8."""
+    _run(c, f"pipenv run flakehell lint {PYTHON_TARGETS_STR}")
+
+
+@task()
+def safety(c):
+    # type: (Context) -> None
+    """Run safety."""
+    _run(
+        c,
+        "pipenv export --dev --format=requirements.txt --without-hashes | "
+        "pipenv run safety check --stdin --full-report",
+    )
+
+
+@task(pre=[flake8, safety, call(format_, check=True)])
+def lint(c):
+    # type: (Context) -> None
+    """Run all linting."""
+
+
+@task()
+def mypy(c):
+    # type: (Context) -> None
+    """Run mypy."""
+    _run(c, f"pipenv run mypy {PYTHON_TARGETS_STR}")
+
+
+@task()
+def tests(c):
+    # type: (Context) -> None
+    """Run tests."""
+    pytest_options = ["--xdoctest", "--cov", "--cov-report=", "--cov-fail-under=0"]
+    _run(c, f"pipenv run pytest {' '.join(pytest_options)} {TEST_DIR} {SOURCE_DIR}")
+
+
+@task(
+    help={
+        "fmt": "Build a local report: report, html, json, annotate, html, xml.",
+        "open_browser": "Open the coverage report in the web browser (requires --fmt html)",
+    }
+)
+def coverage(c, fmt="report", open_browser=False):
+    # type: (Context, str, bool) -> None
+    """Create coverage report."""
+    if any(Path().glob(".coverage.*")):
+        _run(c, "pipenv run coverage combine")
+    _run(c, f"pipenv run coverage {fmt} -i")
+    if fmt == "html" and open_browser:
+        webbrowser.open(COVERAGE_REPORT.as_uri())
+
+
+@task(
+    help={
+        "serve": "Build the docs watching for changes",
+        "open_browser": "Open the docs in the web browser",
+    }
+)
+def docs(c, serve=False, open_browser=False):
+    # type: (Context, bool, bool) -> None
+    """Build documentation."""
+    _run(c, f"sphinx-apidoc -o {DOCS_DIR} {SOURCE_DIR}")
+    build_docs = f"sphinx-build -b html {DOCS_DIR} {DOCS_BUILD_DIR}"
+    _run(c, build_docs)
+    if open_browser:
+        webbrowser.open(DOCS_INDEX.absolute().as_uri())
+    if serve:
+        _run(c, f"pipenv run watchmedo shell-command -p '*.rst;*.md' -c '{build_docs}' -R -D .")
+
+{% endif %}
 
 @task(
     help={

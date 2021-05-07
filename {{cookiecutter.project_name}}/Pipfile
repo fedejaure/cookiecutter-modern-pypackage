@@ -1,0 +1,10 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+yapf = "*"
+flake8 = "*"
+isort = "*"
+pre-commit = "*"

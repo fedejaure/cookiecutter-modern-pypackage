@@ -38,19 +38,20 @@ if __name__ == "__main__":
     else:
         add_symlink(PROJECT_DOCS / "license.rst", "../LICENSE.rst")
 
-    if "Pipenv" == "{{ cookiecutter.package_tool}}":
-        shutil.copyfile("./pipenv_files/Pipfile", PROJECT_DIR / "Pipfile")
-        shutil.copyfile("./pipenv_files/Pipfile.lock", PROJECT_DIR / "Pipfile.lock")
-        shutil.copyfile("./pipenv_files/Makefile", PROJECT_DIR / "Makefile")
+    if "Poetry" == "{{ cookiecutter.package_tool}}":
+        remove_file(PROJECT_DIR / "Pipfile")
+        remove_file(PROJECT_DIR / "Pipfile.lock")
+        remove_folder(PROJECT_DIR / "tools")
+        remove_file(PROJECT_DIR / 'Makefile')
+        os.system("invoke install")
+    else:
+        remove_file(PROJECT_DIR / "poetry.lock")
+        remove_file(PROJECT_DIR / "pyproject.toml")
         os.system(PROJECT_DIR / "tools/install_hooks.sh")
         os.system(PROJECT_DIR / "tools/install.sh")
-    else:
-        shutil.copyfile("./poetry_files/noxfile.py", PROJECT_DIR / "noxfile.py")
-        shutil.copyfile("./poetry_files/pyproject.toml", PROJECT_DIR / "pyproject.toml")
-        shutil.copyfile("./poetry_files/tasks.py", PROJECT_DIR / "tasks.py")
 
-    remove_folder(PROJECT_DIR / "pipenv_files")
-    remove_folder(PROJECT_DIR / "poetry_files")
+
+
     add_symlink(PROJECT_DOCS / "readme.md", "../README.md")
     add_symlink(PROJECT_DOCS / "changelog.md", "../CHANGELOG.md")
 
