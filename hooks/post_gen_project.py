@@ -31,5 +31,8 @@ if __name__ == "__main__":
     else:
         add_symlink(PROJECT_DOCS / "license.rst", "../LICENSE.rst")
 
+    if "{{ cookiecutter.add_code_of_conduct }}" != "y":
+        remove_file("CODE_OF_CONDUCT.md")
+
     add_symlink(PROJECT_DOCS / "readme.md", "../README.md")
     add_symlink(PROJECT_DOCS / "changelog.md", "../CHANGELOG.md")

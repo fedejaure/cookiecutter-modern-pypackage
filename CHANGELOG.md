@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Added
+- optional `CODE_OF_CONDUCT.md` file.
 
 ## [1.2.3] - 2021-04-27
 ### Changed
