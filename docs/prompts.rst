@@ -42,3 +42,9 @@ open_source_license
 
 command_line_interface
     Whether to create a console script using Click. Console script entry point will match the project_name. Options: ["Click", "No command-line interface"]
+
+add_code_of_conduct
+    Whether to add a Contributor Covenant Code of Conduct file.
+
+contact_method
+    Whether to add a contact method. Used on files such of `CODE_OF_CONDUCT.md`.
