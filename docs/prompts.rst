@@ -46,5 +46,8 @@ command_line_interface
 add_code_of_conduct
     Whether to add a Contributor Covenant Code of Conduct file.
 
+add_contributing_file
+    Whether to add a Contributing Guide file.
+
 contact_method
-    Whether to add a contact method. Used on files such of `CODE_OF_CONDUCT.md`.
+    Whether to add a contact method. Used on files such of `CODE_OF_CONDUCT.md` and `CONTRIBUTING.md`.
