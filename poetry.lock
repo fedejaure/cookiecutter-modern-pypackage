@@ -711,22 +711,15 @@ testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xm
 
 [[package]]
 name = "pytest-cookies"
-version = "0.5.1"
-description = ""
+version = "0.6.1"
+description = "The pytest plugin for your Cookiecutter templates. 🍪"
 category = "dev"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-develop = false
+python-versions = ">=3.6"
 
 [package.dependencies]
-cookiecutter = ">=1.4.0,<1.8.0"
-pytest = "*"
-
-[package.source]
-type = "git"
-url = "https://github.com/jayvdb/pytest-cookies.git"
-reference = "rm-pins"
-resolved_reference = "7037acd25111625629a7f064f07af1e52f6baef3"
+cookiecutter = ">=1.4.0"
+pytest = ">=3.3.0"
 
 [[package]]
 name = "python-dateutil"
@@ -1073,7 +1066,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "<3.10,>=3.6.1"
-content-hash = "67ffcd8b6c3270cdf561f9e7004fa429e55c14475be7d9ccf190bfb37683759f"
+content-hash = "d91529ec45fa7f7569167f36ea51610cea8cf4f628c3ab1cd592c7d0eaeaace3"
 
 [metadata.files]
 alabaster = [
@@ -1403,7 +1396,10 @@ pytest = [
     {file = "pytest-6.2.4-py3-none-any.whl", hash = "sha256:91ef2131a9bd6be8f76f1f08eac5c5317221d6ad1e143ae03894b862e8976890"},
     {file = "pytest-6.2.4.tar.gz", hash = "sha256:50bcad0a0b9c5a72c8e4e7c9855a3ad496ca6a881a3641b4260605450772c54b"},
 ]
-pytest-cookies = []
+pytest-cookies = [
+    {file = "pytest-cookies-0.6.1.tar.gz", hash = "sha256:94c41ad914d420b57bc31d58ab2c0b103322c11d07d13b8d245c85fa9b069714"},
+    {file = "pytest_cookies-0.6.1-py3-none-any.whl", hash = "sha256:2e2383c12a321753676c8944fb75b3c8ccac70fce58e27d6b201e1a3ff3dab27"},
+]
 python-dateutil = [
     {file = "python-dateutil-2.8.1.tar.gz", hash = "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"},
     {file = "python_dateutil-2.8.1-py2.py3-none-any.whl", hash = "sha256:75bb3f31ea686f1197762692a9ee6a7550b59fc6ca3a1f4b5d7e32fb98e2da2a"},

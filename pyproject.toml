@@ -55,7 +55,7 @@ bump2version = "^1.0.1"
 pytest = "^6.2.4"
 xdoctest = "^0.15.4"
 cookiecutter = "^1.7.3"
-pytest-cookies = {git = "https://github.com/jayvdb/pytest-cookies.git", rev = "rm-pins"}
+pytest-cookies = "^0.6.1"
 watchdog = {version = "^2.1.2", extras = ["watchmedo"]}
 
 [tool.flakehell]
