@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - watchdog from `2.0.3` to `2.1.1`.
 - flake8 from `3.9.1` to `3.9.2`.
 - pytest from `6.2.3` to `6.2.4`.
+- pre-commit from `^2.12.1` to `^2.13.0`.
 
 ## [1.2.3] - 2021-04-27
 ### Changed
