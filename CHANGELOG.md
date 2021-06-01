@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - sphinx from `3.5.4` to `4.0.1`.
-- watchdog from `2.0.3` to `2.1.1`.
+- watchdog from `2.0.3` to `2.1.2`.
 - flake8 from `3.9.1` to `3.9.2`.
 - pytest from `6.2.3` to `6.2.4`.
 - pre-commit from `^2.12.1` to `^2.13.0`.
