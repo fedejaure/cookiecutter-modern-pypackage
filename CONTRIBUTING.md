@@ -19,7 +19,7 @@ We use `poetry` to manage and install dependencies. [Poetry](https://python-poet
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
 ```
 
-We'll also need `nox` for automate testing in multiple Python environments so [install that too](https://nox.thea.codes/en/stable/).
+We'll also need `nox` for automated testing in multiple Python environments so [install that too](https://nox.thea.codes/en/stable/).
 
 To install the local development requirements inside a virtual environment run:
 
@@ -30,7 +30,7 @@ $ poetry run inv install-hooks
 
 > For more information about `poetry` check the [docs](https://python-poetry.org/docs/).
 
-We use [invoke](http://www.pyinvoke.org/) to wrap up some useful tasks like formatting, linting, testing.
+We use [invoke](http://www.pyinvoke.org/) to wrap up some useful tasks like formatting, linting, testing and more.
 
 Execute `inv[oke] --list` to see the list of available commands.
 
@@ -46,7 +46,7 @@ In this repository, we provide a couple of templates for you to fill in for:
 * Feature Requests/Enhancements
 
 Please read each section in the templates and provide as much information as you can. Please do not put any sensitive information,
-such as personally identifible information, connection strings or cloud credentials. The more information that you can provide, the better we can help you.
+such as personally identifiable information, connection strings or cloud credentials. The more information you can provide, the better we can help you.
 
 ### Pull Requests
 
