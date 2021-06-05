@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - optional `CODE_OF_CONDUCT.md` file.
 - optional `CONTRIBUTING.md` file.
+- optional `SECURITY.md` file.
 - multiple issue templates config.
 
 ### Changed
