@@ -37,5 +37,8 @@ if __name__ == "__main__":
     if "{{ cookiecutter.add_contributing_file }}" != "y":
         remove_file("CONTRIBUTING.md")
 
+    if "{{ cookiecutter.add_security_file }}" != "y":
+        remove_file("SECURITY.md")
+
     add_symlink(PROJECT_DOCS / "readme.md", "../README.md")
     add_symlink(PROJECT_DOCS / "changelog.md", "../CHANGELOG.md")

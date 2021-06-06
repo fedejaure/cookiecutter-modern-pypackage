@@ -49,5 +49,8 @@ add_code_of_conduct
 add_contributing_file
     Whether to add a Contributing Guide file.
 
+add_security_file
+     Whether to add a Security Policy file.
+
 contact_method
-    Whether to add a contact method. Used on files such of `CODE_OF_CONDUCT.md` and `CONTRIBUTING.md`.
+    Whether to add a contact method. Used on files such of `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md` and `SECURITY.md`.
