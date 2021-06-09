@@ -1,5 +1,4 @@
-{% raw %}
-name: "CodeQL"
+{% raw %}name: "CodeQL"
 
 on:
   push:
@@ -39,6 +38,4 @@ jobs:
         uses: github/codeql-action/autobuild@v1
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v1
-
-{% endraw %}
+        uses: github/codeql-action/analyze@v1{% endraw %}
