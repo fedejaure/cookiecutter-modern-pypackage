@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - optional `SECURITY.md` file.
 - multiple issue templates config.
 - codeql analysis workflow.
+- pre-commit autoupdate workflow.
 
 ### Changed
 - sphinx from `3.5.4` to `4.0.2`.

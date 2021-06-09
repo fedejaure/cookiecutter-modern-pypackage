@@ -1,15 +1,17 @@
 name: release
+
 on:
   push:
     tags:
       - 'v*'
+
 jobs:
   github_release:
     name: Create Github Release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.3.4
-      
+
       - name: Get version from tag
         id: tag_name
         shell: bash
