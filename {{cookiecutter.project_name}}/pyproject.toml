@@ -45,7 +45,7 @@ classifiers=[
 [tool.poetry.dependencies]
 python = "<3.10,>=3.6.1"
 {% if cookiecutter.command_line_interface|lower == 'click' %}
-click = "^7.1.2"
+click = "^8.0.1"
 {% endif %}
 
 [tool.poetry.dev-dependencies]
