@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - pytest from `6.2.3` to `6.2.4`.
 - pre-commit from `^2.12.1` to `^2.13.0`.
 - pre-commit-hooks from `^3.0.0` to `^4.0.1`.
+- black from `^20.8b1` to `^21.5b2`.
 
 ## [1.2.3] - 2021-04-27
 ### Changed
