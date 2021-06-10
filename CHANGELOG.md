@@ -25,6 +25,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - click from `^7.1.2` to `^8.0.1`.
 - mypy from `^0.812` to `^0.902`.
 
+### Removed
+- Python `3.6` support.
+
 ## [1.2.3] - 2021-04-27
 ### Changed
 - sphinx from `3.5.2` to `3.5.4`.
