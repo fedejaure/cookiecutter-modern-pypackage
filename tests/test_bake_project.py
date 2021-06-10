@@ -53,7 +53,7 @@ def bake_in_temp_dir(cookies: Cookies, *args: Any, **kwargs: Any) -> Result:
     try:
         yield result
     finally:
-        rmtree(str(result.project))
+        rmtree(str(result.project_path))
 
 
 def run_inside_dir(command: str, dirpath: str) -> int:
@@ -73,19 +73,19 @@ def run_inside_dir(command: str, dirpath: str) -> int:
 def test_year_compute_in_license_file(cookies: Cookies) -> None:
     """Test that the year computed is in the license file."""
     with bake_in_temp_dir(cookies) as result:
-        license_file_path = result.project.join("LICENSE.rst")
+        license_file_path = result.project_path.joinpath("LICENSE.rst")
         now = datetime.datetime.now()
-        assert str(now.year) in license_file_path.read()
+        assert str(now.year) in license_file_path.read_text()
 
 
 def test_bake_with_defaults(cookies: Cookies) -> None:
     """Test bake the project with the default values."""
     with bake_in_temp_dir(cookies) as result:
-        assert result.project.isdir()
+        assert result.project_path.is_dir()
         assert result.exit_code == 0
         assert result.exception is None
 
-        found_toplevel_files = [f.basename for f in result.project.listdir()]
+        found_toplevel_files = [f.name for f in result.project_path.iterdir()]
         assert "src" in found_toplevel_files
         assert "tests" in found_toplevel_files
 
@@ -93,13 +93,13 @@ def test_bake_with_defaults(cookies: Cookies) -> None:
 def test_bake_not_open_source(cookies: Cookies) -> None:
     """Test bake not open-source project."""
     with bake_in_temp_dir(cookies, extra_context=COOKIE_CONTEXT_NOT_OPEN_SOURCE) as result:
-        assert result.project.isdir()
+        assert result.project_path.is_dir()
         assert result.exit_code == 0
         assert result.exception is None
 
-        found_toplevel_files = [f.basename for f in result.project.listdir()]
+        found_toplevel_files = [f.name for f in result.project_path.iterdir()]
         assert "LICENSE.rst" not in found_toplevel_files
-        assert "License" not in result.project.join("README.md").read()
+        assert "License" not in result.project_path.joinpath("README.md").read_text()
 
 
 def _test_bake_and_run_invoke_tasks(
@@ -107,13 +107,13 @@ def _test_bake_and_run_invoke_tasks(
 ) -> None:
     """Test bake the project and check invoke tasks."""
     with bake_in_temp_dir(cookies, extra_context=extra_context) as result:
-        assert result.project.isdir()
+        assert result.project_path.is_dir()
         assert result.exit_code == 0
         assert result.exception is None
 
-        assert run_inside_dir("poetry install", str(result.project)) == 0
+        assert run_inside_dir("poetry install", str(result.project_path)) == 0
         for task in inv_tasks:
-            assert run_inside_dir(f"poetry run inv {task}", str(result.project)) == 0
+            assert run_inside_dir(f"poetry run inv {task}", str(result.project_path)) == 0
 
 
 @pytest.mark.parametrize(
