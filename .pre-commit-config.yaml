@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.0.0
+    rev: v4.0.1
     hooks:
       - id: check-toml
         exclude: "^{{cookiecutter.project_name}}/"
@@ -18,7 +18,7 @@ repos:
       - id: isort
         exclude: "^{{cookiecutter.project_name}}/"
 -   repo: https://github.com/psf/black
-    rev: 20.8b1
+    rev: 21.5b2
     hooks:
       - id: black
         exclude: "^{{cookiecutter.project_name}}/"
