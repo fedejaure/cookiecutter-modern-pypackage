@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2021-06-12
+### Added
+- optional `CODE_OF_CONDUCT.md` file.
+- optional `CONTRIBUTING.md` file.
+- optional `SECURITY.md` file.
+- multiple issue templates config.
+- codeql analysis workflow.
+- pre-commit autoupdate workflow.
+
+### Changed
+- sphinx from `3.5.4` to `4.0.2`.
+- watchdog from `2.0.3` to `2.1.2`.
+- flake8 from `3.9.1` to `3.9.2`.
+- pytest from `6.2.3` to `6.2.4`.
+- pre-commit from `^2.12.1` to `^2.13.0`.
+- pre-commit-hooks from `^3.0.0` to `^4.0.1`.
+- black from `^20.8b1` to `^21.5b2`.
+- click from `^7.1.2` to `^8.0.1`.
+- mypy from `^0.812` to `^0.902`.
+
+### Removed
+- Python `3.6` support.
+
 ## [1.2.3] - 2021-04-27
 ### Changed
 - sphinx from `3.5.2` to `3.5.4`.
@@ -204,7 +227,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release.
 
 
-[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.3...develop
+[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.0.0...develop
+[2.0.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.3...v2.0.0
 [1.2.3]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.2...v1.2.3
 [1.2.2]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.1...v1.2.2
 [1.2.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.0...v1.2.1

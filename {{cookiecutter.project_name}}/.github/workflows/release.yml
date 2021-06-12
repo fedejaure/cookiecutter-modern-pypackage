@@ -1,20 +1,21 @@
-{% raw %}
-name: release
+{% raw %}name: release
+
 on:
   push:
     tags:
       - 'v*'
+
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.3.4
-      
-      - name: Set up Python 3.6
+
+      - name: Set up Python 3.7
         uses: actions/setup-python@v2.2.2
         with:
-          python-version: 3.6
-      
+          python-version: 3.7
+
       - name: Install system deps
         shell: bash
         run: |
@@ -68,6 +69,4 @@ jobs:
           release_name: Release ${{ github.ref }}
           body: ${{ steps.changelog_reader.outputs.changes }}
           draft: false
-          prerelease: false
-
-{% endraw %}
+          prerelease: false{% endraw %}

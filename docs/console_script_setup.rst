@@ -4,7 +4,7 @@
 Console Script Setup
 ====================
 
-Optionally, your package can include a console script using Click (Python 3.6+).
+Optionally, your package can include a console script using Click (Python 3.7+).
 
 How It Works
 ------------
