@@ -50,7 +50,7 @@ pip install -U cookiecutter
 Generate a Python package project:
 
 ```
-cookiecutter gh:fedejaure/cookiecutter-modern-pypackage --checkout v1.2.3
+cookiecutter gh:fedejaure/cookiecutter-modern-pypackage --checkout v2.0.0
 ```
 
 Then:
