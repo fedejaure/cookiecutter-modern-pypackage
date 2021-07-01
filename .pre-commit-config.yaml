@@ -13,12 +13,12 @@ repos:
         exclude: "^{{cookiecutter.project_name}}/"
       - id: end-of-file-fixer
 -   repo: https://github.com/timothycrosley/isort
-    rev: 5.8.0
+    rev: 5.9.1
     hooks:
       - id: isort
         exclude: "^{{cookiecutter.project_name}}/"
 -   repo: https://github.com/psf/black
-    rev: 21.5b2
+    rev: 21.6b0
     hooks:
       - id: black
         exclude: "^{{cookiecutter.project_name}}/"
