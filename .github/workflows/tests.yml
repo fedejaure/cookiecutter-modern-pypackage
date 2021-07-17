@@ -28,7 +28,7 @@ jobs:
 
   tests:
     needs: linting
-    name: Python ${{ matrix.python-version }}
+    name: ${{ matrix.os }} / ${{ matrix.python-version }}
     runs-on: ${{ matrix.os }}-latest
     strategy:
       matrix:
