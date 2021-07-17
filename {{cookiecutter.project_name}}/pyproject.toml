@@ -30,7 +30,11 @@ classifiers=[
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
 ]
-
+{% if cookiecutter.project_name.lower().replace('-', '_') != cookiecutter.project_slug %}
+packages = [
+    { include = "{{ cookiecutter.project_slug }}", from = "src" },
+]
+{% endif %}
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/issues"
