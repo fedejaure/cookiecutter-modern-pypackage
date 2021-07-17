@@ -52,7 +52,7 @@ sphinx = "^4.0.2"
 recommonmark = "^0.7.1"
 bump2version = "^1.0.1"
 pytest = "^6.2.4"
-xdoctest = "^0.15.4"
+xdoctest = "^0.15.5"
 cookiecutter = "^1.7.3"
 pytest-cookies = "^0.6.1"
 watchdog = {version = "^2.1.2", extras = ["watchmedo"]}
