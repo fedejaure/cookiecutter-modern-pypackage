@@ -3,7 +3,7 @@
   "email": "fedejaure@example.com",
   "github_username": "fedejaure",
   "project_name": "modern-python-boilerplate",
-  "project_slug": "{{ cookiecutter.project_name.lower().replace('-', '_').replace('-', '_') }}",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace('-', '_') }}",
   "project_title": "{{ cookiecutter.project_name.replace('-', ' ').title() }}",
   "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a modern Python package.",
   "version": "0.1.0",
