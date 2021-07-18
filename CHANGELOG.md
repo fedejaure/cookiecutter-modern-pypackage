@@ -11,8 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `end-of-file` hook.
 
 ### Changed
-- isort from `5.8.0` to `5.9.2`.
+- isort from `^5.8.0` to `^5.9.2`.
 - black from `^21.5b2` to `^21.7b0`.
+- watchdog from `^2.1.2` to `^2.1.3`.
 
 ## [2.0.0] - 2021-06-12
 ### Added
