@@ -53,7 +53,7 @@ click = "^8.0.1"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.13.0"
-invoke = "^1.5.0"
+invoke = "^1.6.0"
 flake8 = "^3.9.2"
 flakehell = "^0.9.0"
 flake8-builtins = "^1.5.3"
@@ -64,18 +64,18 @@ flake8-annotations = "^2.6.2"
 flake8-docstrings = "^1.6.0"
 flake8-bandit = "^2.1.2"
 darglint = "^1.8.0"
-isort = "^5.8.0"
-black = "^21.5b2"
+isort = "^5.9.2"
+black = "^21.7b0"
 safety = "^1.10.3"
-mypy = "^0.902"
-sphinx = "^4.0.2"
+mypy = "^0.910"
+sphinx = "^4.1.1"
 recommonmark = "^0.7.1"
 bump2version = "^1.0.1"
 pytest = "^6.2.4"
-xdoctest = "^0.15.4"
+xdoctest = "^0.15.5"
 coverage = {version = "^5.3", extras = ["toml"]}
 pytest-cov = "^2.10.1"
-watchdog = {version = "^2.1.2", extras = ["watchmedo"]}
+watchdog = {version = "^2.1.3", extras = ["watchmedo"]}
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
