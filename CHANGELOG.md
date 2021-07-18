@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - isort from `5.8.0` to `5.9.2`.
+- black from `^21.5b2` to `^21.7b0`.
 
 ## [2.0.0] - 2021-06-12
 ### Added
