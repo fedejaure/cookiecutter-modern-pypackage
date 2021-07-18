@@ -116,6 +116,8 @@ def _test_bake_and_run_invoke_tasks(
         assert result.exception is None
 
         assert run_inside_dir("git init", str(result.project_path)) == 0
+        assert run_inside_dir("git add .", str(result.project_path)) == 0
+        assert run_inside_dir("git commit -m 'initial commit'", str(result.project_path)) == 0
         assert run_inside_dir("poetry install", str(result.project_path)) == 0
         for task in inv_tasks:
             assert run_inside_dir(f"poetry run inv {task}", str(result.project_path)) == 0

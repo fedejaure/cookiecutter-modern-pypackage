@@ -12,6 +12,7 @@ repos:
       - id: check-json
         exclude: "^{{cookiecutter.project_name}}/"
       - id: end-of-file-fixer
+        exclude: "^{{cookiecutter.project_name}}/"
 -   repo: https://github.com/timothycrosley/isort
     rev: 5.8.0
     hooks:
