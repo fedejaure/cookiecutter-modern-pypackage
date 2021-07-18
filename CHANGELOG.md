@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - isort from `^5.8.0` to `^5.9.2`.
 - black from `^21.5b2` to `^21.7b0`.
 - watchdog from `^2.1.2` to `^2.1.3`.
+- xdoctest from `^0.15.4` to `^0.15.5`.
 
 ## [2.0.0] - 2021-06-12
 ### Added
