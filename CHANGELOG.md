@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - xdoctest from `^0.15.4` to `^0.15.5`.
 - mypy from `^0.902` to `^0.910`.
 - sphinx from `^4.0.2` to `^4.1.1`.
+- invoke from `^1.5.0` to `^1.6.0`.
 
 ## [2.0.0] - 2021-06-12
 ### Added
