@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - package discovery when `project_name` != `project_slug`
 - `end-of-file` hook.
 
+### Changed
+- isort from `5.8.0` to `5.9.2`.
+
 ## [2.0.0] - 2021-06-12
 ### Added
 - optional `CODE_OF_CONDUCT.md` file.
