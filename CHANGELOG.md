@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Fixed
 - package discovery when `project_name` != `project_slug`
+- `end-of-file` hook.
 
 ## [2.0.0] - 2021-06-12
 ### Added
