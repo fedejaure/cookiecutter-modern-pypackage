@@ -7,8 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Fixed
-- package discovery when `project_name` != `project_slug`
+- package discovery when `project_name` != `project_slug`.
 - `end-of-file` hook.
+
+### Changed
+- actions/upload-artifact from `v2.2.0` to `v2.2.4`.
+- actions/download-artifact from `v2.0.5` to `v2.0.10`.
+- codecov/codecov-action from `v1.3.1` to `v2.0.2`.
 
 ### Changed
 - isort from `^5.8.0` to `^5.9.2`.
