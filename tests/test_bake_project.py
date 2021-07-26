@@ -17,6 +17,10 @@ COOKIE_CONTEXT_NOT_OPEN_SOURCE = {"open_source_license": "Not open source"}
 COOKIE_CONTEXT_CLI = {"command_line_interface": "Click"}
 COOKIE_CONTEXT_BSD = {"open_source_license": "BSD"}
 COOKIE_CONTEXT_NO_CLI = {"command_line_interface": "No command-line interface"}
+COOKIE_CONTEXT_DIFF_NAME_AND_SLUG = {
+    "project_name": "some-project-name",
+    "project_slug": "some_project",
+}
 
 
 @contextmanager
@@ -111,6 +115,11 @@ def _test_bake_and_run_invoke_tasks(
         assert result.exit_code == 0
         assert result.exception is None
 
+        assert run_inside_dir("git init", str(result.project_path)) == 0
+        assert run_inside_dir("git add .", str(result.project_path)) == 0
+        assert run_inside_dir('git config user.email "t@test.com"', str(result.project_path)) == 0
+        assert run_inside_dir('git config user.name "Test User"', str(result.project_path)) == 0
+        assert run_inside_dir("git commit -m 'initial commit'", str(result.project_path)) == 0
         assert run_inside_dir("poetry install", str(result.project_path)) == 0
         for task in inv_tasks:
             assert run_inside_dir(f"poetry run inv {task}", str(result.project_path)) == 0
@@ -123,31 +132,20 @@ def _test_bake_and_run_invoke_tasks(
         COOKIE_CONTEXT_NOT_OPEN_SOURCE,
         {**COOKIE_CONTEXT_NOT_OPEN_SOURCE, **COOKIE_CONTEXT_NO_CLI},
         {**COOKIE_CONTEXT_CLI, **COOKIE_CONTEXT_BSD},
+        COOKIE_CONTEXT_DIFF_NAME_AND_SLUG,
     ],
 )
 def test_bake_and_run_invoke(cookies: Cookies, extra_context: Dict[str, str]) -> None:
     """Test bake the project and check invoke tasks."""
     invoke_tasks = [
+        "install-hooks",
+        "hooks",
         "clean",
         "lint",
         "mypy",
         "tests",
         "coverage",
         "version -d minor",
+        "docs",
     ]
     _test_bake_and_run_invoke_tasks(cookies, extra_context, invoke_tasks)
-
-
-@skip_on_windows
-@pytest.mark.parametrize(
-    "extra_context",
-    [
-        {},
-        COOKIE_CONTEXT_NOT_OPEN_SOURCE,
-        {**COOKIE_CONTEXT_NOT_OPEN_SOURCE, **COOKIE_CONTEXT_NO_CLI},
-        {**COOKIE_CONTEXT_CLI, **COOKIE_CONTEXT_BSD},
-    ],
-)
-def test_bake_and_build_docs(cookies: Cookies, extra_context: Dict[str, str]) -> None:
-    """Test bake the project and check invoke docs task."""
-    _test_bake_and_run_invoke_tasks(cookies, extra_context, ["docs"])

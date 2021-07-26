@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.1] - 2021-07-26
+### Fixed
+- package discovery when `project_name` != `project_slug`.
+- `end-of-file` hook.
+- pypi release step only for open source projects.
+
+### Changed
+- isort from `^5.8.0` to `^5.9.2`.
+- black from `^21.5b2` to `^21.7b0`.
+- watchdog from `^2.1.2` to `^2.1.3`.
+- xdoctest from `^0.15.4` to `^0.15.5`.
+- mypy from `^0.902` to `^0.910`.
+- sphinx from `^4.0.2` to `^4.1.1`.
+- invoke from `^1.5.0` to `^1.6.0`.
+- actions/upload-artifact from `v2.2.0` to `v2.2.4`.
+- actions/download-artifact from `v2.0.5` to `v2.0.10`.
+- codecov/codecov-action from `v1.3.1` to `v2.0.2`.
+- pypa/gh-action-pypi-publish for `v1.4.1` to `v1.4.2`.
+
 ## [2.0.0] - 2021-06-12
 ### Added
 - optional `CODE_OF_CONDUCT.md` file.
@@ -227,7 +246,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release.
 
 
-[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.0.0...develop
+[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.0.1...develop
+[2.0.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.3...v2.0.0
 [1.2.3]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.2...v1.2.3
 [1.2.2]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.1...v1.2.2

@@ -61,7 +61,7 @@ jobs:
         run: nox --force-color -s safety
 
       - name: Upload coverage data
-        uses: actions/upload-artifact@v2.2.0
+        uses: actions/upload-artifact@v2.2.4
         with:
           name: coverage-data
           path: ".coverage.*"
@@ -85,7 +85,7 @@ jobs:
           poetry config virtualenvs.in-project true
 
       - name: Download coverage data
-        uses: actions/download-artifact@v2.0.5
+        uses: actions/download-artifact@v2.0.10
         with:
           name: coverage-data
 
@@ -95,6 +95,6 @@ jobs:
           nox --force-color --session=coverage -- --fmt xml
 
       - name: Upload coverage report
-        uses: codecov/codecov-action@v1.3.1
+        uses: codecov/codecov-action@v2.0.2
         with:
           token: ${{ secrets.CODECOV_TOKEN }}{% endraw %}
