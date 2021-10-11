@@ -72,7 +72,7 @@ sphinx = "^4.1.1"
 recommonmark = "^0.7.1"
 bump2version = "^1.0.1"
 pytest = "^6.2.4"
-xdoctest = "^0.15.5"
+xdoctest = "^0.15.10"
 coverage = {version = "^5.3", extras = ["toml"]}
 pytest-cov = "^2.10.1"
 watchdog = {version = "^2.1.6", extras = ["watchmedo"]}

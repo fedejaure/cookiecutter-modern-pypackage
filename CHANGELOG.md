@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - pre-commit from `^2.13.0` to `^2.15.0`.
 - watchdog from `^2.1.3` to `^2.1.6`.
 - flake8-bugbear from `^21.4.3` to `^21.9.2`.
+- xdoctest from `^0.15.5` to `^0.15.10`.
 
 ## [2.0.1] - 2021-07-26
 ### Fixed
