@@ -33,7 +33,7 @@ jobs:
     strategy:
       matrix:
         os: [Ubuntu, MacOS]
-        python-version: [3.7, 3.8, 3.9]
+        python-version: ['3.7', '3.8', '3.9', '3.10']
       fail-fast: true
     steps:
       - uses: actions/checkout@v2.3.4
@@ -46,7 +46,6 @@ jobs:
       - name: Install system deps
         shell: bash
         run: |
-          pip install virtualenv==20.2.1
           pip install nox
           pip install poetry
           poetry config virtualenvs.in-project true
@@ -60,6 +59,6 @@ jobs:
         run: nox --force-color -s tests-${{ matrix.python-version }}
 
       - name: Run safety check
-        if: matrix.python-version == 3.9
+        if: matrix.python-version == '3.10'
         shell: bash
         run: nox --force-color -s safety
