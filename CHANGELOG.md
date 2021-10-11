@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - xdoctest from `^0.15.5` to `^0.15.10`.
 - sphinx from `^4.1.1` to `^4.2.0`.
 - black from `^21.7b0` to `^21.9b0`.
+- pytest from `^6.2.4` to `^6.2.5`.
 
 ## [2.0.1] - 2021-07-26
 ### Fixed
