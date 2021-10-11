@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - sphinx from `^4.1.1` to `^4.2.0`.
 - black from `^21.7b0` to `^21.9b0`.
 - pytest from `^6.2.4` to `^6.2.5`.
+- isort from `^5.9.2` to `^5.9.3`.
 
 ## [2.0.1] - 2021-07-26
 ### Fixed
