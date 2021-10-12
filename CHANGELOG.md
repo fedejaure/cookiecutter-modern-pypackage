@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.0] - 2021-10-12
+### Added
+- Python `3.10` support.
+
+### Changed
+- pre-commit from `^2.13.0` to `^2.15.0`.
+- watchdog from `^2.1.3` to `^2.1.6`.
+- flake8-bugbear from `^21.4.3` to `^21.9.2`.
+- xdoctest from `^0.15.5` to `^0.15.10`.
+- sphinx from `^4.1.1` to `^4.2.0`.
+- black from `^21.7b0` to `^21.9b0`.
+- pytest from `^6.2.4` to `^6.2.5`.
+- isort from `^5.9.2` to `^5.9.3`.
+- peter-evans/create-pull-request from `v3.10.0` to `v3.10.1`.
+- coverage from `^5.3` to `^6.0.1`.
+- pytest-cov from `^2.10.1` to `^3.0.0`.
+- click from `^8.0.1` to `^8.0.3`.
+
 ## [2.0.1] - 2021-07-26
 ### Fixed
 - package discovery when `project_name` != `project_slug`.
@@ -15,7 +33,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - isort from `^5.8.0` to `^5.9.2`.
-- black from `^21.5b2` to `^21.7b0`.
 - watchdog from `^2.1.2` to `^2.1.3`.
 - xdoctest from `^0.15.4` to `^0.15.5`.
 - mypy from `^0.902` to `^0.910`.
@@ -163,7 +180,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - isort from `^5.5.4` to `^5.6.4`.
 - bump2version from `master` to `^1.0.1`.
 - mypy from `^0.782` to `^0.790`.
-- coverage from `^5.1` to `^5.3`.
+- coverage from `^5.1` to `^6.0.1`.
 - pytest-cov from `^2.8.1` to `^2.10.1`.
 - pytest from `^5.4.2` to `^6.1.1`.
 - flake8 from `^3.7.9` to `^3.8.4`.
@@ -246,7 +263,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release.
 
 
-[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.0.1...develop
+[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.1.0...develop
+[2.1.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.0.1...v2.1.0
 [2.0.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.3...v2.0.0
 [1.2.3]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.2...v1.2.3

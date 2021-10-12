@@ -9,11 +9,11 @@ repos:
       - id: check-json
       - id: end-of-file-fixer
 -   repo: https://github.com/timothycrosley/isort
-    rev: 5.9.2
+    rev: 5.9.3
     hooks:
       - id: isort
 -   repo: https://github.com/psf/black
-    rev: 21.7b0
+    rev: 21.9b0
     hooks:
       - id: black
 -   repo: local
@@ -32,7 +32,7 @@ repos:
           'flake8-builtins~=1.5.3',
           'flake8-blind-except~=0.2.0',
           'flake8-logging-format~=0.6.0',
-          'flake8-bugbear~=21.4.3',
+          'flake8-bugbear~=21.9.2',
           'flake8-annotations~=2.6.2',
           'flake8-docstrings~=1.6.0',
           'flake8-bandit~=2.1.2',
