@@ -19,7 +19,7 @@ repos:
       - id: isort
         exclude: "^{{cookiecutter.project_name}}/"
 -   repo: https://github.com/psf/black
-    rev: 21.9b0
+    rev: 21.10b0
     hooks:
       - id: black
         exclude: "^{{cookiecutter.project_name}}/"
@@ -43,6 +43,6 @@ repos:
           'flake8-annotations~=2.6.2',
           'flake8-docstrings~=1.6.0',
           'flake8-bandit~=2.1.2',
-          'darglint~=1.8.0'
+          'darglint~=1.8.1'
         ]
         exclude: "^{{cookiecutter.project_name}}/"
