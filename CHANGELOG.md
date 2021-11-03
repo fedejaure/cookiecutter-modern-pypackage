@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - checkout action from `v2.3.4` to `v2.3.5`.
 - darglint from `^1.8.0` to `^1.8.1`.
 
+### Added
+- flake8-broken-line `^0.4.0`.
+
 ## [2.1.0] - 2021-10-12
 ### Added
 - Python `3.10` support.
