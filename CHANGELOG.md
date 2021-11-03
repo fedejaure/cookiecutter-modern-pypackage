@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - black from `^21.9b0` to `^21.10b0`.
-- checkout action from `v2.3.4` to `v2.3.5`.
+- checkout action from `v2.3.4` to `v2.4.0`.
 - darglint from `^1.8.0` to `^1.8.1`.
 
 ### Added
