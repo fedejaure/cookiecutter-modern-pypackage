@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - darglint from `^1.8.0` to `^1.8.1`.
 - actions/setup-python from `v2.2.2` to `v2.3.1`.
 - peter-evans/create-pull-request from `v3.10.1` to `v3.11.0`.
+- pre-commit from `^2.15.0` to `^2.16.0`.
 
 ### Added
 - flake8-broken-line `^0.4.0`.
