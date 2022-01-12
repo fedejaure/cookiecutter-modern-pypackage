@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - peter-evans/create-pull-request from `v3.10.1` to `v3.12.0`.
 - pre-commit from `^2.15.0` to `^2.16.0`.
 - isort from `^5.9.3` to `^5.10.1`.
-- sphinx from `^4.2.0` to `^4.3.1`.
+- sphinx from `^4.2.0` to `^4.3.2`.
 - flake8-bugbear from `^21.9.2` to `^21.11.29`.
 - mypy from `^0.910` to `^0.931`.
 
