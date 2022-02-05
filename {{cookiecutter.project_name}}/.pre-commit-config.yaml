@@ -13,7 +13,7 @@ repos:
     hooks:
       - id: isort
 -   repo: https://github.com/psf/black
-    rev: 21.12b0
+    rev: 22.1.0
     hooks:
       - id: black
 -   repo: local
@@ -32,7 +32,7 @@ repos:
           'flake8-builtins~=1.5.3',
           'flake8-blind-except~=0.2.0',
           'flake8-logging-format~=0.6.0',
-          'flake8-bugbear~=21.11.29',
+          'flake8-bugbear~=22.1.11',
           'flake8-annotations~=2.6.2',
           'flake8-docstrings~=1.6.0',
           'flake8-bandit~=2.1.2',
