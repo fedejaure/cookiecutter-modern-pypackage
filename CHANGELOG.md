@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - invoke from `^1.6.0` to `^1.7.0`.
 - pytest from `^6.2.5` to `^7.1.2`.
 - xdoctest from `^0.15.10` to `^1.0.0`.
+- flake8-bandit from `^2.1.2` to `^3.0.0`.
 
 ### Added
 - flake8-broken-line `^0.4.0`.
