@@ -114,6 +114,7 @@ extended_default_ignore = []
 pyflakes = ["+*"]
 pycodestyle = ["+*"]
 mccabe = ["+*"]
+flake8-annotations = ["+*", "-ANN401"]
 "flake8-*" = ["+*"]
 darglint = ["+*"]
 
