@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - pre-commit-hooks from `v4.0.1` to `v4.1.0`.
 - watchdog from `^2.1.6` to `^2.1.7`.
 - invoke from `^1.6.0` to `^1.7.0`.
+- xdoctest from `^0.15.10` to `^1.0.0`.
 
 ### Added
 - flake8-broken-line `^0.4.0`.
