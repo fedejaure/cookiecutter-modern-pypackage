@@ -7,17 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
-- black from `^21.9b0` to `^22.1.0`.
+- black from `^21.9b0` to `^22.3.0`.
 - checkout action from `v2.3.4` to `v2.4.0`.
 - darglint from `^1.8.0` to `^1.8.1`.
 - actions/setup-python from `v2.2.2` to `v2.3.1`.
 - peter-evans/create-pull-request from `v3.10.1` to `v3.12.1`.
-- pre-commit from `^2.15.0` to `^2.17.0`.
+- pre-commit from `^2.15.0` to `^2.18.1`.
 - isort from `^5.9.3` to `^5.10.1`.
 - sphinx from `^4.2.0` to `^4.3.2`.
 - flake8-bugbear from `^21.9.2` to `^22.1.11`.
-- mypy from `^0.910` to `^0.931`.
+- mypy from `^0.910` to `^0.950`.
 - pre-commit-hooks from `v4.0.1` to `v4.1.0`.
+- watchdog from `^2.1.6` to `^2.1.7`.
+- invoke from `^1.6.0` to `^1.7.0`.
+- pytest from `^6.2.5` to `^7.1.2`.
+- xdoctest from `^0.15.10` to `^1.0.0`.
+- flake8-bandit from `^2.1.2` to `^3.0.0`.
 
 ### Added
 - flake8-broken-line `^0.4.0`.
