@@ -57,7 +57,7 @@ pytest = "^7.1.2"
 xdoctest = "^1.0.0"
 cookiecutter = "^1.7.3"
 pytest-cookies = "^0.6.1"
-watchdog = {version = "^2.1.7", extras = ["watchmedo"]}
+watchdog = {version = "^2.1.8", extras = ["watchmedo"]}
 
 [tool.flakehell]
 format = "grouped"
