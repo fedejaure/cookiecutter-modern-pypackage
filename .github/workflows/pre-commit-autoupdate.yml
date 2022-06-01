@@ -28,7 +28,7 @@ jobs:
       - name: Run pre-commit
         run: pre-commit run --all-files
 
-      - uses: peter-evans/create-pull-request@v3.12.1
+      - uses: peter-evans/create-pull-request@v4.0.3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: chore-update-pre-commit-hooks
