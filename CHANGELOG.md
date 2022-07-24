@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - github/codeql-action from `v1` to `v2`.
 - peter-evans/create-pull-request from `v3.10.1` to `v4.0.4`.
 - mindsers/changelog-reader-action from `v2.0.0` to `v2.1.1`.
-- pre-commit from `^2.15.0` to `^2.18.1`.
+- pre-commit from `^2.15.0` to `^2.20.0`.
 - isort from `^5.9.3` to `^5.10.1`.
 - sphinx from `^4.2.0` to `^4.3.2`.
 - flake8-bugbear from `^21.9.2` to `^22.1.11`.
