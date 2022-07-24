@@ -477,7 +477,7 @@ python-versions = "*"
 
 [[package]]
 name = "invoke"
-version = "1.7.0"
+version = "1.7.1"
 description = "Pythonic task execution"
 category = "dev"
 optional = false
@@ -1086,7 +1086,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "<3.10,>=3.8"
-content-hash = "cd1a259c73b17d142b45bf9e990317d63642193243e7633195464fe7ee8910e3"
+content-hash = "1b475559d3a8aa8426994202a25fd38860f7ca43f4778e12a506d5c9d35738f1"
 
 [metadata.files]
 alabaster = []
