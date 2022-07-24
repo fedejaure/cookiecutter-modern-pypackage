@@ -19,7 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - isort from `^5.9.3` to `^5.10.1`.
 - sphinx from `^4.2.0` to `^4.3.2`.
 - flake8-bugbear from `^21.9.2` to `^22.1.11`.
-- mypy from `^0.910` to `^0.950`.
+- mypy from `^0.910` to `^0.971`.
 - pre-commit-hooks from `v4.0.1` to `v4.1.0`.
 - watchdog from `^2.1.6` to `^2.1.7`.
 - invoke from `^1.6.0` to `^1.7.0`.
