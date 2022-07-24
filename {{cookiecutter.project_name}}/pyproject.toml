@@ -26,7 +26,6 @@ classifiers=[
     {% endif %}
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
@@ -47,7 +46,7 @@ packages = [
 {% endif %}
 
 [tool.poetry.dependencies]
-python = "<3.11,>=3.7"
+python = "<3.11,>=3.8"
 {% if cookiecutter.command_line_interface|lower == 'click' %}
 click = "^8.0.3"
 {% endif %}

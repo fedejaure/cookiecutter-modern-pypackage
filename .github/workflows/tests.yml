@@ -16,10 +16,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2.4.0
 
-      - name: Set up Python 3.7
+      - name: Set up Python 3.8
         uses: actions/setup-python@v2.3.1
         with:
-          python-version: 3.7
+          python-version: 3.8
 
       - name: Linting
         run: |
@@ -33,7 +33,7 @@ jobs:
     strategy:
       matrix:
         os: [Ubuntu, MacOS]
-        python-version: ['3.7', '3.8', '3.9', '3.10']
+        python-version: ['3.8', '3.9', '3.10']
       fail-fast: true
     steps:
       - uses: actions/checkout@v2.4.0
