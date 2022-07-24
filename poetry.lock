@@ -323,7 +323,7 @@ flake8 = ">=3.5,<5"
 
 [[package]]
 name = "flake8-bugbear"
-version = "22.1.11"
+version = "22.7.1"
 description = "A plugin for flake8 finding likely bugs and design problems in your program. Contains warnings that don't belong in pyflakes and pycodestyle."
 category = "dev"
 optional = false
@@ -1086,7 +1086,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "<3.10,>=3.8"
-content-hash = "1b475559d3a8aa8426994202a25fd38860f7ca43f4778e12a506d5c9d35738f1"
+content-hash = "91848ab9a26a21cc11ea6b3973432109015089bd9308f6580c7a1d96f0d11b2d"
 
 [metadata.files]
 alabaster = []
