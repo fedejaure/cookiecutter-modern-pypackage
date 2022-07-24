@@ -305,7 +305,7 @@ pycodestyle = "*"
 
 [[package]]
 name = "flake8-blind-except"
-version = "0.2.0"
+version = "0.2.1"
 description = "A flake8 extension that checks for blind except: statements"
 category = "dev"
 optional = false
@@ -1087,7 +1087,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "<3.10,>=3.8"
-content-hash = "a6c15dbe6c961412e1059163aacfaa846565da4d889dc18f39118cb95496c6f5"
+content-hash = "8fb49823065fe21ccf77daa2fb2c8285c2023b3761d255e7edf23fa8781a7913"
 
 [metadata.files]
 alabaster = []
