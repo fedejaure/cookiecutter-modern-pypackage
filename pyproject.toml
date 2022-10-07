@@ -29,7 +29,7 @@ classifiers=[
 "Bug Tracker" = "https://github.com/fedejaure/cookiecutter-modern-pypackage/issues"
 
 [tool.poetry.dependencies]
-python = "<3.10,>=3.8"
+python = "<3.11,>=3.8"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.20.0"
@@ -82,7 +82,7 @@ include_trailing_comma = true
 force_grid_wrap = 0
 use_parentheses = true
 line_length = 99
-known_third_party = ["cookiecutter", "invoke", "nox", "pytest", "pytest_cookies"]
+known_third_party = ["cookiecutter", "invoke", "nox", "nox_poetry", "pytest", "pytest_cookies"]
 skip = "{{ cookiecutter.project_name }}"
 
 [tool.black]

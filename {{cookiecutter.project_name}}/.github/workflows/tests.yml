@@ -43,7 +43,7 @@ jobs:
       - name: Install system deps
         shell: bash
         run: |
-          pip install nox
+          pip install nox-poetry
           pip install poetry
           poetry config virtualenvs.in-project true
 
@@ -80,7 +80,7 @@ jobs:
       - name: Install system deps
         shell: bash
         run: |
-          pip install nox
+          pip install nox-poetry
           pip install poetry
           poetry config virtualenvs.in-project true
 
