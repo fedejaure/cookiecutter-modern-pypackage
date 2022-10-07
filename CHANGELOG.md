@@ -32,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - xdoctest from `^1.0.0` to `^1.0.1`.
 
 ### Added
+- nox-poetry.
 - flake8-broken-line `^0.4.0`.
 
 ### Removed

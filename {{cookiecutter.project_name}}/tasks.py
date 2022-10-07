@@ -113,7 +113,7 @@ def safety(c):
     """Run safety."""
     _run(
         c,
-        "poetry export --dev --format=requirements.txt --without-hashes | "
+        "poetry export --with dev --format=requirements.txt --without-hashes | "
         "poetry run safety check --stdin --full-report",
     )
 
