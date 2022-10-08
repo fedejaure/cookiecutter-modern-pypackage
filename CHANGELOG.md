@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
-- black from `^21.9b0` to `^22.6.0`.
+- black from `^21.9b0` to `^22.10.0`.
 - checkout action from `v2.3.4` to `v2.4.0`.
 - darglint from `^1.8.0` to `^1.8.1`.
 - actions/setup-python from `v2.2.2` to `v4.2.0`.
@@ -17,23 +17,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - mindsers/changelog-reader-action from `v2.0.0` to `v2.2.0`.
 - pre-commit from `^2.15.0` to `^2.20.0`.
 - isort from `^5.9.3` to `^5.10.1`.
-- sphinx from `^4.2.0` to `^5.1.1`.
-- flake8-bugbear from `^21.9.2` to `^22.7.1`.
-- mypy from `^0.910` to `^0.971`.
+- sphinx from `^4.2.0` to `^5.2.3`.
+- flake8-bugbear from `^21.9.2` to `^22.9.23`.
+- mypy from `^0.910` to `^0.982`.
 - pre-commit-hooks from `v4.0.1` to `v4.1.0`.
 - watchdog from `^2.1.6` to `^2.1.7`.
-- invoke from `^1.6.0` to `^1.7.1`.
-- pytest from `^6.2.5` to `^7.1.2`.
+- invoke from `^1.6.0` to `^1.7.3`.
+- pytest from `^6.2.5` to `^7.1.3`.
 - xdoctest from `^0.15.10` to `^1.0.0`.
 - flake8-bandit from `^2.1.2` to `^3.0.0`.
-- safety from `^1.10.3` to `^2.1.1`.
-- flake8-annotations from `^2.6.2` to `^2.9.0`.
+- safety from `^1.10.3` to `^2.3.1`.
+- flake8-annotations from `^2.6.2` to `^2.9.1`.
 - flake8-blind-except from `^0.2.0` to `^0.2.1`.
-- xdoctest from `^1.0.0` to `^1.0.1`.
+- flake8-logging-format from `^0.6.0` to `^0.8.1`.
+- xdoctest from `^1.0.0` to `^1.1.0`.
+- coverage from `^6.0.1` to `^6.5.0`.
 
 ### Added
 - nox-poetry.
-- flake8-broken-line `^0.4.0`.
+- flake8-broken-line `^0.6.0`.
 
 ### Removed
 - Python `3.7` support.
