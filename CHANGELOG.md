@@ -10,11 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - black from `^21.9b0` to `^22.6.0`.
 - checkout action from `v2.3.4` to `v2.4.0`.
 - darglint from `^1.8.0` to `^1.8.1`.
-- actions/setup-python from `v2.2.2` to `v4.1.0`.
+- actions/setup-python from `v2.2.2` to `v4.2.0`.
 - actions/checkout from `v2.4.0` to `v3.0.2`.
 - github/codeql-action from `v1` to `v2`.
-- peter-evans/create-pull-request from `v3.10.1` to `v4.0.4`.
-- mindsers/changelog-reader-action from `v2.0.0` to `v2.1.1`.
+- peter-evans/create-pull-request from `v3.10.1` to `v4.1.3`.
+- mindsers/changelog-reader-action from `v2.0.0` to `v2.2.0`.
 - pre-commit from `^2.15.0` to `^2.20.0`.
 - isort from `^5.9.3` to `^5.10.1`.
 - sphinx from `^4.2.0` to `^5.1.1`.
