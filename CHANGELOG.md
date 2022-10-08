@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - safety from `^1.10.3` to `^2.3.1`.
 - flake8-annotations from `^2.6.2` to `^2.9.1`.
 - flake8-blind-except from `^0.2.0` to `^0.2.1`.
+- flake8-logging-format from `^0.6.0` to `^0.8.1`.
 - xdoctest from `^1.0.0` to `^1.0.1`.
 
 ### Added
