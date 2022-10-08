@@ -365,11 +365,15 @@ pydocstyle = ">=2.1"
 
 [[package]]
 name = "flake8-logging-format"
-version = "0.6.0"
-description = "Flake8 extension to validate (lack of) logging format strings"
+version = "0.8.1"
+description = ""
 category = "dev"
 optional = false
 python-versions = "*"
+
+[package.extras]
+lint = ["flake8"]
+test = ["PyHamcrest", "pytest", "pytest-cov"]
 
 [[package]]
 name = "flake8-polyfill"
@@ -1105,7 +1109,7 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "1.1"
 python-versions = "<3.11,>=3.8"
-content-hash = "56a8e4bdccfbfd50d769e5da1388ff64127e69cefaf5e0a411f61ae695125fb8"
+content-hash = "c78adcd7549880b05f6dc4a0d44c69b48be9618dc10ed2e9eaabbd4eb663c36e"
 
 [metadata.files]
 alabaster = [
@@ -1257,7 +1261,7 @@ flake8-docstrings = [
     {file = "flake8_docstrings-1.6.0-py2.py3-none-any.whl", hash = "sha256:99cac583d6c7e32dd28bbfbef120a7c0d1b6dde4adb5a9fd441c4227a6534bde"},
 ]
 flake8-logging-format = [
-    {file = "flake8-logging-format-0.6.0.tar.gz", hash = "sha256:ca5f2b7fc31c3474a0aa77d227e022890f641a025f0ba664418797d979a779f8"},
+    {file = "flake8-logging-format-0.8.1.tar.gz", hash = "sha256:fecab361ff1700d4550cedbd3f4475d45eda01fcaa800768c9551d2ced16b780"},
 ]
 flake8-polyfill = [
     {file = "flake8-polyfill-1.0.2.tar.gz", hash = "sha256:e44b087597f6da52ec6393a709e7108b2905317d0c0b744cdca6208e670d8eda"},
