@@ -26,7 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - pytest from `^6.2.5` to `^7.1.2`.
 - xdoctest from `^0.15.10` to `^1.0.0`.
 - flake8-bandit from `^2.1.2` to `^3.0.0`.
-- safety from `^1.10.3` to `^2.1.1`.
+- safety from `^1.10.3` to `^2.3.1`.
 - flake8-annotations from `^2.6.2` to `^2.9.0`.
 - flake8-blind-except from `^0.2.0` to `^0.2.1`.
 - xdoctest from `^1.0.0` to `^1.0.1`.
