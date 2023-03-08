@@ -41,6 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - coverage from `^6.0.1` to `^7.2.1`.
 - flake8-docstrings from `1.6.0` to `1.7.0`.
 - flake8-builtins from `1.5.3` to `2.1.0`.
+- click from `^8.0.3` to `^8.1.3`.
 
 ### Added
 - nox-poetry.

@@ -48,7 +48,7 @@ packages = [
 [tool.poetry.dependencies]
 python = "<3.11,>=3.8"
 {% if cookiecutter.command_line_interface|lower == 'click' %}
-click = "^8.0.3"
+click = "^8.1.3"
 {% endif %}
 
 [tool.poetry.dev-dependencies]
