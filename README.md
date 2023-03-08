@@ -25,7 +25,7 @@
 * Dependency tracking using [Poetry][poetry]
 * Testing setup with [Pytest][pytest]
 * [Github Actions][github actions] ready for Continuous Integration testing
-* Linting provided by [Flake8][flake8] with [Flakehell][flakehell]
+* Linting provided by [Flake8][flake8] with [flakeheaven][flakeheaven]
 * Docstring linting provided by [Darglint][darglint] using the [Google Python Style Guide][google styleguide]
 * Static type checking by [Mypy][mypy]
 * Formatting provided by [Black][black] and [Isort][isort]
@@ -78,7 +78,7 @@ This cookiecutter was built for learning purpose and inspired by:
 [pytest]: https://github.com/pytest-dev/pytest
 [github actions]: https://github.com/features/actions
 [flake8]: https://gitlab.com/pycqa/flake8
-[flakehell]: https://github.com/life4/flakehell
+[flakeheaven]: https://github.com/flakeheaven/flakeheaven
 [isort]: https://github.com/timothycrosley/isort
 [black]: https://github.com/psf/black
 [darglint]: https://github.com/terrencepreilly/darglint
