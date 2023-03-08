@@ -56,7 +56,7 @@ jobs:
 
       - name: Get Changelog Entry
         id: changelog_reader
-        uses: mindsers/changelog-reader-action@v2.2.0
+        uses: mindsers/changelog-reader-action@v2.2.2
         with:
           version: ${{ steps.tag_name.outputs.current_version }}
           path: ./CHANGELOG.md
