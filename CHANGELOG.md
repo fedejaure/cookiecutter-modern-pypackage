@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - flakehell `^0.9.0`.
 
 ### Changed
-- black from `^21.9b0` to `^22.10.0`.
+- black from `^21.9b0` to `^22.12.0`.
 - flake8 from `^3.9.2` to `>=4.0.1,<5.0.0`.
 - checkout action from `v2.3.4` to `v2.4.0`.
 - darglint from `^1.8.0` to `^1.8.1`.
