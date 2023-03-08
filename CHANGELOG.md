@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - mindsers/changelog-reader-action from `v2.0.0` to `v2.2.2`.
 - pre-commit from `^2.15.0` to `^3.1.1.
 - isort from `^5.9.3` to `^5.12.0`.
-- sphinx from `^4.2.0` to `^5.2.3`.
+- sphinx from `^4.2.0` to `^6.1.3`.
 - flake8-bugbear from `^21.9.2` to `^22.9.23`.
 - mypy from `^0.910` to `^1.0.1`.
 - pre-commit-hooks from `v4.0.1` to `v4.1.0`.
