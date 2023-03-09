@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - flakehell `^0.9.0`.
 
 ### Changed
-- black from `^21.9b0` to `^22.12.0`.
+- black from `^21.9b0` to `^23.1.0`.
 - flake8 from `^3.9.2` to `>=4.0.1,<5.0.0`.
 - checkout action from `v2.3.4` to `v2.4.0`.
 - darglint from `^1.8.0` to `^1.8.1`.
@@ -33,7 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - pytest from `^6.2.5` to `^7.2.2`.
 - xdoctest from `^0.15.10` to `^1.0.0`.
 - flake8-bandit from `^2.1.2` to `^3.0.0`.
-- safety from `^1.10.3` to `^2.3.5`.
+- safety from `^1.10.3` to `^2.4.0b1`.
 - flake8-annotations from `^2.6.2` to `^2.9.1`.
 - flake8-blind-except from `^0.2.0` to `^0.2.1`.
 - flake8-logging-format from `^0.6.0` to `^0.9.0`.
