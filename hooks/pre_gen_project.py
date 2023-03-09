@@ -14,7 +14,6 @@ def validate_value(value: str, regex: str, fail_msg: str) -> None:
 
 
 if __name__ == "__main__":
-
     validate_value(
         "{{ cookiecutter.project_name }}",
         NAME_REGEX,
