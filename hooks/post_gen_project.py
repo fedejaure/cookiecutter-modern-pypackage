@@ -21,7 +21,6 @@ def add_symlink(path: Path, target: Union[str, Path], target_is_directory: bool 
 
 
 if __name__ == "__main__":
-
     if "No command-line interface" in "{{ cookiecutter.command_line_interface }}":
         remove_file(PROJECT_TESTS / "test_cli.py")
         remove_file(PROJECT_SRC / "cli.py")

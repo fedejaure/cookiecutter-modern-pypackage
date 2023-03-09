@@ -10,12 +10,12 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3.3.0
 
-      - name: Set up Python 3.7
-        uses: actions/setup-python@v2.2.2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v4.5.0
         with:
-          python-version: 3.7
+          python-version: 3.8
 
       - name: Install system deps
         shell: bash
@@ -46,7 +46,7 @@ jobs:
     name: Create Github Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3.3.0
 
       - name: Get version from tag
         id: tag_name
@@ -56,7 +56,7 @@ jobs:
 
       - name: Get Changelog Entry
         id: changelog_reader
-        uses: mindsers/changelog-reader-action@v2.0.0
+        uses: mindsers/changelog-reader-action@v2.2.2
         with:
           version: ${{ steps.tag_name.outputs.current_version }}
           path: ./CHANGELOG.md

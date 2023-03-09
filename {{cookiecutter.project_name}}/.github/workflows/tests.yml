@@ -11,12 +11,12 @@ jobs:
     name: Linting
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3.3.0
 
-      - name: Set up Python 3.7
-        uses: actions/setup-python@v2.2.2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v4.5.0
         with:
-          python-version: 3.7
+          python-version: 3.8
 
       - name: Linting
         run: |
@@ -30,20 +30,20 @@ jobs:
     strategy:
       matrix:
         os: [Ubuntu, MacOS, Windows]
-        python-version: ['3.7', '3.8', '3.9', '3.10']
+        python-version: ['3.8', '3.9', '3.10', '3.11']
       fail-fast: true
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3.3.0
 
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2.2.2
+        uses: actions/setup-python@v4.5.0
         with:
           python-version: ${{ matrix.python-version }}
 
       - name: Install system deps
         shell: bash
         run: |
-          pip install nox
+          pip install nox-poetry
           pip install poetry
           poetry config virtualenvs.in-project true
 
@@ -56,7 +56,7 @@ jobs:
         run: nox --force-color -s tests-${{ matrix.python-version }}
 
       - name: Run safety check
-        if: matrix.python-version == '3.10' && matrix.os == 'Ubuntu'
+        if: matrix.python-version == '3.11' && matrix.os == 'Ubuntu'
         shell: bash
         run: nox --force-color -s safety
 
@@ -70,17 +70,17 @@ jobs:
     needs: tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v3.3.0
       
-      - name: Set up Python 3.7
-        uses: actions/setup-python@v2.2.2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v4.5.0
         with:
-          python-version: 3.7
+          python-version: 3.8
 
       - name: Install system deps
         shell: bash
         run: |
-          pip install nox
+          pip install nox-poetry
           pip install poetry
           poetry config virtualenvs.in-project true
 

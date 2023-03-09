@@ -104,7 +104,7 @@ def format_(c, check=False):
 def flake8(c):
     # type: (Context) -> None
     """Run flake8."""
-    _run(c, f"poetry run flakehell lint {PYTHON_TARGETS_STR}")
+    _run(c, f"poetry run flakeheaven lint {PYTHON_TARGETS_STR}")
 
 
 @task()
@@ -113,7 +113,7 @@ def safety(c):
     """Run safety."""
     _run(
         c,
-        "poetry export --dev --format=requirements.txt --without-hashes | "
+        "poetry export --with dev --format=requirements.txt --without-hashes | "
         "poetry run safety check --stdin --full-report",
     )
 

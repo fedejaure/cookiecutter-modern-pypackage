@@ -7,6 +7,48 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.0] - 2023-03-09
+### Added
+- Python `3.11` support.
+- nox-poetry.
+- flake8-broken-line `^0.6.0`.
+- flakeheaven `^3.2.1`.
+
+### Changed
+- black from `^21.9b0` to `^23.1.0`.
+- flake8 from `^3.9.2` to `>=4.0.1,<5.0.0`.
+- checkout action from `v2.3.4` to `v2.4.0`.
+- darglint from `^1.8.0` to `^1.8.1`.
+- actions/setup-python from `v2.2.2` to `v4.5.0`.
+- actions/checkout from `v2.4.0` to `v3.3.0`.
+- github/codeql-action from `v1` to `v2`.
+- peter-evans/create-pull-request from `v3.10.1` to `v4.2.3`.
+- mindsers/changelog-reader-action from `v2.0.0` to `v2.2.2`.
+- pre-commit from `^2.15.0` to `^3.1.1.
+- isort from `^5.9.3` to `^5.12.0`.
+- sphinx from `^4.2.0` to `^6.1.3`.
+- flake8-bugbear from `^21.9.2` to `^23.2.13`.
+- mypy from `^0.910` to `^1.0.1`.
+- pre-commit-hooks from `v4.0.1` to `v4.4.0`.
+- watchdog from `^2.1.6` to `^2.3.1`.
+- invoke from `^1.6.0` to `^2.0.0`.
+- pytest from `^6.2.5` to `^7.2.2`.
+- xdoctest from `^0.15.10` to `^1.0.0`.
+- flake8-bandit from `^2.1.2` to `^3.0.0`.
+- safety from `^1.10.3` to `^2.4.0b1`.
+- flake8-annotations from `^2.6.2` to `^2.9.1`.
+- flake8-blind-except from `^0.2.0` to `^0.2.1`.
+- flake8-logging-format from `^0.6.0` to `^0.9.0`.
+- xdoctest from `^1.0.0` to `^1.1.1`.
+- coverage from `^6.0.1` to `^7.2.1`.
+- flake8-docstrings from `1.6.0` to `1.7.0`.
+- flake8-builtins from `1.5.3` to `2.1.0`.
+- click from `^8.0.3` to `^8.1.3`.
+
+### Removed
+- Python `3.7` support.
+- flakehell `^0.9.0`.
+
 ## [2.1.0] - 2021-10-12
 ### Added
 - Python `3.10` support.
@@ -263,7 +305,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release.
 
 
-[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.1.0...develop
+[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.2.0...develop
+[2.2.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.1.0...v2.2.0
 [2.1.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.0.1...v2.1.0
 [2.0.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.3...v2.0.0

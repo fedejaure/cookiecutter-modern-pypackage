@@ -3,7 +3,7 @@
 <div align="center">
 
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/fedejaure/cookiecutter-modern-pypackage?logo=github)](https://github.com/fedejaure/cookiecutter-modern-pypackage/releases)
-[![Python Version](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9%20%7C%203.10-blue?logo=python)](https://www.python.org/)
+[![Python Version](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11-blue?logo=python)](https://www.python.org/)
 [![Tests](https://github.com/fedejaure/cookiecutter-modern-pypackage/workflows/tests/badge.svg)](https://github.com/fedejaure/cookiecutter-modern-pypackage/actions?workflow=tests)
 [![Read the Docs](https://readthedocs.org/projects/cookiecutter-modern-pypackage/badge/)](https://cookiecutter-modern-pypackage.readthedocs.io/)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen)](https://opensource.org/licenses/MIT)
@@ -25,7 +25,7 @@
 * Dependency tracking using [Poetry][poetry]
 * Testing setup with [Pytest][pytest]
 * [Github Actions][github actions] ready for Continuous Integration testing
-* Linting provided by [Flake8][flake8] with [Flakehell][flakehell]
+* Linting provided by [Flake8][flake8] with [flakeheaven][flakeheaven]
 * Docstring linting provided by [Darglint][darglint] using the [Google Python Style Guide][google styleguide]
 * Static type checking by [Mypy][mypy]
 * Formatting provided by [Black][black] and [Isort][isort]
@@ -50,7 +50,7 @@ pip install -U cookiecutter
 Generate a Python package project:
 
 ```
-cookiecutter gh:fedejaure/cookiecutter-modern-pypackage --checkout v2.1.0
+cookiecutter gh:fedejaure/cookiecutter-modern-pypackage --checkout v2.2.0
 ```
 
 Then:
@@ -78,7 +78,7 @@ This cookiecutter was built for learning purpose and inspired by:
 [pytest]: https://github.com/pytest-dev/pytest
 [github actions]: https://github.com/features/actions
 [flake8]: https://gitlab.com/pycqa/flake8
-[flakehell]: https://github.com/life4/flakehell
+[flakeheaven]: https://github.com/flakeheaven/flakeheaven
 [isort]: https://github.com/timothycrosley/isort
 [black]: https://github.com/psf/black
 [darglint]: https://github.com/terrencepreilly/darglint
