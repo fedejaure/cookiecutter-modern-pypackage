@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+
+## [2.2.0] - 2023-03-09
 ### Added
 - Python `3.11` support.
 - nox-poetry.
@@ -303,7 +305,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release.
 
 
-[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.1.0...develop
+[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.2.0...develop
+[2.2.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.1.0...v2.2.0
 [2.1.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.0.1...v2.1.0
 [2.0.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v1.2.3...v2.0.0
