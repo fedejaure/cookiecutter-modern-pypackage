@@ -7,6 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.1] - 2023-05-25
+
+### Changed
+- Moved mypy configurations from `mypy.ini` to `pyproject.toml`.
+- Moved poetry `dev-dependencies` to `group.dev.dependencies`.
+- peter-evans/create-pull-request from `v4.2.3` to `v5.0.1`.
+- actions/checkout from `v3.3.0` to `v3.5.2`.
+- codecov/codecov-action from `v2.0.2` to `v3.1.4`.
+- actions/setup-python from `v4.5.0` to `v4.6.1`.
+- pytest-cov from `^3.0.0` to `^4.1.0`.
+- coverage from `^7.2.1` to `^7.2.6`.
+- flakeheaven from `^3.2.1` to `^3.3.0`.
+- black from `^23.1.0` to `^23.3.0`.
+- sphinx from `^6.1.3` to `^7.0.1`.
+- flake8-bugbear from `^23.2.13` to `^23.3.12`.
+- watchdog from `^2.3.1` to `^3.0.0`.
+- pytest-cookies from `^0.6.1` to `^0.7.0`.
+- pytest from `^7.2.2` to `^7.3.1`.
+- mypy from `^1.0.1` to `^1.3.0`.
+- pre-commit from `^3.1.1` to `^3.3.2`.
+- invoke from `^2.0.0` to `^2.1.2`.
+
+### Fixed
+- Adjusted minimum target version for Black.
+
 ## [2.2.0] - 2023-03-09
 ### Added
 - Python `3.11` support.
@@ -24,7 +49,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - github/codeql-action from `v1` to `v2`.
 - peter-evans/create-pull-request from `v3.10.1` to `v4.2.3`.
 - mindsers/changelog-reader-action from `v2.0.0` to `v2.2.2`.
-- pre-commit from `^2.15.0` to `^3.1.1.
+- pre-commit from `^2.15.0` to `^3.1.1`.
 - isort from `^5.9.3` to `^5.12.0`.
 - sphinx from `^4.2.0` to `^6.1.3`.
 - flake8-bugbear from `^21.9.2` to `^23.2.13`.
@@ -305,7 +330,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release.
 
 
-[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.2.0...develop
+[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.2.1...develop
+[2.2.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.2.0...v2.2.1
 [2.2.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.1.0...v2.2.0
 [2.1.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.0.1...v2.1.0
 [2.0.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.0.0...v2.0.1
