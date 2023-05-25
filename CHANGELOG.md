@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.1] - 2023-05-25
+
 ### Changed
 - Moved mypy configurations from `mypy.ini` to `pyproject.toml`.
 - Moved poetry `dev-dependencies` to `group.dev.dependencies`.
@@ -328,7 +330,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release.
 
 
-[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.2.0...develop
+[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.2.1...develop
+[2.2.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.2.0...v2.2.1
 [2.2.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.1.0...v2.2.0
 [2.1.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.0.1...v2.1.0
 [2.0.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.0.0...v2.0.1
