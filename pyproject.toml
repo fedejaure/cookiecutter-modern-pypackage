@@ -89,7 +89,7 @@ skip = "{{ cookiecutter.project_name }}"
 
 [tool.black]
 line-length = 99
-target-version = ["py37"]
+target-version = ["py38"]
 
 [tool.mypy]
 warn_return_any = true
