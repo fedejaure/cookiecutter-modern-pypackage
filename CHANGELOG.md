@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - watchdog from `^2.3.1` to `^3.0.0`.
 - pytest-cookies from `^0.6.1` to `^0.7.0`.
 - pytest from `^7.2.2` to `^7.3.1`.
+- mypy from `^1.0.1` to `^1.3.0`.
 
 ### Fixed
 - Adjusted minimum target version for Black.
