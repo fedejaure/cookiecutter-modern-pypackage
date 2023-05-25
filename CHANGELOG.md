@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - pytest-cookies from `^0.6.1` to `^0.7.0`.
 - pytest from `^7.2.2` to `^7.3.1`.
 - mypy from `^1.0.1` to `^1.3.0`.
+- pre-commit from `^3.1.1` to `^3.3.2`.
 
 ### Fixed
 - Adjusted minimum target version for Black.
@@ -45,7 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - github/codeql-action from `v1` to `v2`.
 - peter-evans/create-pull-request from `v3.10.1` to `v4.2.3`.
 - mindsers/changelog-reader-action from `v2.0.0` to `v2.2.2`.
-- pre-commit from `^2.15.0` to `^3.1.1.
+- pre-commit from `^2.15.0` to `^3.1.1`.
 - isort from `^5.9.3` to `^5.12.0`.
 - sphinx from `^4.2.0` to `^6.1.3`.
 - flake8-bugbear from `^21.9.2` to `^23.2.13`.
