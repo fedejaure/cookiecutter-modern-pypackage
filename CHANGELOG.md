@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - pytest-cov from `^3.0.0` to `^4.1.0`.
 - coverage from `^7.2.1` to `^7.2.6`.
 - flakeheaven from `^3.2.1` to `^3.3.0`.
+- black from `^23.1.0` to `^23.3.0`.
 
 ### Fixed
 - Adjusted minimum target version for Black.
