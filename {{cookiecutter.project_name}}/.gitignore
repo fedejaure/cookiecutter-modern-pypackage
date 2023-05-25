@@ -130,3 +130,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Code editors
+.vscode
+
+# Caches
+.flakeheaven_cache
