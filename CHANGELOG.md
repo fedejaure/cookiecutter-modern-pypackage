@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - black from `^23.1.0` to `^23.3.0`.
 - sphinx from `^6.1.3` to `^7.0.1`.
 - flake8-bugbear from `^23.2.13` to `^23.3.12`.
+- watchdog from `^2.3.1` to `^3.0.0`.
 
 ### Fixed
 - Adjusted minimum target version for Black.
