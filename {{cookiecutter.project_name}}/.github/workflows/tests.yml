@@ -11,7 +11,7 @@ jobs:
     name: Linting
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.3.0
+      - uses: actions/checkout@v3.5.2
 
       - name: Set up Python 3.8
         uses: actions/setup-python@v4.5.0
@@ -33,7 +33,7 @@ jobs:
         python-version: ['3.8', '3.9', '3.10', '3.11']
       fail-fast: true
     steps:
-      - uses: actions/checkout@v3.3.0
+      - uses: actions/checkout@v3.5.2
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4.5.0
@@ -70,7 +70,7 @@ jobs:
     needs: tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.3.0
+      - uses: actions/checkout@v3.5.2
       
       - name: Set up Python 3.8
         uses: actions/setup-python@v4.5.0

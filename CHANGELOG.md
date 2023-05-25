@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Moved mypy configurations from `mypy.ini` to `pyproject.toml`.
 - Moved poetry `dev-dependencies` to `group.dev.dependencies`.
 - peter-evans/create-pull-request from `v4.2.3` to `v5.0.1`.
+- actions/checkout from `v3.3.0` to `v3.5.2`.
 - codecov/codecov-action from `v2.0.2` to `v3.1.4`.
 - pytest-cov from `^3.0.0` to `^4.1.0`.
 - coverage from `^7.2.1` to `^7.2.6`.
