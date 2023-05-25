@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Moved mypy configurations from `mypy.ini` to `pyproject.toml`.
+
 ## [2.2.0] - 2023-03-09
 ### Added
 - Python `3.11` support.
