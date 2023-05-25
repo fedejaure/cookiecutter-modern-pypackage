@@ -75,7 +75,7 @@ recommonmark = "^0.7.1"
 bump2version = "^1.0.1"
 pytest = "^7.2.2"
 xdoctest = "^1.1.1"
-coverage = {version = "^7.2.1", extras = ["toml"]}
+coverage = {version = "^7.2.6", extras = ["toml"]}
 pytest-cov = "^4.1.0"
 watchdog = {version = "^2.3.1", extras = ["watchmedo"]}
 

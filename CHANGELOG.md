@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Moved poetry `dev-dependencies` to `group.dev.dependencies`.
 - codecov/codecov-action from `v2.0.2` to `v3.1.4`.
 - pytest-cov from `^3.0.0` to `^4.1.0`.
+- coverage from `^7.2.1` to `^7.2.6`.
 
 ### Fixed
 - Adjusted minimum target version for Black.
