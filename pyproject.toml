@@ -32,7 +32,7 @@ classifiers=[
 [tool.poetry.dependencies]
 python = "<3.12,>=3.8"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pre-commit = "^3.1.1"
 invoke = "^2.0.0"
 flake8 = ">=4.0.1,<5.0.0"

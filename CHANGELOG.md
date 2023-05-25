@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Moved mypy configurations from `mypy.ini` to `pyproject.toml`.
+- Moved poetry `dev-dependencies` to `group.dev.dependencies`.
 
 ### Fixed
 - Adjusted minimum target version for Black.
