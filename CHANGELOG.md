@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - coverage from `^7.2.1` to `^7.2.6`.
 - flakeheaven from `^3.2.1` to `^3.3.0`.
 - black from `^23.1.0` to `^23.3.0`.
+- sphinx from `^6.1.3` to `^7.0.1`.
 
 ### Fixed
 - Adjusted minimum target version for Black.
