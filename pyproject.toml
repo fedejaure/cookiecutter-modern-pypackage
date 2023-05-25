@@ -34,7 +34,7 @@ python = "<3.12,>=3.8"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.3.2"
-invoke = "^2.0.0"
+invoke = "^2.1.2"
 flake8 = ">=4.0.1,<5.0.0"
 flakeheaven = "^3.3.0"
 flake8-builtins = "^2.1.0"
