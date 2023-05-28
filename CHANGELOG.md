@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Reorganized dev dependencies into groups.
 - Renamed invoke safety task to invoke security.
+- flakeheaven pre-coomit hook with local deps.
 
 ## [2.2.1] - 2023-05-25
 

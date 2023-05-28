@@ -18,10 +18,16 @@ jobs:
         with:
           python-version: 3.8
 
-      - name: Linting
+      - name: Install system deps
+        shell: bash
         run: |
-          pip install pre-commit
-          pre-commit run --all-files
+          pip install poetry
+          poetry config virtualenvs.in-project true
+          poetry install --no-root --only dev --only linters --sync
+
+      - name: Linting
+        shell: bash
+        run: poetry run pre-commit run --all-files
 
   tests:
     needs: linting
