@@ -19,14 +19,18 @@ jobs:
         with:
           python-version: 3.8
 
-      - name: Install pre-commit
-        run: pip install pre-commit
+      - name: Install system deps
+        shell: bash
+        run: |
+          pip install poetry
+          poetry config virtualenvs.in-project true
+          poetry install --no-root --only dev --only linters --sync
 
       - name: Run autoupdate
-        run: pre-commit autoupdate
+        run: poetry run pre-commit autoupdate
 
       - name: Run pre-commit
-        run: pre-commit run --all-files
+        run: poetry run pre-commit run --all-files
 
       - uses: peter-evans/create-pull-request@v5.0.1
         with:

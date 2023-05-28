@@ -21,7 +21,7 @@ def mypy(session: Session) -> None:
 
 
 @session(python="3.11")
-def safety(session: Session) -> None:
+def security(session: Session) -> None:
     """Scan dependencies for insecure packages."""
     session.install("invoke", "safety")
-    session.run("inv", "safety")
+    session.run("inv", "security")
