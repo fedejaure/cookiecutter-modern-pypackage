@@ -68,7 +68,7 @@ safety = "^2.4.0b1"
 mypy = "^1.3.0"
 
 [tool.poetry.group.docs.dependencies]
-sphinx = "^7.0.1"
+sphinx = "^7.1.1"
 recommonmark = "^0.7.1"
 
 [tool.flakeheaven]
