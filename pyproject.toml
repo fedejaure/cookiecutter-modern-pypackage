@@ -31,7 +31,7 @@ classifiers=[
 
 [tool.poetry.dependencies]
 python = "<3.12,>=3.8"
-cookiecutter = "^2.1.1"
+cookiecutter = "^2.2.3"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.3.2"
