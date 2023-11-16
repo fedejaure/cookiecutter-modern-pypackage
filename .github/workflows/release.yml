@@ -10,7 +10,7 @@ jobs:
     name: Create Github Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.5.2
+      - uses: actions/checkout@v4.1.1
 
       - name: Get version from tag
         id: tag_name
