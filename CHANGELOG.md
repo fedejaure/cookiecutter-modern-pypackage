@@ -9,19 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - actions/setup-python from `v4.6.1` to `v4.7.1`.
 - actions/checkout from `v3.5.2` to `v4.1.1`.
+- peter-evans/create-pull-request from `v5.0.1` to `v5.0.2`.
 
 ### Fixed
 - readthedocs config.
 
 ## [2.3.0] - 2023-05-28
-
 ### Changed
 - Reorganized dev dependencies into groups.
 - Renamed invoke safety task to invoke security.
 - flakeheaven pre-coomit hook with local deps.
 
 ## [2.2.1] - 2023-05-25
-
 ### Changed
 - Moved mypy configurations from `mypy.ini` to `pyproject.toml`.
 - Moved poetry `dev-dependencies` to `group.dev.dependencies`.
