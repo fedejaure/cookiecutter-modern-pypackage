@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+### Changed
+- actions/setup-python from `v4.6.1` to `v4.7.1`.
+
 ### Fixed
 - readthedocs config.
 
