@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - actions/setup-python from `v4.6.1` to `v4.7.1`.
 - actions/checkout from `v3.5.2` to `v4.1.1`.
 - peter-evans/create-pull-request from `v5.0.1` to `v5.0.2`.
+- pypa/gh-action-pypi-publish from from `v1.4.2` to `v1.8.10`.
 
 ### Fixed
 - readthedocs config.
