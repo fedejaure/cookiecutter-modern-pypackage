@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - safety from `^2.4.0b1` to `^2.4.0b2`.
 - pytest from `^7.3.1` to `^7.4.3`.
 - xdoctest from `^1.1.1` to `^1.1.2`.
+- coverage from `^7.2.6` to `^7.3.2`.
 
 ### Fixed
 - readthedocs config.
