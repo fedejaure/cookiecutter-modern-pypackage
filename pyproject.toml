@@ -62,7 +62,7 @@ flake8-broken-line = "^0.6.0"
 darglint = "^1.8.1"
 
 [tool.poetry.group.security.dependencies]
-safety = "^2.4.0b1"
+safety = "^2.4.0b2"
 
 [tool.poetry.group.typing.dependencies]
 mypy = "^1.7.0"
