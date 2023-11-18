@@ -1,4 +1,4 @@
-# Changelog
+3# Changelog
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - invoke from `^2.1.2` to `^2.2.0`.
 - pre-commit from `^3.3.2` to `^3.5.0`.
 - black from `^23.3.0` to `^23.11.0`.
+- mypy from `^1.3.0` to `1.7.0`.
 
 ### Fixed
 - readthedocs config.
