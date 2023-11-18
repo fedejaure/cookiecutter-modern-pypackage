@@ -691,13 +691,13 @@ files = [
 
 [[package]]
 name = "invoke"
-version = "2.1.2"
+version = "2.2.0"
 description = "Pythonic task execution"
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "invoke-2.1.2-py3-none-any.whl", hash = "sha256:bfc904df1c9e9fe1a881933de661fe054b8db616ff2c4cf78e00407fe473ba5d"},
-    {file = "invoke-2.1.2.tar.gz", hash = "sha256:a6cc1f06f75bacd0b1e11488fa3bf3e62f85e31f62e2c0172188613ba5b070e2"},
+    {file = "invoke-2.2.0-py3-none-any.whl", hash = "sha256:6ea924cc53d4f78e3d98bc436b08069a03077e6f85ad1ddaa8a116d7dad15820"},
+    {file = "invoke-2.2.0.tar.gz", hash = "sha256:ee6cbb101af1a859c7fe84f2a264c059020b0cb7fe3535f9424300ab568f6bd5"},
 ]
 
 [[package]]
@@ -1692,4 +1692,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "<3.12,>=3.8"
-content-hash = "e7d6721136fa1a6791791f6871ddda1617016cb20f1688b4c2ae7b209173246d"
+content-hash = "7ed99a4a711831d5dd46ebdd46129726be9eb62b50de22f3e6e494a65d2be668"

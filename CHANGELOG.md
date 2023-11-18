@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - peter-evans/create-pull-request from `v5.0.1` to `v5.0.2`.
 - pypa/gh-action-pypi-publish from from `v1.4.2` to `v1.8.10`.
 - sphinx from `^7.0.1` to `^7.1.2`.
+- invoke from `^2.1.2` to `^2.2.0`.
 
 ### Fixed
 - readthedocs config.
