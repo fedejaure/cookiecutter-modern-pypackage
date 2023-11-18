@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+
+## [2.3.1] - 2023-11-18
 ### Changed
 - actions/setup-python from `v4.6.1` to `v4.7.1`.
 - actions/checkout from `v3.5.2` to `v4.1.1`.
@@ -355,7 +357,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release.
 
 
-[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.3.0...develop
+[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.3.1...develop
+[2.3.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.3.0...v2.3.1
 [2.3.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.2.1...v2.3.0
 [2.2.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.2.0...v2.2.1
 [2.2.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.1.0...v2.2.0
