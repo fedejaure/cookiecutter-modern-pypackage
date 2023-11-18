@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - xdoctest from `^1.1.1` to `^1.1.2`.
 - coverage from `^7.2.6` to `^7.3.2`.
 - click from `^8.1.3` to `^8.1.7`.
+- flake8-builtins from `^2.1.0` to `^2.2.0`.
 
 ### Fixed
 - readthedocs config.
