@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - sphinx from `^7.0.1` to `^7.1.2`.
 - invoke from `^2.1.2` to `^2.2.0`.
 - pre-commit from `^3.3.2` to `^3.5.0`.
+- black from `^23.3.0` to `^23.11.0`.
 
 ### Fixed
 - readthedocs config.
