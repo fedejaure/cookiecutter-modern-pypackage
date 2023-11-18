@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - mypy from `^1.3.0` to `^1.7.0`.
 - safety from `^2.4.0b1` to `^2.4.0b2`.
 - pytest from `^7.3.1` to `^7.4.3`.
+- xdoctest from `^1.1.1` to `^1.1.2`.
 
 ### Fixed
 - readthedocs config.
