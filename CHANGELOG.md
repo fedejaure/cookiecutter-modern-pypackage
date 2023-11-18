@@ -1,4 +1,4 @@
-# Changelog
+3# Changelog
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
@@ -11,6 +11,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - actions/checkout from `v3.5.2` to `v4.1.1`.
 - peter-evans/create-pull-request from `v5.0.1` to `v5.0.2`.
 - pypa/gh-action-pypi-publish from from `v1.4.2` to `v1.8.10`.
+- pre-commit-hooks from `v4.4.0` to `v4.5.0`.
+- sphinx from `^7.0.1` to `^7.1.2`.
+- invoke from `^2.1.2` to `^2.2.0`.
+- pre-commit from `^3.3.2` to `^3.5.0`.
+- black from `^23.3.0` to `^23.11.0`.
+- mypy from `^1.3.0` to `^1.7.0`.
+- safety from `^2.4.0b1` to `^2.4.0b2`.
+- pytest from `^7.3.1` to `^7.4.3`.
+- xdoctest from `^1.1.1` to `^1.1.2`.
+- coverage from `^7.2.6` to `^7.3.2`.
+- click from `^8.1.3` to `^8.1.7`.
+- flake8-builtins from `^2.1.0` to `^2.2.0`.
 
 ### Fixed
 - readthedocs config.
