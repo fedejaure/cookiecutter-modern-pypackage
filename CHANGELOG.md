@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - mypy from `^1.7.0` to `^1.7.1`.
+- actions/setup-python from `v4.7.1` to `v5.0.0`.
 
 ## [2.3.1] - 2023-11-18
 ### Changed
