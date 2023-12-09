@@ -26,7 +26,7 @@
 * Testing setup with [Pytest][pytest]
 * [Github Actions][github actions] ready for Continuous Integration testing
 * Linting provided by [Ruff][ruff]
-* Docstring linting provided by [Darglint][darglint] using the [Google Python Style Guide][google styleguide]
+* Docstring using the [Google Python Style Guide][google styleguide]
 * Static type checking by [Mypy][mypy]
 * Formatting provided by [Black][black] and [Isort][isort]
 * Checks dependencies for known security vulnerabilities with [Safety][safety]
@@ -80,7 +80,6 @@ This cookiecutter was built for learning purpose and inspired by:
 [ruff]: https://github.com/astral-sh/ruff
 [isort]: https://github.com/timothycrosley/isort
 [black]: https://github.com/psf/black
-[darglint]: https://github.com/terrencepreilly/darglint
 [mypy]: https://github.com/python/mypy
 [pre-commit]: https://pre-commit.com/
 [safety]: https://github.com/pyupio/safety
