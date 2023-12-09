@@ -41,6 +41,9 @@ files = [
     {file = "Babel-2.13.1.tar.gz", hash = "sha256:33e0952d7dd6374af8dbf6768cc4ddf3ccfefc244f9986d4074704f2fbd18900"},
 ]
 
+[package.dependencies]
+setuptools = {version = "*", markers = "python_version >= \"3.12\""}
+
 [package.extras]
 dev = ["freezegun (>=1.0,<2.0)", "pytest (>=6.0)", "pytest-cov"]
 
@@ -1381,5 +1384,5 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 
 [metadata]
 lock-version = "2.0"
-python-versions = "<3.12,>=3.9"
-content-hash = "809df514efefbe68535d7f3003fa20e5a4a1f9e62fd2e0e668953adcfbb1cb66"
+python-versions = "<3.13,>=3.9"
+content-hash = "fa2615ee521bbc8ed1cb4d3efffa95673b91fa41fda7e972c74cf9252d15e229"
