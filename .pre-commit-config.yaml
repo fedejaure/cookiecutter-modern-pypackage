@@ -1,5 +1,6 @@
+---
 repos:
--   repo: https://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
     hooks:
       - id: check-toml
@@ -13,24 +14,18 @@ repos:
         exclude: "^{{cookiecutter.project_name}}/"
       - id: end-of-file-fixer
         exclude: "^{{cookiecutter.project_name}}/"
--   repo: https://github.com/timothycrosley/isort
+  - repo: https://github.com/timothycrosley/isort
     rev: 5.12.0
     hooks:
       - id: isort
         exclude: "^{{cookiecutter.project_name}}/"
--   repo: https://github.com/psf/black
+  - repo: https://github.com/psf/black
     rev: 23.11.0
     hooks:
       - id: black
         exclude: "^{{cookiecutter.project_name}}/"
--   repo: local
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.7
     hooks:
-      - id: flakeheaven
-        name: flakeheaven
-        description: "`FlakeHeaven` it's a Flake8 wrapper to make it cools."
-        entry: poetry run flakeheaven
-        args: [lint]
-        language: system
-        types: [python]
-        require_serial: true
+      - id: ruff
         exclude: "^{{cookiecutter.project_name}}/"

@@ -64,22 +64,10 @@ xdoctest = "^1.1.2"
 coverage = {version = "^7.3.2", extras = ["toml"]}
 pytest-cov = "^4.1.0"
 
-[tool.poetry.group.format.dependencies]
+[tool.poetry.group.linters.dependencies]
 isort = "^5.12.0"
 black = "^23.11.0"
-
-[tool.poetry.group.linters.dependencies]
-flake8 = ">=4.0.1,<5.0.0"
-flakeheaven = "^3.3.0"
-flake8-builtins = "^2.2.0"
-flake8-blind-except = "^0.2.1"
-flake8-logging-format = "^0.9.0"
-flake8-bugbear = "^23.3.12"
-flake8-annotations = "^2.9.1"
-flake8-docstrings = "^1.7.0"
-flake8-bandit = "^3.0.0"
-flake8-broken-line = "^0.6.0"
-darglint = "^1.8.1"
+ruff = "^0.1.7"
 
 [tool.poetry.group.security.dependencies]
 safety = "^2.4.0b2"
@@ -115,24 +103,46 @@ show_missing = true
 [tool.coverage.html]
 directory = "htmlcov"
 
-[tool.flakeheaven]
-format = "grouped"
-max_line_length = 99
-show_source = true
-docstring-convention = "google"
-extended_default_ignore = []
+[tool.ruff]
+target-version = "py38"
+show-source = true
+line-length = 99
+fix = true
+unfixable = [
+  "ERA",  # Don't remove commented-out code
+]
+extend-exclude = [
+    "docs/*",
+]
+select = [
+  "E", "F", "W",  # flake8
+  "C",  # mccabe
+  "I",  # isort
+  "N",  # pep8-naming
+  "D",  # flake8-docstrings
+  "ANN",  # flake8-annotations
+  "S",  # flake8-bandit
+  "BLE",  # flake8-blind-except
+  "B",  # flake8-bugbear
+  "A",  # flake8-builtins
+  "G",  # flake8-logging-format
+  "ERA",  # eradicate
+  "ISC",  # flake8-implicit-str-concat
+  "RUF",  # Ruff-specific rules
+]
+ignore = ["ANN101"]
 
-[tool.flakeheaven.plugins]
-pyflakes = ["+*"]
-pycodestyle = ["+*"]
-mccabe = ["+*"]
-flake8-annotations = ["+*", "-ANN1??", "-ANN401"]
-flake8-docstrings = ["+*", "-D212"]
-"flake8-*" = ["+*"]
-pylint = ["-C????", "-E????", "+F????", "+I????", "-R????", "-W????"]
+[tool.ruff.per-file-ignores]
+"tests/*" = ["S101"]
 
-[tool.flakeheaven.exceptions."tests/"]
-flake8-bandit = ["-S101"]
+[tool.ruff.mccabe]
+max-complexity = 10
+
+[tool.ruff.isort]
+known-first-party = ["{{ cookiecutter.project_slug }}"]
+
+[tool.ruff.pydocstyle]
+convention = "google"
 
 [tool.isort]
 multi_line_output = 3

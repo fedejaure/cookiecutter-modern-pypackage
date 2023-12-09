@@ -136,6 +136,3 @@ modern-python-boilerplate/
 
 # Code editors
 .vscode
-
-# Caches
-.flakeheaven_cache
