@@ -17,7 +17,6 @@ classifiers=[
     "License :: OSI Approved :: BSD License",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
@@ -30,7 +29,7 @@ classifiers=[
 "Bug Tracker" = "https://github.com/fedejaure/cookiecutter-modern-pypackage/issues"
 
 [tool.poetry.dependencies]
-python = "<3.12,>=3.8"
+python = "<3.12,>=3.9"
 cookiecutter = "^2.5.0"
 
 [tool.poetry.group.dev.dependencies]
@@ -108,7 +107,7 @@ skip = "{{ cookiecutter.project_name }}"
 
 [tool.black]
 line-length = 99
-target-version = ["py38"]
+target-version = ["py39"]
 
 [tool.mypy]
 warn_return_any = true

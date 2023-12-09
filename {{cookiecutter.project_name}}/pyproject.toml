@@ -26,7 +26,6 @@ classifiers=[
     {% endif %}
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
@@ -47,7 +46,7 @@ packages = [
 {% endif %}
 
 [tool.poetry.dependencies]
-python = "<3.12,>=3.8"
+python = "<3.12,>=3.9"
 {% if cookiecutter.command_line_interface|lower == 'click' %}
 click = "^8.1.7"
 {% endif %}
@@ -154,7 +153,7 @@ known_third_party = ["invoke", "nox", "nox_poetry"]
 
 [tool.black]
 line-length = 99
-target-version = ["py38"]
+target-version = ["py39"]
 
 [tool.mypy]
 warn_return_any = true

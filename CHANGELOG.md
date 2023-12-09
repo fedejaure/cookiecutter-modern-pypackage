@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 - falke8 and flakeheaven.
+- Python `3.8` support.
 
 ## [2.3.1] - 2023-11-18
 ### Changed
