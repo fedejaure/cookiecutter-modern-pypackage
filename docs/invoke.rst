@@ -22,12 +22,12 @@ Execute `inv[oke] --list` to see the list of available commands.
      clean-tests     Clean up files from testing.
      coverage        Create coverage report.
      docs            Build documentation.
-     flake8          Run flake8.
      format          Format code.
      hooks           Run pre-commit hooks.
      install-hooks   Install pre-commit hooks.
      lint            Run all linting.
      mypy            Run mypy.
+     ruff            Run ruff.
      security        Run security related checks.
      tests           Run tests.
      version         Bump version.
