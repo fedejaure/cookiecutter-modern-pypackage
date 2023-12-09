@@ -5,7 +5,7 @@ import nox
 from nox_poetry import Session, session
 
 nox.options.sessions = ["tests", "mypy"]
-python_versions = ["3.8", "3.9", "3.10", "3.11"]
+python_versions = ["3.9", "3.10", "3.11", "3.12"]
 
 
 @session(python=python_versions)
@@ -42,7 +42,7 @@ def mypy(session: Session) -> None:
     session.run("inv", "mypy")
 
 
-@session(python="3.11")
+@session(python="3.12")
 def security(session: Session) -> None:
     """Scan dependencies for insecure packages."""
     session.install("invoke", "safety")
