@@ -73,7 +73,7 @@ ruff = "^0.1.9"
 safety = "^2.4.0b2"
 
 [tool.poetry.group.typing.dependencies]
-mypy = "^1.7.1"
+mypy = "^1.8.0"
 
 [tool.poetry.group.docs.dependencies]
 sphinx = "^7.2.6"
