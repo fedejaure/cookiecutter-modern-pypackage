@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - actions/setup-python from `v4.7.1` to `v5.0.0`.
 - sphinx from `^7.1.2` to `^7.2.6`.
 - isort from `^5.12.0` to `^5.13.2`.
+- black from `^23.11.0` to `^23.12.1`.
 
 ### Removed
 - falke8 and flakeheaven.
