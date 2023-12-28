@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - black from `^23.11.0` to `^23.12.1`.
 - pre-commit from `^3.5.0` to `^3.6.0`.
 - github/codeql-action from `v2` to `v3`.
+- coverage from `^7.3.2` to `^7.4.0`.
 
 ### Removed
 - falke8 and flakeheaven.
