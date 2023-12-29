@@ -7,12 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Ruff `^0.1.7`.
+- Ruff `^0.1.9`.
 - Python `3.12` support.
 
 ### Changed
-- mypy from `^1.7.0` to `^1.7.1`.
+- mypy from `^1.7.0` to `^1.8.0`.
 - actions/setup-python from `v4.7.1` to `v5.0.0`.
+- sphinx from `^7.1.2` to `^7.2.6`.
+- isort from `^5.12.0` to `^5.13.2`.
+- black from `^23.11.0` to `^23.12.1`.
+- pre-commit from `^3.5.0` to `^3.6.0`.
+- github/codeql-action from `v2` to `v3`.
+- coverage from `^7.3.2` to `^7.4.0`.
+- pypa/gh-action-pypi-publish from from `v1.8.10` to `v1.8.11`.
 
 ### Removed
 - falke8 and flakeheaven.

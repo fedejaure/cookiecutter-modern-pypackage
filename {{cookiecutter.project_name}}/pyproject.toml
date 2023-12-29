@@ -53,7 +53,7 @@ click = "^8.1.7"
 {% endif %}
 
 [tool.poetry.group.dev.dependencies]
-pre-commit = "^3.5.0"
+pre-commit = "^3.6.0"
 invoke = "^2.2.0"
 bump2version = "^1.0.1"
 watchdog = {version = "^3.0.0", extras = ["watchmedo"]}
@@ -61,22 +61,22 @@ watchdog = {version = "^3.0.0", extras = ["watchmedo"]}
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.3"
 xdoctest = "^1.1.2"
-coverage = {version = "^7.3.2", extras = ["toml"]}
+coverage = {version = "^7.4.0", extras = ["toml"]}
 pytest-cov = "^4.1.0"
 
 [tool.poetry.group.linters.dependencies]
-isort = "^5.12.0"
-black = "^23.11.0"
-ruff = "^0.1.7"
+isort = "^5.13.2"
+black = "^23.12.1"
+ruff = "^0.1.9"
 
 [tool.poetry.group.security.dependencies]
 safety = "^2.4.0b2"
 
 [tool.poetry.group.typing.dependencies]
-mypy = "^1.7.1"
+mypy = "^1.8.0"
 
 [tool.poetry.group.docs.dependencies]
-sphinx = "^7.1.2"
+sphinx = "^7.2.6"
 recommonmark = "^0.7.1"
 
 [tool.coverage.paths]
