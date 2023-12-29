@@ -20,6 +20,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - github/codeql-action from `v2` to `v3`.
 - coverage from `^7.3.2` to `^7.4.0`.
 - pypa/gh-action-pypi-publish from from `v1.8.10` to `v1.8.11`.
+- actions/upload-artifact from `v2.2.4` to `v4`.
+- actions/download-artifact from `v2.0.10` to `v4`.
 
 ### Removed
 - falke8 and flakeheaven.
