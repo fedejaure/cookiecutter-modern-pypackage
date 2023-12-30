@@ -12,5 +12,6 @@
   "add_code_of_conduct": "y",
   "add_contributing_file": "y",
   "add_security_file": "y",
+  "add_codeowners_file": "y",
   "contact_method": null
 }
