@@ -1,18 +1,18 @@
-{% set license_classifiers = {
+{%- set license_classifiers = {
     'MIT': 'License :: OSI Approved :: MIT License',
     'BSD': 'License :: OSI Approved :: BSD License',
     'ISC': 'License :: OSI Approved :: ISC License (ISCL)',
     'Apache Software License 2.0': 'License :: OSI Approved :: Apache Software License',
     'GNU General Public License v3': 'License :: OSI Approved :: GNU General Public License v3 (GPLv3)'
-} %}
+} -%}
 [tool.poetry]
 name = "{{ cookiecutter.project_name }}"
 version = "{{ cookiecutter.version }}"
 description = "{{ cookiecutter.project_short_description }}"
 authors = ["{{ cookiecutter.full_name }} <{{ cookiecutter.email }}>"]
-{% if cookiecutter.open_source_license == "Not open source" %}
+{% if cookiecutter.open_source_license == "Not open source" -%}
 license = "{{ cookiecutter.open_source_license }}"
-{% endif %}
+{% endif -%}
 readme = "README.md"
 homepage = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}"
 repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}"
@@ -21,9 +21,9 @@ keywords = ["{{ cookiecutter.project_name }}"]
 classifiers=[
     "Development Status :: 2 - Pre-Alpha",
     "Intended Audience :: Developers",
-    {% if cookiecutter.open_source_license in license_classifiers %}
+    {%- if cookiecutter.open_source_license in license_classifiers %}
     "{{ license_classifiers[cookiecutter.open_source_license] }}",
-    {% endif %}
+    {%- endif %}
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.9",
@@ -31,26 +31,26 @@ classifiers=[
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
 ]
-{% if cookiecutter.project_name.lower().replace('-', '_') != cookiecutter.project_slug %}
+{%- if cookiecutter.project_name.lower().replace('-', '_') != cookiecutter.project_slug %}
 packages = [
     { include = "{{ cookiecutter.project_slug }}", from = "src" },
 ]
-{% endif %}
+{%- endif %}
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/issues"
 
+{%- if cookiecutter.command_line_interface|lower == 'click' %}
 
-{% if cookiecutter.command_line_interface|lower == 'click' %}
 [tool.poetry.scripts]
 {{ cookiecutter.project_name }} = '{{ cookiecutter.project_slug }}.cli:main'
-{% endif %}
+{%- endif %}
 
 [tool.poetry.dependencies]
 python = "<3.13,>=3.9"
-{% if cookiecutter.command_line_interface|lower == 'click' %}
+{%- if cookiecutter.command_line_interface|lower == 'click' %}
 click = "^8.1.7"
-{% endif %}
+{%- endif %}
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.6.0"

@@ -1,4 +1,4 @@
-{% set is_open_source = cookiecutter.open_source_license != 'Not open source' %}
+{%- set is_open_source = cookiecutter.open_source_license != 'Not open source' -%}
 name: release
 
 on:
@@ -26,7 +26,10 @@ jobs:
       - name: Build package
         run: |
           poetry build --ansi
-      {% if is_open_source %}{% raw %}
+
+{%- if is_open_source %}
+
+      {% raw -%}
       - name: Publish package on PyPI
         uses: pypa/gh-action-pypi-publish@v1.8.11
         with:
@@ -39,8 +42,11 @@ jobs:
           user: __token__
           password: ${{ secrets.TEST_PYPI_TOKEN }}
           repository_url: https://test.pypi.org/legacy/
-      {% endraw %}{% endif %}
-  {% raw %}
+      {%- endraw %}
+
+{%- endif %}
+
+  {% raw -%}
   github_release:
     needs: release
     name: Create Github Release
@@ -71,4 +77,5 @@ jobs:
           release_name: Release ${{ github.ref }}
           body: ${{ steps.changelog_reader.outputs.changes }}
           draft: false
-          prerelease: false{% endraw %}
+          prerelease: false
+  {%- endraw %}

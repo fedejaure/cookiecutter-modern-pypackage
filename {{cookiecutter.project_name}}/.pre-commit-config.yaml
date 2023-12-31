@@ -4,11 +4,16 @@ repos:
     rev: v4.5.0
     hooks:
       - id: check-toml
+      - id: check-json
       - id: check-yaml
       - id: debug-statements
       - id: check-merge-conflict
-      - id: check-json
+      - id: pretty-format-json
+        args: [--autofix, '--no-sort-keys']
+        exclude: .ipynb
       - id: end-of-file-fixer
+      - id: trailing-whitespace
+        exclude: .bumpversion.cfg
   - repo: https://github.com/timothycrosley/isort
     rev: 5.13.2
     hooks:
@@ -21,3 +26,4 @@ repos:
     rev: v0.1.9
     hooks:
       - id: ruff
+        args: [ --fix ]
