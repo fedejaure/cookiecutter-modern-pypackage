@@ -5,15 +5,24 @@ repos:
     hooks:
       - id: check-toml
         exclude: "^{{cookiecutter.project_name}}/"
+      - id: check-json
+        exclude: "^{{cookiecutter.project_name}}/"
       - id: check-yaml
         exclude: "^{{cookiecutter.project_name}}/"
       - id: debug-statements
         exclude: "^{{cookiecutter.project_name}}/"
       - id: check-merge-conflict
-      - id: check-json
+      - id: pretty-format-json
+        args: [--autofix, '--no-sort-keys']
         exclude: "^{{cookiecutter.project_name}}/"
       - id: end-of-file-fixer
         exclude: "^{{cookiecutter.project_name}}/"
+      - id: trailing-whitespace
+        exclude: |
+            (?x)^(
+              .bumpversion.cfg|
+              {{cookiecutter.project_name}}/
+            )
   - repo: https://github.com/timothycrosley/isort
     rev: 5.13.2
     hooks:
@@ -28,4 +37,5 @@ repos:
     rev: v0.1.9
     hooks:
       - id: ruff
+        args: [ --fix ]
         exclude: "^{{cookiecutter.project_name}}/"

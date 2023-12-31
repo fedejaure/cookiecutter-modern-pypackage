@@ -5,6 +5,6 @@
 
 # These owners will be the default owners for everything in
 # the repo. Unless a later match takes precedence,
-# @{{ cookiecutter.github_username }} will be requested for review when someone opens 
+# @{{ cookiecutter.github_username }} will be requested for review when someone opens
 # a pull request.
 *   @{{ cookiecutter.github_username }}

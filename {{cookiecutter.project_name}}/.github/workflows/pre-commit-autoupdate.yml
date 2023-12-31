@@ -37,7 +37,7 @@ jobs:
           title: Update pre-commit hooks
           commit-message: "Update pre-commit hooks"
           body: |
-            # Update pre-commit hooks 
-            
+            # Update pre-commit hooks
+
             - Update pre-commit hooks to the latest version.
           delete-branch: true{% endraw %}
