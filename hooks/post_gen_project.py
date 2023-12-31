@@ -39,5 +39,8 @@ if __name__ == "__main__":
     if "{{ cookiecutter.add_security_file }}" != "y":
         remove_file("SECURITY.md")
 
+    if "{{ cookiecutter.add_codeowners_file }}" != "y":
+        remove_file(".github/CODEOWNERS")
+
     add_symlink(PROJECT_DOCS / "readme.md", "../README.md")
     add_symlink(PROJECT_DOCS / "changelog.md", "../CHANGELOG.md")
