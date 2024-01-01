@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Python `3.12` support.
 - `CODEOWNERS` file.
 - poetry pre-commit hooks.
+- Typer `^0.9.0`.
 
 ### Changed
 - mypy from `^1.7.0` to `^1.8.0`.
@@ -30,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - falke8 and flakeheaven.
 - darglint.
 - Python `3.8` support.
+- Click in favor of Typer.
 
 ### Fixed
 - template whitespace control.

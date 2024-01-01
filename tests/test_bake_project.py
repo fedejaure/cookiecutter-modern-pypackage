@@ -14,7 +14,7 @@ from pytest_cookies.plugin import Cookies, Result
 skip_on_windows = pytest.mark.skipif(sys.platform == "win32", reason="does not run on windows")
 
 COOKIE_CONTEXT_NOT_OPEN_SOURCE = {"open_source_license": "Not open source"}
-COOKIE_CONTEXT_CLI = {"command_line_interface": "Click"}
+COOKIE_CONTEXT_CLI = {"command_line_interface": "Typer"}
 COOKIE_CONTEXT_BSD = {"open_source_license": "BSD"}
 COOKIE_CONTEXT_NO_CLI = {"command_line_interface": "No command-line interface"}
 COOKIE_CONTEXT_DIFF_NAME_AND_SLUG = {

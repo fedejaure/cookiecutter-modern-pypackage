@@ -2,23 +2,27 @@
 from typing import List
 
 import pytest
-from click.testing import CliRunner
+from typer.testing import CliRunner
 
 import {{ cookiecutter.project_slug }}
 from {{ cookiecutter.project_slug }} import cli
+
+runner = CliRunner()
 
 
 @pytest.mark.parametrize(
     "options,expected",
     [
         ([], "{{ cookiecutter.project_slug }}.cli.main"),
-        (["--help"], "Usage: main [OPTIONS]"),
-        (["--version"], f"main, version { {{ cookiecutter.project_slug }}.__version__ }\n"),
+        (["--help"], "Usage: "),
+        (
+            ["--version"],
+            f"{{ cookiecutter.project_name }}, version { {{ cookiecutter.project_slug }}.__version__ }\n",
+        ),
     ],
 )
 def test_command_line_interface(options: List[str], expected: str) -> None:
     """Test the CLI."""
-    runner = CliRunner()
-    result = runner.invoke(cli.main, options)
+    result = runner.invoke(cli.app, options)
     assert result.exit_code == 0
-    assert expected in result.output
+    assert expected in result.stdout

@@ -41,7 +41,7 @@ open_source_license
     Whether to add a license file. Options: ["MIT", "BSD", "ISC", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"s]
 
 command_line_interface
-    Whether to create a console script using Click. Console script entry point will match the project_name. Options: ["Click", "No command-line interface"]
+    Whether to create a console script using Typer. Console script entry point will match the project_name. Options: ["Typer", "No command-line interface"]
 
 add_code_of_conduct
     Whether to add a Contributor Covenant Code of Conduct file.

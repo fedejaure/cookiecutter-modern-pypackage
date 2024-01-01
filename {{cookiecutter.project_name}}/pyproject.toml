@@ -40,16 +40,16 @@ packages = [
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/issues"
 
-{%- if cookiecutter.command_line_interface|lower == 'click' %}
+{%- if cookiecutter.command_line_interface|lower == 'typer' %}
 
 [tool.poetry.scripts]
-{{ cookiecutter.project_name }} = '{{ cookiecutter.project_slug }}.cli:main'
+{{ cookiecutter.project_name }} = '{{ cookiecutter.project_slug }}.cli:app'
 {%- endif %}
 
 [tool.poetry.dependencies]
 python = "<3.13,>=3.9"
-{%- if cookiecutter.command_line_interface|lower == 'click' %}
-click = "^8.1.7"
+{%- if cookiecutter.command_line_interface|lower == 'typer' %}
+typer = {extras = ["all"], version = "^0.9.0"}
 {%- endif %}
 
 [tool.poetry.group.dev.dependencies]
