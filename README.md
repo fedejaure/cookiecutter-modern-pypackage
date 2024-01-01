@@ -34,7 +34,7 @@
 * All development tasks (lint, format, test, etc) wrapped up in a python CLI by [invoke][invoke]
 * Multiple Python environments testing provided by [Nox][nox]
 * Documentation provided by [Sphinx][sphinx] ready for generation with, for example, [Read the Docs][rtd]
-* Command line interface using [Click][click] (optional)
+* Command line interface using [Typer][typer] (optional)
 * Automated dependency updates with [Dependabot][dependabot]
 * Coverage reports on [Codecov][codecov]
 * Automated releases to [PyPI][pypi] and [TestPyPI][testpypi]
@@ -89,7 +89,7 @@ This cookiecutter was built for learning purpose and inspired by:
 [rtd]: https://readthedocs.org/
 [nox]: https://nox.thea.codes/en/stable/
 [tutorial]: https://cookiecutter-modern-pypackage.readthedocs.io/en/latest/tutorial.html
-[click]: http://click.pocoo.org/
+[typer]: https://typer.tiangolo.com/
 [dependabot]: https://dependabot.com/
 [audreyr/cookiecutter-pypackage]: https://github.com/audreyr/cookiecutter-pypackage
 [briggySmalls/cookiecutter-pypackage]: https://github.com/briggySmalls/cookiecutter-pypackage

@@ -16,7 +16,7 @@
     "Not open source"
   ],
   "command_line_interface": [
-    "Click",
+    "Typer",
     "No command-line interface"
   ],
   "add_code_of_conduct": "y",
