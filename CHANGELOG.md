@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Ruff `^0.1.9`.
+- Ruff `^0.1.11`.
 - Python `3.12` support.
 - `CODEOWNERS` file.
 - poetry pre-commit hooks.
