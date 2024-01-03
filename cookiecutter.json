@@ -23,5 +23,6 @@
   "add_contributing_file": "y",
   "add_security_file": "y",
   "add_codeowners_file": "y",
+  "add_funding_file": "y",
   "contact_method": null
 }

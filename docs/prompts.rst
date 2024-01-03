@@ -53,7 +53,10 @@ add_security_file
     Whether to add a Security Policy file.
 
 add_codeowners_file
-    Whether to add a CODEOWNERS file.
+    Whether to add a `CODEOWNERS` file.
+
+add_funding_file
+    Whether to add a `FUNDING.yml` file.
 
 contact_method
     Whether to add a contact method. Used on files such of `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md` and `SECURITY.md`.

@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Ruff `^0.1.11`.
 - Python `3.12` support.
 - `CODEOWNERS` file.
+- `FUNDING.yml` file.
 - poetry pre-commit hooks.
 - Typer `^0.9.0`.
 
