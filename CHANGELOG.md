@@ -26,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - actions/upload-artifact from `v2.2.4` to `v4`.
 - actions/download-artifact from `v2.0.10` to `v4`.
 - Contributor Covenant from `v2.0` to `v2.1`.
+- pytest from `^7.4.3` to `^7.4.4`.
 
 ### Removed
 - falke8 and flakeheaven.
