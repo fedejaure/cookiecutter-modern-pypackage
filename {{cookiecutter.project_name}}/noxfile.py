@@ -1,4 +1,5 @@
 """Nox sessions."""
+
 import platform
 
 import nox

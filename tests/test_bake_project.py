@@ -1,4 +1,5 @@
 """Tests for `cookiecutter-modern-pypackage` package."""
+
 import datetime
 import os
 import shlex

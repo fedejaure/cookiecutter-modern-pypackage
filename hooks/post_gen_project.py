@@ -1,4 +1,5 @@
 """Script that run after the project is generated."""
+
 from pathlib import Path
 from typing import Union
 
