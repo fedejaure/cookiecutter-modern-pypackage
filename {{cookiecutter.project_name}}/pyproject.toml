@@ -70,7 +70,7 @@ black = "^23.12.1"
 ruff = "^0.1.11"
 
 [tool.poetry.group.security.dependencies]
-safety = "^2.4.0b2"
+safety = "^3.0.1"
 
 [tool.poetry.group.typing.dependencies]
 mypy = "^1.8.0"
