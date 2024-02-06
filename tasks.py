@@ -2,6 +2,7 @@
 
 Execute 'invoke --list' for guidance on using Invoke
 """
+
 import platform
 import webbrowser
 from pathlib import Path

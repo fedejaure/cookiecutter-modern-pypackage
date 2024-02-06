@@ -33,12 +33,12 @@ repos:
       - id: isort
         exclude: "^{{cookiecutter.project_name}}/"
   - repo: https://github.com/psf/black
-    rev: 23.12.1
+    rev: 24.1.1
     hooks:
       - id: black
         exclude: "^{{cookiecutter.project_name}}/"
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.1.11
+    rev: v0.2.1
     hooks:
       - id: ruff
         args: [ --fix ]

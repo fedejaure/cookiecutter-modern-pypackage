@@ -1,4 +1,5 @@
 """Nox sessions."""
+
 import nox
 from nox_poetry import Session, session
 

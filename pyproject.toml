@@ -40,17 +40,17 @@ bump2version = "^1.0.1"
 watchdog = {version = "^3.0.0", extras = ["watchmedo"]}
 
 [tool.poetry.group.test.dependencies]
-pytest = "^7.4.4"
-xdoctest = "^1.1.2"
+pytest = "^8.0.0"
+xdoctest = "^1.1.3"
 pytest-cookies = "^0.7.0"
 
 [tool.poetry.group.linters.dependencies]
 isort = "^5.13.2"
-black = "^23.12.1"
-ruff = "^0.1.11"
+black = "^24.1.1"
+ruff = "^0.2.1"
 
 [tool.poetry.group.security.dependencies]
-safety = "^2.4.0b2"
+safety = "^3.0.1"
 
 [tool.poetry.group.typing.dependencies]
 mypy = "^1.8.0"
@@ -61,15 +61,14 @@ recommonmark = "^0.7.1"
 
 [tool.ruff]
 target-version = "py38"
-show-source = true
+output-format = "full"
 line-length = 99
 fix = true
-unfixable = [
-  "ERA",  # Don't remove commented-out code
-]
 extend-exclude = [
     "docs/*",
 ]
+
+[tool.ruff.lint]
 select = [
   "E", "F", "W",  # flake8
   "C",  # mccabe
@@ -87,14 +86,17 @@ select = [
   "RUF",  # Ruff-specific rules
 ]
 ignore = ["ANN101"]
+unfixable = [
+  "ERA",  # Don't remove commented-out code
+]
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S101"]
 
-[tool.ruff.mccabe]
+[tool.ruff.lint.mccabe]
 max-complexity = 10
 
-[tool.ruff.pydocstyle]
+[tool.ruff.lint.pydocstyle]
 convention = "google"
 
 [tool.isort]

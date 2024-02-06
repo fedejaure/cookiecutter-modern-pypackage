@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Ruff `^0.1.11`.
+- Ruff `^0.2.1`.
 - Python `3.12` support.
 - `CODEOWNERS` file.
 - `FUNDING.yml` file.
@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - actions/setup-python from `v4.7.1` to `v5.0.0`.
 - sphinx from `^7.1.2` to `^7.2.6`.
 - isort from `^5.12.0` to `^5.13.2`.
-- black from `^23.11.0` to `^23.12.1`.
+- black from `^23.11.0` to `^24.1.1`.
 - pre-commit from `^3.5.0` to `^3.6.0`.
 - github/codeql-action from `v2` to `v3`.
 - coverage from `^7.3.2` to `^7.4.0`.
@@ -28,7 +28,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - actions/upload-artifact from `v2.2.4` to `v4`.
 - actions/download-artifact from `v2.0.10` to `v4`.
 - Contributor Covenant from `v2.0` to `v2.1`.
-- pytest from `^7.4.3` to `^7.4.4`.
+- pytest from `^7.4.3` to `^8.0.0`.
+- safety from `^2.4.0b2` to `^3.0.1`.
+- peter-evans/create-pull-request from `v5.0.2` to `v6.0.0`.
+- xdoctest from `^1.1.2` to `^1.1.3`.
 
 ### Removed
 - falke8 and flakeheaven.

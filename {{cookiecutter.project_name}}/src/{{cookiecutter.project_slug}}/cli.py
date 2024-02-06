@@ -1,4 +1,5 @@
 """Console script for {{ cookiecutter.project_name }}."""
+
 from typing import Annotated, Optional
 
 import typer

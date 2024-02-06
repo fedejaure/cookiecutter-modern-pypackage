@@ -1,4 +1,5 @@
 """Tests for `{{ cookiecutter.project_slug }}`.cli module."""
+
 from typing import List
 
 import pytest
