@@ -47,7 +47,7 @@ pytest-cookies = "^0.7.0"
 [tool.poetry.group.linters.dependencies]
 isort = "^5.13.2"
 black = "^23.12.1"
-ruff = "^0.1.11"
+ruff = "^0.2.1"
 
 [tool.poetry.group.security.dependencies]
 safety = "^2.4.0b2"
