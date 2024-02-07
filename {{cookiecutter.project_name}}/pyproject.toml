@@ -108,9 +108,6 @@ target-version = "py38"
 output-format = "full"
 line-length = 99
 fix = true
-unfixable = [
-  "ERA",  # Don't remove commented-out code
-]
 extend-exclude = [
     "docs/*",
 ]
@@ -133,6 +130,9 @@ select = [
   "RUF",  # Ruff-specific rules
 ]
 ignore = ["ANN101"]
+unfixable = [
+  "ERA",  # Don't remove commented-out code
+]
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S101"]
