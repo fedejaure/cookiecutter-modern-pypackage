@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - poetry pre-commit hooks.
 - Typer `^0.9.0`.
 - `py.typed` file.
+- `CITATION.cff` file.
 
 ### Changed
 - mypy from `^1.7.0` to `^1.8.0`.

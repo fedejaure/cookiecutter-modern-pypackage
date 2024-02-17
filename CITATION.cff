@@ -1,0 +1,26 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Cookiecutter Modern PyPackage
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Federico
+    family-names: Jaureguialzo
+    alias: fedejaure
+identifiers:
+  - type: url
+    value: >-
+      https://github.com/fedejaure/cookiecutter-modern-pypackage/releases/tag/v2.3.1
+    description: The Software Heritage link for version 2.3.1.
+repository-code: 'https://github.com/fedejaure/cookiecutter-modern-pypackage'
+abstract: Cookiecutter template for a modern Python package.
+keywords:
+  - cookiecutter
+  - template
+  - package
+license: MIT
+version: 2.3.1

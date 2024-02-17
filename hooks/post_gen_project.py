@@ -46,5 +46,8 @@ if __name__ == "__main__":
     if "{{ cookiecutter.add_funding_file }}" != "y":
         remove_file(".github/FUNDING.yml")
 
+    if "{{ cookiecutter.add_citation_file }}" != "y":
+        remove_file("CITATION.cff")
+
     add_symlink(PROJECT_DOCS / "readme.md", "../README.md")
     add_symlink(PROJECT_DOCS / "changelog.md", "../CHANGELOG.md")
