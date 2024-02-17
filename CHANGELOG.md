@@ -32,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - safety from `^2.4.0b2` to `^3.0.1`.
 - peter-evans/create-pull-request from `v5.0.2` to `v6.0.0`.
 - xdoctest from `^1.1.2` to `^1.1.3`.
+- watchdog from `^3.0.0` to `^4.0.0`.
 
 ### Removed
 - falke8 and flakeheaven.
