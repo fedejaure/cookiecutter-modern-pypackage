@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - actions/setup-python from `v4.7.1` to `v5.0.0`.
 - sphinx from `^7.1.2` to `^7.2.6`.
 - isort from `^5.12.0` to `^5.13.2`.
-- black from `^23.11.0` to `^24.1.1`.
+- black from `^23.11.0` to `^24.2.0`.
 - pre-commit from `^3.5.0` to `^3.6.0`.
 - github/codeql-action from `v2` to `v3`.
 - coverage from `^7.3.2` to `^7.4.0`.
