@@ -1,4 +1,5 @@
 """Script that run before the project is generated."""
+
 import re
 import sys
 

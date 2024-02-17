@@ -35,7 +35,7 @@ Use cookiecutter, pointing it at the cookiecutter-pypackage repo:
 
 .. code-block:: bash
 
-    $ cookiecutter gh:fedejaure/cookiecutter-modern-pypackage --checkout v2.3.1
+    $ cookiecutter gh:fedejaure/cookiecutter-modern-pypackage --checkout v3.0.0
 
 You'll be asked to enter a bunch of values to set the package up.
 If you don't know what to enter, stick with the defaults.
@@ -55,7 +55,7 @@ You will find one folder named after the ``[project_name]``. Move into this fold
     mypackage $ git add .
     mypackage $ git commit -m "Initial skeleton."
     mypackage $ git remote add origin git@github.com:myusername/mypackage.git
-    mypackage $ git push -u origin master
+    mypackage $ git push -u origin main
 
 Where ``myusername`` and ``mypackage`` are adjusted for your username and package name.
 
@@ -79,7 +79,7 @@ Install the new project's local development requirements inside a virtual enviro
 Step 5: Set Up Codecov
 ----------------------
 
-`Codecov`_ provides highly integrated tools to group, merge, archive, and compare coverage reports. 
+`Codecov`_ provides highly integrated tools to group, merge, archive, and compare coverage reports.
 
 Log into your account at `Codecov`_. If you don't have one, create one and log into it.
 
@@ -111,7 +111,7 @@ The Python Package Index or `PyPI`_ is the official third-party software reposit
 
 `TestPyPI`_ is a separate instance of the Python Package Index (`PyPI`_) that allows you to try out the distribution tools and process without worrying about affecting the real index.
 
-Log into your account at `PyPI`_ and `TestPyPI`_. Go to Account Settings and generate an API tokens. 
+Log into your account at `PyPI`_ and `TestPyPI`_. Go to Account Settings and generate an API tokens.
 
 Go to the repository settings on GitHub, and add tow secrets named `PYPI_TOKEN` and `TEST_PYPI_TOKEN` with the tokens that you just generated.
 

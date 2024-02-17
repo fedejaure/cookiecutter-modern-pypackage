@@ -1,4 +1,5 @@
 """Tests for `{{ cookiecutter.project_slug }}` module."""
+
 from typing import Generator
 
 import pytest

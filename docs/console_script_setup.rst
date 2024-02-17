@@ -4,12 +4,12 @@
 Console Script Setup
 ====================
 
-Optionally, your package can include a console script using Click (Python 3.8+).
+Optionally, your package can include a console script using Typer (Python 3.9+).
 
 How It Works
 ------------
 
-If the 'command_line_interface' option is set to ['click'] during setup, cookiecutter will
+If the 'command_line_interface' option is set to ['typer'] during setup, cookiecutter will
 add a file 'cli.py' in the project_slug subdirectory. An entry point is added to
 pyproject.toml that points to the main function in cli.py.
 
@@ -31,5 +31,5 @@ The script will be generated with output for no arguments and --help.
 More Details
 ------------
 
-You can read more about Click at:
-http://click.pocoo.org/
+You can read more about Typer at:
+https://typer.tiangolo.com/

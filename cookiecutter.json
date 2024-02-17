@@ -1,5 +1,7 @@
 {
-  "full_name": "Federico Jaureguialzo",
+  "given_names": "Federico",
+  "family_names": "Jaureguialzo",
+  "full_name": "{{ cookiecutter.given_names }} {{ cookiecutter.family_names }}",
   "email": "fedejaure@example.com",
   "github_username": "fedejaure",
   "project_name": "modern-python-boilerplate",
@@ -7,10 +9,23 @@
   "project_title": "{{ cookiecutter.project_name.replace('-', ' ').title() }}",
   "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a modern Python package.",
   "version": "0.1.0",
-  "open_source_license": ["MIT", "BSD", "ISC", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"],
-  "command_line_interface": ["Click", "No command-line interface"],
+  "open_source_license": [
+    "MIT",
+    "BSD",
+    "ISC",
+    "Apache Software License 2.0",
+    "GNU General Public License v3",
+    "Not open source"
+  ],
+  "command_line_interface": [
+    "Typer",
+    "No command-line interface"
+  ],
   "add_code_of_conduct": "y",
   "add_contributing_file": "y",
   "add_security_file": "y",
+  "add_codeowners_file": "y",
+  "add_funding_file": "y",
+  "add_citation_file": "y",
   "contact_method": null
 }

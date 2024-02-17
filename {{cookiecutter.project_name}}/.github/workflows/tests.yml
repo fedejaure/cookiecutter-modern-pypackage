@@ -13,10 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.1
 
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v4.7.1
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v5.0.0
         with:
-          python-version: 3.8
+          python-version: 3.9
 
       - name: Install system deps
         shell: bash
@@ -36,13 +36,13 @@ jobs:
     strategy:
       matrix:
         os: [Ubuntu, MacOS, Windows]
-        python-version: ['3.8', '3.9', '3.10', '3.11']
+        python-version: ['3.9', '3.10', '3.11', '3.12']
       fail-fast: true
     steps:
       - uses: actions/checkout@v4.1.1
 
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4.7.1
+        uses: actions/setup-python@v5.0.0
         with:
           python-version: ${{ matrix.python-version }}
 
@@ -62,26 +62,27 @@ jobs:
         run: nox --force-color -s tests-${{ matrix.python-version }}
 
       - name: Run securtity check
-        if: matrix.python-version == '3.11' && matrix.os == 'Ubuntu'
+        if: matrix.python-version == '3.12' && matrix.os == 'Ubuntu'
         shell: bash
         run: nox --force-color -s security
 
       - name: Upload coverage data
-        uses: actions/upload-artifact@v2.2.4
+        uses: actions/upload-artifact@v4
         with:
-          name: coverage-data
+          name: ${{ matrix.os }}-${{ matrix.python-version }}.coverage-data
           path: ".coverage.*"
+          retention-days: 2
 
   coverage:
     needs: tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.1.1
-      
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v4.7.1
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v5.0.0
         with:
-          python-version: 3.8
+          python-version: 3.9
 
       - name: Install system deps
         shell: bash
@@ -91,9 +92,10 @@ jobs:
           poetry config virtualenvs.in-project true
 
       - name: Download coverage data
-        uses: actions/download-artifact@v2.0.10
+        uses: actions/download-artifact@v4
         with:
-          name: coverage-data
+          pattern: "*.coverage-data"
+          merge-multiple: true
 
       - name: Create coverage report
         shell: bash

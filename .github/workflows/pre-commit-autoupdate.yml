@@ -14,10 +14,10 @@ jobs:
         with:
           ref: develop
 
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v4.7.1
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v5.0.0
         with:
-          python-version: 3.8
+          python-version: 3.9
 
       - name: Install system deps
         shell: bash
@@ -32,15 +32,15 @@ jobs:
       - name: Run pre-commit
         run: poetry run pre-commit run --all-files
 
-      - uses: peter-evans/create-pull-request@v5.0.2
+      - uses: peter-evans/create-pull-request@v6.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: chore-update-pre-commit-hooks
           title: Update pre-commit hooks
           commit-message: "Update pre-commit hooks"
           body: |
-            # Update pre-commit hooks 
-            
+            # Update pre-commit hooks
+
             - Update pre-commit hooks to the latest version.
           delete-branch: true
           labels: |

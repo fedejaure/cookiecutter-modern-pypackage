@@ -1,4 +1,5 @@
 """Script that run after the project is generated."""
+
 from pathlib import Path
 from typing import Union
 
@@ -38,6 +39,15 @@ if __name__ == "__main__":
 
     if "{{ cookiecutter.add_security_file }}" != "y":
         remove_file("SECURITY.md")
+
+    if "{{ cookiecutter.add_codeowners_file }}" != "y":
+        remove_file(".github/CODEOWNERS")
+
+    if "{{ cookiecutter.add_funding_file }}" != "y":
+        remove_file(".github/FUNDING.yml")
+
+    if "{{ cookiecutter.add_citation_file }}" != "y":
+        remove_file("CITATION.cff")
 
     add_symlink(PROJECT_DOCS / "readme.md", "../README.md")
     add_symlink(PROJECT_DOCS / "changelog.md", "../CHANGELOG.md")

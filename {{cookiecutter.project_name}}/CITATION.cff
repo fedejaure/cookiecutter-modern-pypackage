@@ -1,0 +1,24 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: {{ cookiecutter.project_title }}
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: {{ cookiecutter.given_names }}
+    family-names: {{ cookiecutter.family_names }}
+    alias: fedejaure
+identifiers:
+  - type: url
+    value: >-
+      https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/releases/tag/v{{ cookiecutter.version }}
+    description: The Software Heritage link for version {{ cookiecutter.version }}.
+repository-code: 'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}'
+abstract: Cookiecutter template for a modern Python package.
+keywords:
+  - {{ cookiecutter.project_name }}
+license: MIT
+version: {{ cookiecutter.version }}

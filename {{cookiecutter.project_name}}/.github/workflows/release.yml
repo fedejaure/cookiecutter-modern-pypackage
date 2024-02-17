@@ -1,4 +1,4 @@
-{% set is_open_source = cookiecutter.open_source_license != 'Not open source' %}
+{%- set is_open_source = cookiecutter.open_source_license != 'Not open source' -%}
 name: release
 
 on:
@@ -12,10 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.1
 
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v4.7.1
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v5.0.0
         with:
-          python-version: 3.8
+          python-version: 3.9
 
       - name: Install system deps
         shell: bash
@@ -26,21 +26,27 @@ jobs:
       - name: Build package
         run: |
           poetry build --ansi
-      {% if is_open_source %}{% raw %}
+
+{%- if is_open_source %}
+
+      {% raw -%}
       - name: Publish package on PyPI
-        uses: pypa/gh-action-pypi-publish@v1.8.10
+        uses: pypa/gh-action-pypi-publish@v1.8.11
         with:
           user: __token__
           password: ${{ secrets.PYPI_TOKEN }}
 
       - name: Publish package on TestPyPI
-        uses: pypa/gh-action-pypi-publish@v1.8.10
+        uses: pypa/gh-action-pypi-publish@v1.8.11
         with:
           user: __token__
           password: ${{ secrets.TEST_PYPI_TOKEN }}
           repository_url: https://test.pypi.org/legacy/
-      {% endraw %}{% endif %}
-  {% raw %}
+      {%- endraw %}
+
+{%- endif %}
+
+  {% raw -%}
   github_release:
     needs: release
     name: Create Github Release
@@ -71,4 +77,5 @@ jobs:
           release_name: Release ${{ github.ref }}
           body: ${{ steps.changelog_reader.outputs.changes }}
           draft: false
-          prerelease: false{% endraw %}
+          prerelease: false
+  {%- endraw %}

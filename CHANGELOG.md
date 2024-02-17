@@ -1,4 +1,4 @@
-3# Changelog
+# Changelog
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
@@ -6,6 +6,46 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+
+## [3.0.0] - 2024-02-17
+### Added
+- Ruff `^0.2.1`.
+- Python `3.12` support.
+- `CODEOWNERS` file.
+- `FUNDING.yml` file.
+- poetry pre-commit hooks.
+- Typer `^0.9.0`.
+- `py.typed` file.
+- `CITATION.cff` file.
+
+### Changed
+- mypy from `^1.7.0` to `^1.8.0`.
+- actions/setup-python from `v4.7.1` to `v5.0.0`.
+- sphinx from `^7.1.2` to `^7.2.6`.
+- isort from `^5.12.0` to `^5.13.2`.
+- black from `^23.11.0` to `^24.2.0`.
+- pre-commit from `^3.5.0` to `^3.6.1`.
+- github/codeql-action from `v2` to `v3`.
+- coverage from `^7.3.2` to `^7.4.1`.
+- pypa/gh-action-pypi-publish from from `v1.8.10` to `v1.8.11`.
+- actions/upload-artifact from `v2.2.4` to `v4`.
+- actions/download-artifact from `v2.0.10` to `v4`.
+- Contributor Covenant from `v2.0` to `v2.1`.
+- pytest from `^7.4.3` to `^8.0.1`.
+- safety from `^2.4.0b2` to `^3.0.1`.
+- peter-evans/create-pull-request from `v5.0.2` to `v6.0.0`.
+- xdoctest from `^1.1.2` to `^1.1.3`.
+- watchdog from `^3.0.0` to `^4.0.0`.
+
+### Removed
+- falke8 and flakeheaven.
+- darglint.
+- Python `3.8` support.
+- Click in favor of Typer.
+
+### Fixed
+- template whitespace control.
+- docs typo.
 
 ## [2.3.1] - 2023-11-18
 ### Changed
@@ -357,7 +397,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release.
 
 
-[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.3.1...develop
+[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v3.0.0...develop
+[3.0.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.3.1...v3.0.0
 [2.3.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.3.0...v2.3.1
 [2.3.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.2.1...v2.3.0
 [2.2.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.2.0...v2.2.1

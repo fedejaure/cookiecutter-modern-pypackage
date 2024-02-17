@@ -1,11 +1,12 @@
 """Tests for `cookiecutter-modern-pypackage` package."""
+
 import datetime
 import os
 import shlex
-import subprocess  # noqa: S404
+import subprocess
 import sys
 from contextlib import contextmanager
-from typing import Any, Dict, Generator, List
+from typing import Dict, Generator, List, Optional
 
 import pytest
 from cookiecutter.utils import rmtree
@@ -14,7 +15,7 @@ from pytest_cookies.plugin import Cookies, Result
 skip_on_windows = pytest.mark.skipif(sys.platform == "win32", reason="does not run on windows")
 
 COOKIE_CONTEXT_NOT_OPEN_SOURCE = {"open_source_license": "Not open source"}
-COOKIE_CONTEXT_CLI = {"command_line_interface": "Click"}
+COOKIE_CONTEXT_CLI = {"command_line_interface": "Typer"}
 COOKIE_CONTEXT_BSD = {"open_source_license": "BSD"}
 COOKIE_CONTEXT_NO_CLI = {"command_line_interface": "No command-line interface"}
 COOKIE_CONTEXT_DIFF_NAME_AND_SLUG = {
@@ -42,18 +43,17 @@ def inside_dir(dirpath: str) -> Generator[None, None, None]:
 
 
 @contextmanager
-def bake_in_temp_dir(cookies: Cookies, *args: Any, **kwargs: Any) -> Result:
-    """Delete the temporal directory that is created when executing the tests.
+def bake_in_temp_dir(cookies: Cookies, extra_context: Optional[Dict[str, str]] = None) -> Result:
+    """Bake a cookie and clean up the temporary directory created during tests.
 
     Args:
-        cookies: A cookie to be baked and its temporal files will be removed.
-        *args: Variable length argument list to be passed to the bake command.
-        **kwargs: Arbitrary keyword arguments to be passed to the bake command.
+        cookies: The cookie to be baked, and its temporal files will be removed.
+        extra_context: An optional additional context to be provided to the bake command.
 
     Yields:
         The baked cookie.
     """
-    result = cookies.bake(*args, **kwargs)
+    result = cookies.bake(extra_context=extra_context)
     try:
         yield result
     finally:
