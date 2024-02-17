@@ -20,18 +20,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - actions/setup-python from `v4.7.1` to `v5.0.0`.
 - sphinx from `^7.1.2` to `^7.2.6`.
 - isort from `^5.12.0` to `^5.13.2`.
-- black from `^23.11.0` to `^24.1.1`.
-- pre-commit from `^3.5.0` to `^3.6.0`.
+- black from `^23.11.0` to `^24.2.0`.
+- pre-commit from `^3.5.0` to `^3.6.1`.
 - github/codeql-action from `v2` to `v3`.
-- coverage from `^7.3.2` to `^7.4.0`.
+- coverage from `^7.3.2` to `^7.4.1`.
 - pypa/gh-action-pypi-publish from from `v1.8.10` to `v1.8.11`.
 - actions/upload-artifact from `v2.2.4` to `v4`.
 - actions/download-artifact from `v2.0.10` to `v4`.
 - Contributor Covenant from `v2.0` to `v2.1`.
-- pytest from `^7.4.3` to `^8.0.0`.
+- pytest from `^7.4.3` to `^8.0.1`.
 - safety from `^2.4.0b2` to `^3.0.1`.
 - peter-evans/create-pull-request from `v5.0.2` to `v6.0.0`.
 - xdoctest from `^1.1.2` to `^1.1.3`.
+- watchdog from `^3.0.0` to `^4.0.0`.
 
 ### Removed
 - falke8 and flakeheaven.
