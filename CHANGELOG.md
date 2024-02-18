@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.1] - 2024-02-18
+### Fixed
+- Github funding file syntax.
+
 ## [3.0.0] - 2024-02-17
 ### Added
 - Ruff `^0.2.1`.
@@ -397,7 +401,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release.
 
 
-[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v3.0.0...develop
+[Unreleased]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v3.0.1...develop
+[3.0.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v3.0.0...v3.0.1
 [3.0.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.3.1...v3.0.0
 [2.3.1]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.3.0...v2.3.1
 [2.3.0]: https://github.com/fedejaure/cookiecutter-modern-pypackage/compare/v2.2.1...v2.3.0
