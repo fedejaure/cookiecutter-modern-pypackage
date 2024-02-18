@@ -67,7 +67,7 @@ pip install -U cookiecutter
 Run Cookiecutter using the latest release
 
 ```sh
-cookiecutter gh:fedejaure/cookiecutter-modern-pypackage --checkout v3.0.0
+cookiecutter gh:fedejaure/cookiecutter-modern-pypackage --checkout v3.0.1
 ```
 
 ### 3. Set up Your Project
