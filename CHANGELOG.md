@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - codecov/codecov-action from `v3.1.4` to `v4.4.1`.
 - actions/upload-artifact from `v4` to `v4.3.3`.
 - actions/download-artifact from `v4` to `v4.1.7`.
+- actions/setup-python from `v5.0.0` to `v5.1.0`.
 
 ## [3.0.1] - 2024-02-18
 ### Fixed
