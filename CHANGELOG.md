@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - actions/setup-python from `v5.0.0` to `v5.1.0`.
 - mindsers/changelog-reader-action from `v2.2.2` to `v2.2.3`.
 - peter-evans/create-pull-request from `v6.0.0` to `v6.0.5`.
+- actions/checkout from `v4.1.1` to `v4.1.6`.
 
 ## [3.0.1] - 2024-02-18
 ### Fixed
