@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - pytest-cov from `^4.1.0` to `^5.0.0`.
 - sphinx from `^7.2.6` to `^7.3.7`.
 - black from `^24.2.0` to `^24.4.2`.
+- mypy from `^1.8.0` to `^1.10.0`.
 - codecov/codecov-action from `v3.1.4` to `v4.4.1`.
 - actions/upload-artifact from `v4` to `v4.3.3`.
 - actions/download-artifact from `v4` to `v4.1.7`.
