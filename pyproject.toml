@@ -41,7 +41,7 @@ watchdog = {version = "^4.0.0", extras = ["watchmedo"]}
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.0.1"
-xdoctest = "^1.1.3"
+xdoctest = "^1.1.4"
 pytest-cookies = "^0.7.0"
 
 [tool.poetry.group.linters.dependencies]
