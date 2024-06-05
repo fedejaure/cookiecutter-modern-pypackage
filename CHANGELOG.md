@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ruff from `^0.2.1` to `^0.4.8`.
 - safety from `^3.0.1` to `^3.2.1`.
 - pytest from `^8.0.1` to `^8.2.2`.
+- pre-commit from `^3.6.1` to `^3.7.1`.
 - codecov/codecov-action from `v3.1.4` to `v4.4.1`.
 - actions/upload-artifact from `v4` to `v4.3.3`.
 - actions/download-artifact from `v4` to `v4.1.7`.
