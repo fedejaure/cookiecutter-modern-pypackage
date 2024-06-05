@@ -10,6 +10,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - `.safety-policy.yml` file.
 
+### Changed
+- typer from `^0.9.0` to `^0.12.3`.
+- coverage from `^7.4.1` to `^7.5.3`.
+- pytest-cov from `^4.1.0` to `^5.0.0`.
+- sphinx from `^7.2.6` to `^7.3.7`.
+- black from `^24.2.0` to `^24.4.2`.
+- mypy from `^1.8.0` to `^1.10.0`.
+- ruff from `^0.2.1` to `^0.4.8`.
+- safety from `^3.0.1` to `^3.2.1`.
+- pytest from `^8.0.1` to `^8.2.2`.
+- pre-commit from `^3.6.1` to `^3.7.1`.
+- xdoctest from `^1.1.3` to `^1.1.4`.
+- watchdog from `^4.0.0` to `^4.0.1`.
+- poetry pre-commit hooks from `1.7.1` to `1.8.3`.
+- codecov/codecov-action from `v3.1.4` to `v4.4.1`.
+- actions/upload-artifact from `v4` to `v4.3.3`.
+- actions/download-artifact from `v4` to `v4.1.7`.
+- actions/setup-python from `v5.0.0` to `v5.1.0`.
+- mindsers/changelog-reader-action from `v2.2.2` to `v2.2.3`.
+- peter-evans/create-pull-request from `v6.0.0` to `v6.0.5`.
+- actions/checkout from `v4.1.1` to `v4.1.6`.
+
 ## [3.0.1] - 2024-02-18
 ### Fixed
 - Github funding file syntax.

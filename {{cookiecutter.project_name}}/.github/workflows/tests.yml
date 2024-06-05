@@ -11,10 +11,10 @@ jobs:
     name: Linting
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.1
+      - uses: actions/checkout@v4.1.6
 
       - name: Set up Python 3.9
-        uses: actions/setup-python@v5.0.0
+        uses: actions/setup-python@v5.1.0
         with:
           python-version: 3.9
 
@@ -39,10 +39,10 @@ jobs:
         python-version: ['3.9', '3.10', '3.11', '3.12']
       fail-fast: true
     steps:
-      - uses: actions/checkout@v4.1.1
+      - uses: actions/checkout@v4.1.6
 
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v5.0.0
+        uses: actions/setup-python@v5.1.0
         with:
           python-version: ${{ matrix.python-version }}
 
@@ -67,7 +67,7 @@ jobs:
         run: nox --force-color -s security
 
       - name: Upload coverage data
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.3.3
         with:
           name: ${{ matrix.os }}-${{ matrix.python-version }}.coverage-data
           path: ".coverage.*"
@@ -77,10 +77,10 @@ jobs:
     needs: tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.1
+      - uses: actions/checkout@v4.1.6
 
       - name: Set up Python 3.9
-        uses: actions/setup-python@v5.0.0
+        uses: actions/setup-python@v5.1.0
         with:
           python-version: 3.9
 
@@ -92,7 +92,7 @@ jobs:
           poetry config virtualenvs.in-project true
 
       - name: Download coverage data
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v4.1.7
         with:
           pattern: "*.coverage-data"
           merge-multiple: true
@@ -103,6 +103,6 @@ jobs:
           nox --force-color --session=coverage -- --fmt xml
 
       - name: Upload coverage report
-        uses: codecov/codecov-action@v3.1.4
+        uses: codecov/codecov-action@v4.4.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}{% endraw %}
