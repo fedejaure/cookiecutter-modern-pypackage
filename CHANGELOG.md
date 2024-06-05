@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- `.safety-policy.yml` file.
+
 ## [3.0.1] - 2024-02-18
 ### Fixed
 - Github funding file syntax.
