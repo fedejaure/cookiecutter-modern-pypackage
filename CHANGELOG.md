@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - typer from `^0.9.0` to `^0.12.3`.
 - coverage from `^7.4.1` to `^7.5.3`.
+- pytest-cov from `^4.1.0` to `^5.0.0`.
 
 ## [3.0.1] - 2024-02-18
 ### Fixed
