@@ -24,6 +24,7 @@ TEST_DIR = ROOT_DIR.joinpath("tests")
 PYTHON_TARGETS = [
     SOURCE_DIR,
     TEST_DIR,
+    DOCS_DIR.joinpath("conf.py"),
     ROOT_DIR.joinpath("noxfile.py"),
     Path(__file__),
 ]
