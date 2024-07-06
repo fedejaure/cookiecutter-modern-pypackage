@@ -32,6 +32,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - peter-evans/create-pull-request from `v6.0.0` to `v6.0.5`.
 - actions/checkout from `v4.1.1` to `v4.1.6`.
 
+### Fixed
+- Citation abstract to be generated with `project_short_description`.
+- Docs `conf.py` to the linting target path.
+
 ## [3.0.1] - 2024-02-18
 ### Fixed
 - Github funding file syntax.
