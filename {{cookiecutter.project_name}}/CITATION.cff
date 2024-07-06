@@ -17,7 +17,7 @@ identifiers:
       https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/releases/tag/v{{ cookiecutter.version }}
     description: The Software Heritage link for version {{ cookiecutter.version }}.
 repository-code: 'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}'
-abstract: Cookiecutter template for a modern Python package.
+abstract: {{ cookiecutter.project_short_description }}
 keywords:
   - {{ cookiecutter.project_name }}
 license: MIT
