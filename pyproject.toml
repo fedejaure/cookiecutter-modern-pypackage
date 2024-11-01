@@ -34,7 +34,7 @@ python = "<3.13,>=3.9"
 cookiecutter = "^2.6.0"
 
 [tool.poetry.group.dev.dependencies]
-pre-commit = "^3.7.1"
+pre-commit = "^4.0.1"
 invoke = "^2.2.0"
 bump2version = "^1.0.1"
 watchdog = {version = "^4.0.1", extras = ["watchmedo"]}
