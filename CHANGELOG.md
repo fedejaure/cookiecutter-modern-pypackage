@@ -35,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Citation abstract to be generated with `project_short_description`.
 - Docs `conf.py` to the linting target path.
+- Release workflow permissions.
 
 ## [3.0.1] - 2024-02-18
 ### Fixed
