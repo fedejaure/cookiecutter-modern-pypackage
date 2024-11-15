@@ -61,8 +61,8 @@ watchdog = {version = "^6.0.0", extras = ["watchmedo"]}
 [tool.poetry.group.test.dependencies]
 pytest = "^8.3.3"
 xdoctest = "^1.2.0"
-coverage = {version = "^7.5.3", extras = ["toml"]}
 pytest-cov = "^5.0.0"
+coverage = {version = "^7.6.7", extras = ["toml"]}
 
 [tool.poetry.group.linters.dependencies]
 isort = "^5.13.2"
