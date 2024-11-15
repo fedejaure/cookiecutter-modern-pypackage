@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - black from `^24.2.0` to `^24.4.2`.
 - mypy from `^1.8.0` to `^1.10.0`.
 - ruff from `^0.2.1` to `^0.4.8`.
-- safety from `^3.0.1` to `^3.2.1`.
+- safety from `^3.0.1` to `^3.2.11`.
 - pytest from `^8.0.1` to `^8.3.3`.
 - pre-commit from `^3.6.1` to `^3.7.1`.
 - xdoctest from `^1.1.3` to `^1.2.0`.
