@@ -25,6 +25,7 @@ classifiers=[
     "Programming Language :: Python :: Implementation :: PyPy",
     "Topic :: Software Development",
 ]
+package-mode = false
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/fedejaure/cookiecutter-modern-pypackage/issues"
