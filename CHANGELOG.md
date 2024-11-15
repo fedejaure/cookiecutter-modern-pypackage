@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - pytest-cov from `^4.1.0` to `^5.0.0`.
 - sphinx from `^7.2.6` to `^7.4.7`.
 - black from `^24.2.0` to `^24.4.2`.
-- mypy from `^1.8.0` to `^1.10.0`.
+- mypy from `^1.8.0` to `^1.13.0`.
 - ruff from `^0.2.1` to `^0.4.8`.
 - safety from `^3.0.1` to `^3.2.11`.
 - pytest from `^8.0.1` to `^8.3.3`.
