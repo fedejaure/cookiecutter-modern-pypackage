@@ -49,34 +49,34 @@ packages = [
 [tool.poetry.dependencies]
 python = "<3.13,>=3.9"
 {%- if cookiecutter.command_line_interface|lower == 'typer' %}
-typer = {extras = ["all"], version = "^0.12.3"}
+typer = {extras = ["all"], version = "^0.13.0"}
 {%- endif %}
 
 [tool.poetry.group.dev.dependencies]
-pre-commit = "^3.7.1"
+pre-commit = "^4.0.1"
 invoke = "^2.2.0"
 bump2version = "^1.0.1"
-watchdog = {version = "^4.0.1", extras = ["watchmedo"]}
+watchdog = {version = "^6.0.0", extras = ["watchmedo"]}
 
 [tool.poetry.group.test.dependencies]
-pytest = "^8.2.2"
-xdoctest = "^1.1.4"
-coverage = {version = "^7.5.3", extras = ["toml"]}
-pytest-cov = "^5.0.0"
+pytest = "^8.3.3"
+xdoctest = "^1.2.0"
+coverage = {version = "^7.6.7", extras = ["toml"]}
+pytest-cov = "^6.0.0"
 
 [tool.poetry.group.linters.dependencies]
 isort = "^5.13.2"
-black = "^24.4.2"
-ruff = "^0.4.8"
+black = "^24.10.0"
+ruff = "^0.7.1"
 
 [tool.poetry.group.security.dependencies]
-safety = "^3.2.1"
+safety = "^3.2.11"
 
 [tool.poetry.group.typing.dependencies]
-mypy = "^1.10.0"
+mypy = "^1.13.0"
 
 [tool.poetry.group.docs.dependencies]
-sphinx = "^7.3.7"
+sphinx = "^7.4.7"
 recommonmark = "^0.7.1"
 
 [tool.coverage.paths]

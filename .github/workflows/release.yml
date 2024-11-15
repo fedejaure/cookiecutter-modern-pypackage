@@ -5,12 +5,16 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  id-token: write
+  contents: write
+
 jobs:
   github_release:
     name: Create Github Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.6
+      - uses: actions/checkout@v4.2.2
 
       - name: Get version from tag
         id: tag_name

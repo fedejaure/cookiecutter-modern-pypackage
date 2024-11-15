@@ -10,12 +10,12 @@ jobs:
     name: autoupdate
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.6
+      - uses: actions/checkout@v4.2.2
         with:
           ref: develop
 
       - name: Set up Python 3.9
-        uses: actions/setup-python@v5.1.0
+        uses: actions/setup-python@v5.3.0
         with:
           python-version: 3.9
 
@@ -28,11 +28,12 @@ jobs:
 
       - name: Run autoupdate
         run: poetry run pre-commit autoupdate
+        continue-on-error: true
 
       - name: Run pre-commit
         run: poetry run pre-commit run --all-files
 
-      - uses: peter-evans/create-pull-request@v6.0.5
+      - uses: peter-evans/create-pull-request@v7.0.5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: chore-update-pre-commit-hooks
