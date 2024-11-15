@@ -26,7 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - poetry pre-commit hooks from `1.7.1` to `1.8.3`.
 - codecov/codecov-action from `v3.1.4` to `v4.4.1`.
 - actions/upload-artifact from `v4` to `v4.4.3`.
-- actions/download-artifact from `v4` to `v4.1.7`.
+- actions/download-artifact from `v4` to `v4.1.8`.
 - actions/setup-python from `v5.0.0` to `v5.3.0`.
 - mindsers/changelog-reader-action from `v2.2.2` to `v2.2.3`.
 - peter-evans/create-pull-request from `v6.0.0` to `v7.0.5`.
