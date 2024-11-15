@@ -17,13 +17,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - sphinx from `^7.2.6` to `^7.4.7`.
 - black from `^24.2.0` to `^24.10.0`.
 - mypy from `^1.8.0` to `^1.13.0`.
-- ruff from `^0.2.1` to `^0.7.1`.
+- ruff from `^0.2.1` to `^0.7.4`.
 - safety from `^3.0.1` to `^3.2.11`.
 - pytest from `^8.0.1` to `^8.3.3`.
 - pre-commit from `^3.6.1` to `^4.0.1`.
 - xdoctest from `^1.1.3` to `^1.2.0`.
 - watchdog from `^4.0.0` to `^6.0.0`.
 - poetry pre-commit hooks from `1.7.1` to `1.8.3`.
+- pre-commit-hooks from `v4.5.0` to `v5.0.0`.
 - codecov/codecov-action from `v3.1.4` to `v4.4.1`.
 - actions/upload-artifact from `v4` to `v4.4.3`.
 - actions/download-artifact from `v4` to `v4.1.8`.
