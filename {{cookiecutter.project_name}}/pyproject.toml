@@ -49,7 +49,7 @@ packages = [
 [tool.poetry.dependencies]
 python = "<3.13,>=3.9"
 {%- if cookiecutter.command_line_interface|lower == 'typer' %}
-typer = {extras = ["all"], version = "^0.12.3"}
+typer = {extras = ["all"], version = "^0.13.0"}
 {%- endif %}
 
 [tool.poetry.group.dev.dependencies]
