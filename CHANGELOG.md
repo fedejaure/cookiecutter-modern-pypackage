@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - safety from `^3.0.1` to `^3.2.1`.
 - pytest from `^8.0.1` to `^8.2.2`.
 - pre-commit from `^3.6.1` to `^3.7.1`.
-- xdoctest from `^1.1.3` to `^1.1.4`.
+- xdoctest from `^1.1.3` to `^1.2.0`.
 - watchdog from `^4.0.0` to `^4.0.1`.
 - poetry pre-commit hooks from `1.7.1` to `1.8.3`.
 - codecov/codecov-action from `v3.1.4` to `v4.4.1`.
