@@ -37,6 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Docs `conf.py` to the linting target path.
 - Release workflow permissions.
 - Release Pypi.
+- Nox coverage session under an interactive execution.
 
 ## [3.0.1] - 2024-02-18
 ### Fixed

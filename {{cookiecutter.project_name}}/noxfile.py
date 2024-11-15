@@ -27,7 +27,7 @@ def tests(session: Session) -> None:
             session.notify("coverage")
 
 
-@session
+@session(python=python_versions)
 def coverage(session: Session) -> None:
     """Produce the coverage report."""
     args = session.posargs if session.posargs and len(session._runner.manifest) == 1 else []
