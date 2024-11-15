@@ -11,9 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `.safety-policy.yml` file.
 
 ### Changed
-- pytest-cov from `^4.1.0` to `^5.0.0`.
 - typer from `^0.9.0` to `^0.13.0`.
 - coverage from `^7.4.1` to `^7.6.7`.
+- pytest-cov from `^4.1.0` to `^6.0.0`.
 - sphinx from `^7.2.6` to `^7.4.7`.
 - black from `^24.2.0` to `^24.10.0`.
 - mypy from `^1.8.0` to `^1.13.0`.
