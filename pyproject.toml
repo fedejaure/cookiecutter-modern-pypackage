@@ -46,7 +46,7 @@ xdoctest = "^1.2.0"
 pytest-cookies = "^0.7.0"
 
 [tool.poetry.group.linters.dependencies]
-isort = "^5.13.2"
+isort = "^6.0.0"
 black = "^24.10.0"
 ruff = "^0.7.4"
 
